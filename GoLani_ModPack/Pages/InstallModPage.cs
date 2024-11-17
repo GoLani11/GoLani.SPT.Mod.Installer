@@ -3,6 +3,7 @@ using SharpCompress.Archives;
 using SharpCompress.Common;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -43,7 +44,7 @@ namespace GoLani_ModPack.Pages
             mods.Add(new Mod("SPT 타르코프 아이템 텍스처 한글화 프로젝트 - 4096", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1bp2ewi3gx0kRkbkz1u1I0aCYBlPnceEC" }, SPTTex4096Btn));
 
-            
+
 
 
             //SAIN
@@ -65,6 +66,10 @@ namespace GoLani_ModPack.Pages
                 "https://github.com/space-commits/SPT-Realism-Mod-Client/releases/download/v1.4.8/Realism-Mod-v1.4.8-SPT-v3.9.8.zip" }, RealismBox));
             mods.Add(new Mod("SPT Realism Mod - KR", new List<string> {
                 "" }, RealismKRBox));
+
+            //SVM
+            mods.Add(new Mod("SVM", new List<string> {
+                "https://drive.google.com/uc?export=download&id=1JTimCEDlCsq6SG71dCBXkfwuONwWQmWS" }, SVMBox));
 
             //Questing Bots
             mods.Add(new Mod("Questing Bots", new List<string> { "https://github.com/dwesterwick/SPTQuestingBots/releases/download/0.8.0/DanW-SPTQuestingBots.zip",
@@ -191,21 +196,18 @@ namespace GoLani_ModPack.Pages
 
             foreach (var mod in mods)
             {
-                // Initialize isSelected to false
                 bool isSelected = false;
 
-                // Check if the mod uses a CheckBox and if it's checked
+                // 체크박스나 라디오 버튼을 통해 선택 여부 확인
                 if (mod.CheckBox != null)
                 {
                     isSelected = mod.CheckBox.Checked;
                 }
-                // Check if the mod uses a RadioButton and if it's checked
                 else if (mod.RadioButton != null)
                 {
                     isSelected = mod.RadioButton.Checked;
                 }
 
-                // If the mod is selected, proceed with installation
                 if (isSelected)
                 {
                     InstallLogBox.Text += $"{mod.Name} 다운로드 및 설치 중...\r\n";
@@ -228,7 +230,18 @@ namespace GoLani_ModPack.Pages
                                     // 파일 이름 추출
                                     string fileName = GetFileNameFromResponse(response, mod.Name);
 
-                                    string archiveFilePath = Path.Combine(installPath, fileName);
+                                    // SVM 버튼 기준으로 경로 설정
+                                    string targetPath = mod.CheckBox == SVMBox // SVM 버튼 변수를 조건으로 추가
+                                        ? Path.Combine(installPath, "user", "mods")
+                                        : installPath;
+
+                                    // 디렉토리 존재 여부 확인 및 생성
+                                    if (!Directory.Exists(targetPath))
+                                    {
+                                        Directory.CreateDirectory(targetPath);
+                                    }
+
+                                    string archiveFilePath = Path.Combine(targetPath, fileName);
 
                                     // 파일 다운로드 및 저장
                                     using (var fs = new FileStream(archiveFilePath, FileMode.Create, FileAccess.Write, FileShare.None))
@@ -241,14 +254,13 @@ namespace GoLani_ModPack.Pages
                                     // 압축 해제
                                     InstallLogBox.Text += $"{fileName} 압축 해제 중...\r\n";
 
-                                    // 압축 파일 열기
                                     using (var archive = ArchiveFactory.Open(archiveFilePath))
                                     {
                                         foreach (var entry in archive.Entries)
                                         {
                                             if (!entry.IsDirectory)
                                             {
-                                                entry.WriteToDirectory(installPath, new ExtractionOptions() { ExtractFullPath = true, Overwrite = true });
+                                                entry.WriteToDirectory(targetPath, new ExtractionOptions() { ExtractFullPath = true, Overwrite = true });
                                             }
                                         }
                                     }
@@ -271,15 +283,14 @@ namespace GoLani_ModPack.Pages
                 }
             }
 
-            // readme 또는 README 텍스트 파일 삭제
             DeleteReadmeFiles();
 
             InstallLogBox.Text += "설치가 완료되었습니다.\r\n";
             MessageBox.Show("선택한 모드들이 모두 설치되었습니다.", "다운로드 완료", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             InstallBtn.Enabled = true; // 다운로드 버튼 활성화
-                                       // 필요한 변수 초기화 (필요하다면 추가)
         }
+
 
 
         // HTTP 응답에서 파일 이름을 추출하는 메서드
@@ -341,6 +352,16 @@ namespace GoLani_ModPack.Pages
         private void SPTTexKRBox_CheckedChanged(object sender, EventArgs e)
         {
             SPTTexDefaultBtn.Enabled = true;
+        }
+
+        private void Sainlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/1062-sain-solarint-s-ai-modifications-full-ai-combat-system-replacement/") { UseShellExecute = true });
+        }
+
+        private void Realisemlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/606-spt-realism-mod/") { UseShellExecute = true });
         }
     }
 

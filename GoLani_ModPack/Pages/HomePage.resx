@@ -117,4 +117,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label5.Text" xml:space="preserve">
+    <value>1. 원본 모드 출처:
+   본 프로그램에 포함된 원본 모드들은 SPT 허브 및 기타 관련 사이트에서 제작 및 배포되었음을 명시합니다. 
+   각 모드의 구체적인 출처와 라이선스는 해당 모드의 문서를 참조하시기 바랍니다.
+
+2. 한글화 저작권:
+   모든 한글화 작업은 '_고라니_'에 의해 제작 및 수정되었습니다.
+
+본 프로그램은 원본 제작자들의 지적 재산권을 존중합니다. 무단 복제, 배포 또는 수정은 엄격히 금지됩니다.
+
+
+MIT License
+
+Copyright (c) 2024 Golani11, _고라니_
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+추가 제한 사항:
+- 이 소프트웨어의 무단 수정 및 재배포를 금지합니다.
+- 저작권자 이외에 상업적 목적으로 이 소프트웨어의 사용을 금합니다.
+- 이 소프트웨어를 수정 및 배포 시에는 원 저작자에게 사전 허락 후 사용하고,
+  수정하여 배포 시에는 배포 사이트 링크를 추가로 제공하고 원 저작자의 이름을 명시해야 합니다.</value>
+  </data>
 </root>

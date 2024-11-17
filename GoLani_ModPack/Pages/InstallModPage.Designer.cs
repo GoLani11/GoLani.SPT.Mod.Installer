@@ -36,92 +36,94 @@
             panel2 = new Panel();
             ModtabControl = new TabControl();
             ModtabPage1 = new TabPage();
-            linkLabel25 = new LinkLabel();
-            AudioBox = new CheckBox();
-            linkLabel27 = new LinkLabel();
-            ContextMenuBox = new CheckBox();
-            linkLabel28 = new LinkLabel();
-            GrenadeBox = new CheckBox();
             linkLabel1 = new LinkLabel();
+            SVMBox = new CheckBox();
+            A_Indicatorlink = new LinkLabel();
+            AudioBox = new CheckBox();
+            Contentlink = new LinkLabel();
+            ContextMenuBox = new CheckBox();
+            G_Indicatorlink = new LinkLabel();
+            GrenadeBox = new CheckBox();
+            Trainerlink = new LinkLabel();
             TrainerBox = new CheckBox();
-            linkLabel2 = new LinkLabel();
+            DadGamerlink = new LinkLabel();
             DadGamerBox = new CheckBox();
-            linkLabel3 = new LinkLabel();
+            Fovlink = new LinkLabel();
             FOVFixBox = new CheckBox();
-            linkLabel4 = new LinkLabel();
+            Notifierlink = new LinkLabel();
             NotifierBox = new CheckBox();
-            linkLabel5 = new LinkLabel();
+            Clutterlink = new LinkLabel();
             CluttererBox = new CheckBox();
-            linkLabel6 = new LinkLabel();
+            Hudlink = new LinkLabel();
             HudBox = new CheckBox();
-            linkLabel7 = new LinkLabel();
+            Graphicslink = new LinkLabel();
             GraphicsBox = new CheckBox();
-            linkLabel8 = new LinkLabel();
+            Maplink = new LinkLabel();
             MapsBox = new CheckBox();
-            linkLabel9 = new LinkLabel();
+            Questinglink = new LinkLabel();
             QuestingBotsBox = new CheckBox();
-            linkLabel10 = new LinkLabel();
+            Realisemlink = new LinkLabel();
             RealismBox = new CheckBox();
-            linkLabel11 = new LinkLabel();
+            Donutlink = new LinkLabel();
             DonutBox = new CheckBox();
-            linkLabel16 = new LinkLabel();
+            Sainlink = new LinkLabel();
             SAINBox = new CheckBox();
             ModtabPage2 = new TabPage();
-            linkLabel33 = new LinkLabel();
+            Bloodylink = new LinkLabel();
             BloodyBox = new CheckBox();
-            linkLabel30 = new LinkLabel();
+            WeaponBuildinglink = new LinkLabel();
             ModdingBox = new CheckBox();
-            linkLabel35 = new LinkLabel();
+            FireSupportlink = new LinkLabel();
             FireSupportBox = new CheckBox();
             panel4 = new Panel();
-            linkLabel40 = new LinkLabel();
+            Texture4Klink = new LinkLabel();
             SPTTexDefaultBtn = new RadioButton();
             SPTTex4096Btn = new RadioButton();
-            linkLabel37 = new LinkLabel();
+            TextureKRlink = new LinkLabel();
             SPTTexKRBox = new CheckBox();
-            linkLabel38 = new LinkLabel();
+            LogoKRlink = new LinkLabel();
             SPTLogoKRBox = new CheckBox();
-            linkLabel39 = new LinkLabel();
+            SPTKRlink = new LinkLabel();
             SPTKRBox = new CheckBox();
             panel3 = new Panel();
             KRtabControl = new TabControl();
             KRtabPage1 = new TabPage();
-            linkLabel26 = new LinkLabel();
+            A_IndicatorKRlink = new LinkLabel();
             AudioKRBox = new CheckBox();
-            linkLabel32 = new LinkLabel();
+            G_IndicatorKRlink = new LinkLabel();
             GrenadeKRBox = new CheckBox();
-            linkLabel12 = new LinkLabel();
+            TrainerKRlink = new LinkLabel();
             TrainerKRBox = new CheckBox();
-            linkLabel13 = new LinkLabel();
+            DadGamerKRlink = new LinkLabel();
             DadGamerKRBox = new CheckBox();
-            linkLabel14 = new LinkLabel();
+            FovKRlink = new LinkLabel();
             FOVFixKRBox = new CheckBox();
-            linkLabel15 = new LinkLabel();
+            NotifierKRlink = new LinkLabel();
             NotifierKRBox = new CheckBox();
-            linkLabel17 = new LinkLabel();
+            ClutterKRlink = new LinkLabel();
             CluttererKRBox = new CheckBox();
-            linkLabel18 = new LinkLabel();
+            HudKRlink = new LinkLabel();
             HudKRBox = new CheckBox();
-            linkLabel19 = new LinkLabel();
+            GraphicsKRlink = new LinkLabel();
             GraphicsKRBox = new CheckBox();
-            linkLabel20 = new LinkLabel();
+            MapKRlink = new LinkLabel();
             MapsKRBox = new CheckBox();
-            linkLabel21 = new LinkLabel();
+            QuestingKRlink = new LinkLabel();
             QuestingBotsKRBox = new CheckBox();
-            linkLabel22 = new LinkLabel();
+            RealisemKRlink = new LinkLabel();
             RealismKRBox = new CheckBox();
-            linkLabel23 = new LinkLabel();
+            DonutKRlink = new LinkLabel();
             DonutKRBox = new CheckBox();
-            linkLabel24 = new LinkLabel();
+            SainKRlink = new LinkLabel();
             SAINKRBox = new CheckBox();
             KRtabPage2 = new TabPage();
-            linkLabel36 = new LinkLabel();
+            BloodyKRlink = new LinkLabel();
             BloodyKRBox = new CheckBox();
-            linkLabel29 = new LinkLabel();
+            WeaponBuildingKRlink = new LinkLabel();
             ModdingKRBox = new CheckBox();
-            linkLabel31 = new LinkLabel();
+            ViscreralKRlink = new LinkLabel();
             VisceralBox = new CheckBox();
-            linkLabel34 = new LinkLabel();
+            FireSupportKRlink = new LinkLabel();
             FireSupportKRBox = new CheckBox();
             label1 = new Label();
             label2 = new Label();
@@ -156,6 +158,7 @@
             LinkBox.ReadOnly = true;
             LinkBox.Size = new Size(483, 23);
             LinkBox.TabIndex = 3;
+            LinkBox.Text = "SPT 폴더를 지정해주세요. ex) C:\\SPT\r\n";
             // 
             // InstallBtn
             // 
@@ -215,35 +218,37 @@
             // 
             // ModtabPage1
             // 
-            ModtabPage1.Controls.Add(linkLabel25);
-            ModtabPage1.Controls.Add(AudioBox);
-            ModtabPage1.Controls.Add(linkLabel27);
-            ModtabPage1.Controls.Add(ContextMenuBox);
-            ModtabPage1.Controls.Add(linkLabel28);
-            ModtabPage1.Controls.Add(GrenadeBox);
             ModtabPage1.Controls.Add(linkLabel1);
+            ModtabPage1.Controls.Add(SVMBox);
+            ModtabPage1.Controls.Add(A_Indicatorlink);
+            ModtabPage1.Controls.Add(AudioBox);
+            ModtabPage1.Controls.Add(Contentlink);
+            ModtabPage1.Controls.Add(ContextMenuBox);
+            ModtabPage1.Controls.Add(G_Indicatorlink);
+            ModtabPage1.Controls.Add(GrenadeBox);
+            ModtabPage1.Controls.Add(Trainerlink);
             ModtabPage1.Controls.Add(TrainerBox);
-            ModtabPage1.Controls.Add(linkLabel2);
+            ModtabPage1.Controls.Add(DadGamerlink);
             ModtabPage1.Controls.Add(DadGamerBox);
-            ModtabPage1.Controls.Add(linkLabel3);
+            ModtabPage1.Controls.Add(Fovlink);
             ModtabPage1.Controls.Add(FOVFixBox);
-            ModtabPage1.Controls.Add(linkLabel4);
+            ModtabPage1.Controls.Add(Notifierlink);
             ModtabPage1.Controls.Add(NotifierBox);
-            ModtabPage1.Controls.Add(linkLabel5);
+            ModtabPage1.Controls.Add(Clutterlink);
             ModtabPage1.Controls.Add(CluttererBox);
-            ModtabPage1.Controls.Add(linkLabel6);
+            ModtabPage1.Controls.Add(Hudlink);
             ModtabPage1.Controls.Add(HudBox);
-            ModtabPage1.Controls.Add(linkLabel7);
+            ModtabPage1.Controls.Add(Graphicslink);
             ModtabPage1.Controls.Add(GraphicsBox);
-            ModtabPage1.Controls.Add(linkLabel8);
+            ModtabPage1.Controls.Add(Maplink);
             ModtabPage1.Controls.Add(MapsBox);
-            ModtabPage1.Controls.Add(linkLabel9);
+            ModtabPage1.Controls.Add(Questinglink);
             ModtabPage1.Controls.Add(QuestingBotsBox);
-            ModtabPage1.Controls.Add(linkLabel10);
+            ModtabPage1.Controls.Add(Realisemlink);
             ModtabPage1.Controls.Add(RealismBox);
-            ModtabPage1.Controls.Add(linkLabel11);
+            ModtabPage1.Controls.Add(Donutlink);
             ModtabPage1.Controls.Add(DonutBox);
-            ModtabPage1.Controls.Add(linkLabel16);
+            ModtabPage1.Controls.Add(Sainlink);
             ModtabPage1.Controls.Add(SAINBox);
             ModtabPage1.Location = new Point(4, 44);
             ModtabPage1.Name = "ModtabPage1";
@@ -253,39 +258,61 @@
             ModtabPage1.Text = "1페이지";
             ModtabPage1.UseVisualStyleBackColor = true;
             // 
-            // linkLabel25
+            // linkLabel1
             // 
-            linkLabel25.AutoSize = true;
-            linkLabel25.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel25.LinkColor = Color.Black;
-            linkLabel25.Location = new Point(250, 195);
-            linkLabel25.Name = "linkLabel25";
-            linkLabel25.Size = new Size(150, 42);
-            linkLabel25.TabIndex = 91;
-            linkLabel25.TabStop = true;
-            linkLabel25.Text = "Audio Accessibility\r\nIndicators";
+            linkLabel1.AutoSize = true;
+            linkLabel1.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            linkLabel1.LinkColor = Color.Black;
+            linkLabel1.Location = new Point(250, 36);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(146, 21);
+            linkLabel1.TabIndex = 93;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "SVM (공식 한글화)";
+            // 
+            // SVMBox
+            // 
+            SVMBox.AutoSize = true;
+            SVMBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            SVMBox.Location = new Point(229, 42);
+            SVMBox.Name = "SVMBox";
+            SVMBox.Size = new Size(15, 14);
+            SVMBox.TabIndex = 92;
+            SVMBox.UseVisualStyleBackColor = true;
+            // 
+            // A_Indicatorlink
+            // 
+            A_Indicatorlink.AutoSize = true;
+            A_Indicatorlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            A_Indicatorlink.LinkColor = Color.Black;
+            A_Indicatorlink.Location = new Point(250, 226);
+            A_Indicatorlink.Name = "A_Indicatorlink";
+            A_Indicatorlink.Size = new Size(150, 42);
+            A_Indicatorlink.TabIndex = 91;
+            A_Indicatorlink.TabStop = true;
+            A_Indicatorlink.Text = "Audio Accessibility\r\nIndicators";
             // 
             // AudioBox
             // 
             AudioBox.AutoSize = true;
             AudioBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            AudioBox.Location = new Point(229, 201);
+            AudioBox.Location = new Point(229, 232);
             AudioBox.Name = "AudioBox";
             AudioBox.Size = new Size(15, 14);
             AudioBox.TabIndex = 90;
             AudioBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel27
+            // Contentlink
             // 
-            linkLabel27.AutoSize = true;
-            linkLabel27.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel27.LinkColor = Color.Black;
-            linkLabel27.Location = new Point(26, 221);
-            linkLabel27.Name = "linkLabel27";
-            linkLabel27.Size = new Size(157, 42);
-            linkLabel27.TabIndex = 89;
-            linkLabel27.TabStop = true;
-            linkLabel27.Text = "Item Context Menu\r\n(포팅 - 한글화 포함)";
+            Contentlink.AutoSize = true;
+            Contentlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            Contentlink.LinkColor = Color.Black;
+            Contentlink.Location = new Point(26, 221);
+            Contentlink.Name = "Contentlink";
+            Contentlink.Size = new Size(157, 42);
+            Contentlink.TabIndex = 89;
+            Contentlink.TabStop = true;
+            Contentlink.Text = "Item Context Menu\r\n(포팅 - 한글화 포함)";
             // 
             // ContextMenuBox
             // 
@@ -297,17 +324,17 @@
             ContextMenuBox.TabIndex = 88;
             ContextMenuBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel28
+            // G_Indicatorlink
             // 
-            linkLabel28.AutoSize = true;
-            linkLabel28.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel28.LinkColor = Color.Black;
-            linkLabel28.Location = new Point(27, 195);
-            linkLabel28.Name = "linkLabel28";
-            linkLabel28.Size = new Size(143, 21);
-            linkLabel28.TabIndex = 87;
-            linkLabel28.TabStop = true;
-            linkLabel28.Text = "Grenade Indicator";
+            G_Indicatorlink.AutoSize = true;
+            G_Indicatorlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            G_Indicatorlink.LinkColor = Color.Black;
+            G_Indicatorlink.Location = new Point(27, 195);
+            G_Indicatorlink.Name = "G_Indicatorlink";
+            G_Indicatorlink.Size = new Size(143, 21);
+            G_Indicatorlink.TabIndex = 87;
+            G_Indicatorlink.TabStop = true;
+            G_Indicatorlink.Text = "Grenade Indicator";
             // 
             // GrenadeBox
             // 
@@ -319,39 +346,39 @@
             GrenadeBox.TabIndex = 86;
             GrenadeBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel1
+            // Trainerlink
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel1.LinkColor = Color.Black;
-            linkLabel1.Location = new Point(250, 163);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(129, 21);
-            linkLabel1.TabIndex = 85;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Personal Trainer";
+            Trainerlink.AutoSize = true;
+            Trainerlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            Trainerlink.LinkColor = Color.Black;
+            Trainerlink.Location = new Point(250, 194);
+            Trainerlink.Name = "Trainerlink";
+            Trainerlink.Size = new Size(129, 21);
+            Trainerlink.TabIndex = 85;
+            Trainerlink.TabStop = true;
+            Trainerlink.Text = "Personal Trainer";
             // 
             // TrainerBox
             // 
             TrainerBox.AutoSize = true;
             TrainerBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            TrainerBox.Location = new Point(229, 169);
+            TrainerBox.Location = new Point(229, 200);
             TrainerBox.Name = "TrainerBox";
             TrainerBox.Size = new Size(15, 14);
             TrainerBox.TabIndex = 84;
             TrainerBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel2
+            // DadGamerlink
             // 
-            linkLabel2.AutoSize = true;
-            linkLabel2.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel2.LinkColor = Color.Black;
-            linkLabel2.Location = new Point(27, 163);
-            linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(143, 21);
-            linkLabel2.TabIndex = 83;
-            linkLabel2.TabStop = true;
-            linkLabel2.Text = "Dad Gamer Mode";
+            DadGamerlink.AutoSize = true;
+            DadGamerlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            DadGamerlink.LinkColor = Color.Black;
+            DadGamerlink.Location = new Point(27, 163);
+            DadGamerlink.Name = "DadGamerlink";
+            DadGamerlink.Size = new Size(143, 21);
+            DadGamerlink.TabIndex = 83;
+            DadGamerlink.TabStop = true;
+            DadGamerlink.Text = "Dad Gamer Mode";
             // 
             // DadGamerBox
             // 
@@ -363,39 +390,39 @@
             DadGamerBox.TabIndex = 82;
             DadGamerBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel3
+            // Fovlink
             // 
-            linkLabel3.AutoSize = true;
-            linkLabel3.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel3.LinkColor = Color.Black;
-            linkLabel3.Location = new Point(250, 131);
-            linkLabel3.Name = "linkLabel3";
-            linkLabel3.Size = new Size(145, 21);
-            linkLabel3.TabIndex = 81;
-            linkLabel3.TabStop = true;
-            linkLabel3.Text = "Fontaine's FOV Fix";
+            Fovlink.AutoSize = true;
+            Fovlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            Fovlink.LinkColor = Color.Black;
+            Fovlink.Location = new Point(250, 162);
+            Fovlink.Name = "Fovlink";
+            Fovlink.Size = new Size(145, 21);
+            Fovlink.TabIndex = 81;
+            Fovlink.TabStop = true;
+            Fovlink.Text = "Fontaine's FOV Fix";
             // 
             // FOVFixBox
             // 
             FOVFixBox.AutoSize = true;
             FOVFixBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            FOVFixBox.Location = new Point(229, 137);
+            FOVFixBox.Location = new Point(229, 168);
             FOVFixBox.Name = "FOVFixBox";
             FOVFixBox.Size = new Size(15, 14);
             FOVFixBox.TabIndex = 80;
             FOVFixBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel4
+            // Notifierlink
             // 
-            linkLabel4.AutoSize = true;
-            linkLabel4.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel4.LinkColor = Color.Black;
-            linkLabel4.Location = new Point(27, 131);
-            linkLabel4.Name = "linkLabel4";
-            linkLabel4.Size = new Size(105, 21);
-            linkLabel4.TabIndex = 79;
-            linkLabel4.TabStop = true;
-            linkLabel4.Text = "Boss Notifier";
+            Notifierlink.AutoSize = true;
+            Notifierlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            Notifierlink.LinkColor = Color.Black;
+            Notifierlink.Location = new Point(27, 131);
+            Notifierlink.Name = "Notifierlink";
+            Notifierlink.Size = new Size(105, 21);
+            Notifierlink.TabIndex = 79;
+            Notifierlink.TabStop = true;
+            Notifierlink.Text = "Boss Notifier";
             // 
             // NotifierBox
             // 
@@ -407,39 +434,39 @@
             NotifierBox.TabIndex = 78;
             NotifierBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel5
+            // Clutterlink
             // 
-            linkLabel5.AutoSize = true;
-            linkLabel5.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel5.LinkColor = Color.Black;
-            linkLabel5.Location = new Point(250, 101);
-            linkLabel5.Name = "linkLabel5";
-            linkLabel5.Size = new Size(102, 21);
-            linkLabel5.TabIndex = 77;
-            linkLabel5.TabStop = true;
-            linkLabel5.Text = "De-Clutterer";
+            Clutterlink.AutoSize = true;
+            Clutterlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            Clutterlink.LinkColor = Color.Black;
+            Clutterlink.Location = new Point(250, 132);
+            Clutterlink.Name = "Clutterlink";
+            Clutterlink.Size = new Size(102, 21);
+            Clutterlink.TabIndex = 77;
+            Clutterlink.TabStop = true;
+            Clutterlink.Text = "De-Clutterer";
             // 
             // CluttererBox
             // 
             CluttererBox.AutoSize = true;
             CluttererBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            CluttererBox.Location = new Point(229, 107);
+            CluttererBox.Location = new Point(229, 138);
             CluttererBox.Name = "CluttererBox";
             CluttererBox.Size = new Size(15, 14);
             CluttererBox.TabIndex = 76;
             CluttererBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel6
+            // Hudlink
             // 
-            linkLabel6.AutoSize = true;
-            linkLabel6.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel6.LinkColor = Color.Black;
-            linkLabel6.Location = new Point(27, 101);
-            linkLabel6.Name = "linkLabel6";
-            linkLabel6.Size = new Size(143, 21);
-            linkLabel6.TabIndex = 75;
-            linkLabel6.TabStop = true;
-            linkLabel6.Text = "Game Pannel Hud";
+            Hudlink.AutoSize = true;
+            Hudlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            Hudlink.LinkColor = Color.Black;
+            Hudlink.Location = new Point(27, 101);
+            Hudlink.Name = "Hudlink";
+            Hudlink.Size = new Size(143, 21);
+            Hudlink.TabIndex = 75;
+            Hudlink.TabStop = true;
+            Hudlink.Text = "Game Pannel Hud";
             // 
             // HudBox
             // 
@@ -451,39 +478,39 @@
             HudBox.TabIndex = 74;
             HudBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel7
+            // Graphicslink
             // 
-            linkLabel7.AutoSize = true;
-            linkLabel7.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel7.LinkColor = Color.Black;
-            linkLabel7.Location = new Point(250, 68);
-            linkLabel7.Name = "linkLabel7";
-            linkLabel7.Size = new Size(139, 21);
-            linkLabel7.TabIndex = 73;
-            linkLabel7.TabStop = true;
-            linkLabel7.Text = "Amanda Graphics";
+            Graphicslink.AutoSize = true;
+            Graphicslink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            Graphicslink.LinkColor = Color.Black;
+            Graphicslink.Location = new Point(250, 99);
+            Graphicslink.Name = "Graphicslink";
+            Graphicslink.Size = new Size(139, 21);
+            Graphicslink.TabIndex = 73;
+            Graphicslink.TabStop = true;
+            Graphicslink.Text = "Amanda Graphics";
             // 
             // GraphicsBox
             // 
             GraphicsBox.AutoSize = true;
             GraphicsBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            GraphicsBox.Location = new Point(229, 74);
+            GraphicsBox.Location = new Point(229, 105);
             GraphicsBox.Name = "GraphicsBox";
             GraphicsBox.Size = new Size(15, 14);
             GraphicsBox.TabIndex = 72;
             GraphicsBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel8
+            // Maplink
             // 
-            linkLabel8.AutoSize = true;
-            linkLabel8.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel8.LinkColor = Color.Black;
-            linkLabel8.Location = new Point(27, 68);
-            linkLabel8.Name = "linkLabel8";
-            linkLabel8.Size = new Size(118, 21);
-            linkLabel8.TabIndex = 71;
-            linkLabel8.TabStop = true;
-            linkLabel8.Text = "Dynamic Maps";
+            Maplink.AutoSize = true;
+            Maplink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            Maplink.LinkColor = Color.Black;
+            Maplink.Location = new Point(27, 68);
+            Maplink.Name = "Maplink";
+            Maplink.Size = new Size(118, 21);
+            Maplink.TabIndex = 71;
+            Maplink.TabStop = true;
+            Maplink.Text = "Dynamic Maps";
             // 
             // MapsBox
             // 
@@ -495,39 +522,40 @@
             MapsBox.TabIndex = 70;
             MapsBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel9
+            // Questinglink
             // 
-            linkLabel9.AutoSize = true;
-            linkLabel9.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel9.LinkColor = Color.Black;
-            linkLabel9.Location = new Point(250, 36);
-            linkLabel9.Name = "linkLabel9";
-            linkLabel9.Size = new Size(114, 21);
-            linkLabel9.TabIndex = 69;
-            linkLabel9.TabStop = true;
-            linkLabel9.Text = "Questing Bots";
+            Questinglink.AutoSize = true;
+            Questinglink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            Questinglink.LinkColor = Color.Black;
+            Questinglink.Location = new Point(250, 67);
+            Questinglink.Name = "Questinglink";
+            Questinglink.Size = new Size(114, 21);
+            Questinglink.TabIndex = 69;
+            Questinglink.TabStop = true;
+            Questinglink.Text = "Questing Bots";
             // 
             // QuestingBotsBox
             // 
             QuestingBotsBox.AutoSize = true;
             QuestingBotsBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            QuestingBotsBox.Location = new Point(229, 42);
+            QuestingBotsBox.Location = new Point(229, 73);
             QuestingBotsBox.Name = "QuestingBotsBox";
             QuestingBotsBox.Size = new Size(15, 14);
             QuestingBotsBox.TabIndex = 68;
             QuestingBotsBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel10
+            // Realisemlink
             // 
-            linkLabel10.AutoSize = true;
-            linkLabel10.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel10.LinkColor = Color.Black;
-            linkLabel10.Location = new Point(27, 36);
-            linkLabel10.Name = "linkLabel10";
-            linkLabel10.Size = new Size(140, 21);
-            linkLabel10.TabIndex = 67;
-            linkLabel10.TabStop = true;
-            linkLabel10.Text = "SPT Realism Mod";
+            Realisemlink.AutoSize = true;
+            Realisemlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            Realisemlink.LinkColor = Color.Black;
+            Realisemlink.Location = new Point(27, 36);
+            Realisemlink.Name = "Realisemlink";
+            Realisemlink.Size = new Size(140, 21);
+            Realisemlink.TabIndex = 67;
+            Realisemlink.TabStop = true;
+            Realisemlink.Text = "SPT Realism Mod";
+            Realisemlink.LinkClicked += Realisemlink_LinkClicked;
             // 
             // RealismBox
             // 
@@ -539,17 +567,17 @@
             RealismBox.TabIndex = 66;
             RealismBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel11
+            // Donutlink
             // 
-            linkLabel11.AutoSize = true;
-            linkLabel11.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel11.LinkColor = Color.Black;
-            linkLabel11.Location = new Point(250, 6);
-            linkLabel11.Name = "linkLabel11";
-            linkLabel11.Size = new Size(55, 21);
-            linkLabel11.TabIndex = 65;
-            linkLabel11.TabStop = true;
-            linkLabel11.Text = "Donut";
+            Donutlink.AutoSize = true;
+            Donutlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            Donutlink.LinkColor = Color.Black;
+            Donutlink.Location = new Point(250, 6);
+            Donutlink.Name = "Donutlink";
+            Donutlink.Size = new Size(55, 21);
+            Donutlink.TabIndex = 65;
+            Donutlink.TabStop = true;
+            Donutlink.Text = "Donut";
             // 
             // DonutBox
             // 
@@ -561,17 +589,18 @@
             DonutBox.TabIndex = 64;
             DonutBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel16
+            // Sainlink
             // 
-            linkLabel16.AutoSize = true;
-            linkLabel16.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel16.LinkColor = Color.Black;
-            linkLabel16.Location = new Point(27, 6);
-            linkLabel16.Name = "linkLabel16";
-            linkLabel16.Size = new Size(46, 21);
-            linkLabel16.TabIndex = 63;
-            linkLabel16.TabStop = true;
-            linkLabel16.Text = "SAIN";
+            Sainlink.AutoSize = true;
+            Sainlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            Sainlink.LinkColor = Color.Black;
+            Sainlink.Location = new Point(27, 6);
+            Sainlink.Name = "Sainlink";
+            Sainlink.Size = new Size(46, 21);
+            Sainlink.TabIndex = 63;
+            Sainlink.TabStop = true;
+            Sainlink.Text = "SAIN";
+            Sainlink.LinkClicked += Sainlink_LinkClicked;
             // 
             // SAINBox
             // 
@@ -585,11 +614,11 @@
             // 
             // ModtabPage2
             // 
-            ModtabPage2.Controls.Add(linkLabel33);
+            ModtabPage2.Controls.Add(Bloodylink);
             ModtabPage2.Controls.Add(BloodyBox);
-            ModtabPage2.Controls.Add(linkLabel30);
+            ModtabPage2.Controls.Add(WeaponBuildinglink);
             ModtabPage2.Controls.Add(ModdingBox);
-            ModtabPage2.Controls.Add(linkLabel35);
+            ModtabPage2.Controls.Add(FireSupportlink);
             ModtabPage2.Controls.Add(FireSupportBox);
             ModtabPage2.Location = new Point(4, 44);
             ModtabPage2.Name = "ModtabPage2";
@@ -599,17 +628,17 @@
             ModtabPage2.Text = "2페이지";
             ModtabPage2.UseVisualStyleBackColor = true;
             // 
-            // linkLabel33
+            // Bloodylink
             // 
-            linkLabel33.AutoSize = true;
-            linkLabel33.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel33.LinkColor = Color.Black;
-            linkLabel33.Location = new Point(40, 111);
-            linkLabel33.Name = "linkLabel33";
-            linkLabel33.Size = new Size(254, 42);
-            linkLabel33.TabIndex = 85;
-            linkLabel33.TabStop = true;
-            linkLabel33.Text = "Borkel's Bloody Bullet Wounds +\r\nParticles + Splatters";
+            Bloodylink.AutoSize = true;
+            Bloodylink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            Bloodylink.LinkColor = Color.Black;
+            Bloodylink.Location = new Point(40, 111);
+            Bloodylink.Name = "Bloodylink";
+            Bloodylink.Size = new Size(254, 42);
+            Bloodylink.TabIndex = 85;
+            Bloodylink.TabStop = true;
+            Bloodylink.Text = "Borkel's Bloody Bullet Wounds +\r\nParticles + Splatters";
             // 
             // BloodyBox
             // 
@@ -621,17 +650,17 @@
             BloodyBox.TabIndex = 84;
             BloodyBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel30
+            // WeaponBuildinglink
             // 
-            linkLabel30.AutoSize = true;
-            linkLabel30.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel30.LinkColor = Color.Black;
-            linkLabel30.Location = new Point(40, 56);
-            linkLabel30.Name = "linkLabel30";
-            linkLabel30.Size = new Size(213, 42);
-            linkLabel30.TabIndex = 83;
-            linkLabel30.TabStop = true;
-            linkLabel30.Text = "Trader Modding and \r\nImproved Weapon Building";
+            WeaponBuildinglink.AutoSize = true;
+            WeaponBuildinglink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            WeaponBuildinglink.LinkColor = Color.Black;
+            WeaponBuildinglink.Location = new Point(40, 56);
+            WeaponBuildinglink.Name = "WeaponBuildinglink";
+            WeaponBuildinglink.Size = new Size(213, 42);
+            WeaponBuildinglink.TabIndex = 83;
+            WeaponBuildinglink.TabStop = true;
+            WeaponBuildinglink.Text = "Trader Modding and \r\nImproved Weapon Building";
             // 
             // ModdingBox
             // 
@@ -643,17 +672,17 @@
             ModdingBox.TabIndex = 82;
             ModdingBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel35
+            // FireSupportlink
             // 
-            linkLabel35.AutoSize = true;
-            linkLabel35.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel35.LinkColor = Color.Black;
-            linkLabel35.Location = new Point(40, 21);
-            linkLabel35.Name = "linkLabel35";
-            linkLabel35.Size = new Size(195, 21);
-            linkLabel35.TabIndex = 75;
-            linkLabel35.TabStop = true;
-            linkLabel35.Text = "SamSWAT's Fire Support";
+            FireSupportlink.AutoSize = true;
+            FireSupportlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            FireSupportlink.LinkColor = Color.Black;
+            FireSupportlink.Location = new Point(40, 21);
+            FireSupportlink.Name = "FireSupportlink";
+            FireSupportlink.Size = new Size(195, 21);
+            FireSupportlink.TabIndex = 75;
+            FireSupportlink.TabStop = true;
+            FireSupportlink.Text = "SamSWAT's Fire Support";
             // 
             // FireSupportBox
             // 
@@ -669,38 +698,38 @@
             // 
             panel4.BackColor = SystemColors.ButtonHighlight;
             panel4.BorderStyle = BorderStyle.FixedSingle;
-            panel4.Controls.Add(linkLabel40);
+            panel4.Controls.Add(Texture4Klink);
             panel4.Controls.Add(SPTTexDefaultBtn);
             panel4.Controls.Add(SPTTex4096Btn);
-            panel4.Controls.Add(linkLabel37);
+            panel4.Controls.Add(TextureKRlink);
             panel4.Controls.Add(SPTTexKRBox);
-            panel4.Controls.Add(linkLabel38);
+            panel4.Controls.Add(LogoKRlink);
             panel4.Controls.Add(SPTLogoKRBox);
-            panel4.Controls.Add(linkLabel39);
+            panel4.Controls.Add(SPTKRlink);
             panel4.Controls.Add(SPTKRBox);
             panel4.Location = new Point(156, 64);
             panel4.Name = "panel4";
             panel4.Size = new Size(638, 110);
             panel4.TabIndex = 8;
             // 
-            // linkLabel40
+            // Texture4Klink
             // 
-            linkLabel40.AutoSize = true;
-            linkLabel40.Font = new Font("맑은 고딕", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel40.LinkColor = Color.Black;
-            linkLabel40.Location = new Point(513, 56);
-            linkLabel40.Name = "linkLabel40";
-            linkLabel40.Size = new Size(84, 40);
-            linkLabel40.TabIndex = 94;
-            linkLabel40.TabStop = true;
-            linkLabel40.Text = "4K 버전\r\n(수동 설치)";
+            Texture4Klink.AutoSize = true;
+            Texture4Klink.Font = new Font("맑은 고딕", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            Texture4Klink.LinkColor = Color.Black;
+            Texture4Klink.Location = new Point(513, 48);
+            Texture4Klink.Name = "Texture4Klink";
+            Texture4Klink.Size = new Size(84, 40);
+            Texture4Klink.TabIndex = 94;
+            Texture4Klink.TabStop = true;
+            Texture4Klink.Text = "4K 버전\r\n(수동 설치)";
             // 
             // SPTTexDefaultBtn
             // 
             SPTTexDefaultBtn.AutoSize = true;
             SPTTexDefaultBtn.Enabled = false;
             SPTTexDefaultBtn.Font = new Font("맑은 고딕", 11.25F);
-            SPTTexDefaultBtn.Location = new Point(493, 29);
+            SPTTexDefaultBtn.Location = new Point(493, 21);
             SPTTexDefaultBtn.Name = "SPTTexDefaultBtn";
             SPTTexDefaultBtn.Size = new Size(92, 24);
             SPTTexDefaultBtn.TabIndex = 93;
@@ -713,47 +742,47 @@
             SPTTex4096Btn.AutoSize = true;
             SPTTex4096Btn.Enabled = false;
             SPTTex4096Btn.Font = new Font("맑은 고딕", 11.25F);
-            SPTTex4096Btn.Location = new Point(493, 70);
+            SPTTex4096Btn.Location = new Point(493, 62);
             SPTTex4096Btn.Name = "SPTTex4096Btn";
             SPTTex4096Btn.Size = new Size(14, 13);
             SPTTex4096Btn.TabIndex = 92;
             SPTTex4096Btn.TabStop = true;
             SPTTex4096Btn.UseVisualStyleBackColor = true;
             // 
-            // linkLabel37
+            // TextureKRlink
             // 
-            linkLabel37.AutoSize = true;
-            linkLabel37.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel37.LinkColor = Color.Black;
-            linkLabel37.Location = new Point(348, 26);
-            linkLabel37.Name = "linkLabel37";
-            linkLabel37.Size = new Size(128, 63);
-            linkLabel37.TabIndex = 91;
-            linkLabel37.TabStop = true;
-            linkLabel37.Text = "SPT 타르코프 \r\n아이템 텍스처 \r\n한글화 프로젝트";
+            TextureKRlink.AutoSize = true;
+            TextureKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            TextureKRlink.LinkColor = Color.Black;
+            TextureKRlink.Location = new Point(348, 21);
+            TextureKRlink.Name = "TextureKRlink";
+            TextureKRlink.Size = new Size(128, 63);
+            TextureKRlink.TabIndex = 91;
+            TextureKRlink.TabStop = true;
+            TextureKRlink.Text = "SPT 타르코프 \r\n아이템 텍스처 \r\n한글화 프로젝트";
             // 
             // SPTTexKRBox
             // 
             SPTTexKRBox.AutoSize = true;
             SPTTexKRBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            SPTTexKRBox.Location = new Point(327, 32);
+            SPTTexKRBox.Location = new Point(327, 27);
             SPTTexKRBox.Name = "SPTTexKRBox";
             SPTTexKRBox.Size = new Size(15, 14);
             SPTTexKRBox.TabIndex = 90;
             SPTTexKRBox.UseVisualStyleBackColor = true;
             SPTTexKRBox.CheckedChanged += SPTTexKRBox_CheckedChanged;
             // 
-            // linkLabel38
+            // LogoKRlink
             // 
-            linkLabel38.AutoSize = true;
-            linkLabel38.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel38.LinkColor = Color.Black;
-            linkLabel38.Location = new Point(206, 33);
-            linkLabel38.Name = "linkLabel38";
-            linkLabel38.Size = new Size(96, 42);
-            linkLabel38.TabIndex = 89;
-            linkLabel38.TabStop = true;
-            linkLabel38.Text = "타르코프 \r\n로고 한글화";
+            LogoKRlink.AutoSize = true;
+            LogoKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            LogoKRlink.LinkColor = Color.Black;
+            LogoKRlink.Location = new Point(206, 33);
+            LogoKRlink.Name = "LogoKRlink";
+            LogoKRlink.Size = new Size(96, 42);
+            LogoKRlink.TabIndex = 89;
+            LogoKRlink.TabStop = true;
+            LogoKRlink.Text = "타르코프 \r\n로고 한글화";
             // 
             // SPTLogoKRBox
             // 
@@ -765,17 +794,17 @@
             SPTLogoKRBox.TabIndex = 88;
             SPTLogoKRBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel39
+            // SPTKRlink
             // 
-            linkLabel39.AutoSize = true;
-            linkLabel39.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel39.LinkColor = Color.Black;
-            linkLabel39.Location = new Point(39, 33);
-            linkLabel39.Name = "linkLabel39";
-            linkLabel39.Size = new Size(128, 42);
-            linkLabel39.TabIndex = 87;
-            linkLabel39.TabStop = true;
-            linkLabel39.Text = "SPT 타르코프 \r\n한글화 프로젝트";
+            SPTKRlink.AutoSize = true;
+            SPTKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            SPTKRlink.LinkColor = Color.Black;
+            SPTKRlink.Location = new Point(39, 33);
+            SPTKRlink.Name = "SPTKRlink";
+            SPTKRlink.Size = new Size(128, 42);
+            SPTKRlink.TabIndex = 87;
+            SPTKRlink.TabStop = true;
+            SPTKRlink.Text = "SPT 타르코프 \r\n한글화 프로젝트";
             // 
             // SPTKRBox
             // 
@@ -810,33 +839,33 @@
             // 
             // KRtabPage1
             // 
-            KRtabPage1.Controls.Add(linkLabel26);
+            KRtabPage1.Controls.Add(A_IndicatorKRlink);
             KRtabPage1.Controls.Add(AudioKRBox);
-            KRtabPage1.Controls.Add(linkLabel32);
+            KRtabPage1.Controls.Add(G_IndicatorKRlink);
             KRtabPage1.Controls.Add(GrenadeKRBox);
-            KRtabPage1.Controls.Add(linkLabel12);
+            KRtabPage1.Controls.Add(TrainerKRlink);
             KRtabPage1.Controls.Add(TrainerKRBox);
-            KRtabPage1.Controls.Add(linkLabel13);
+            KRtabPage1.Controls.Add(DadGamerKRlink);
             KRtabPage1.Controls.Add(DadGamerKRBox);
-            KRtabPage1.Controls.Add(linkLabel14);
+            KRtabPage1.Controls.Add(FovKRlink);
             KRtabPage1.Controls.Add(FOVFixKRBox);
-            KRtabPage1.Controls.Add(linkLabel15);
+            KRtabPage1.Controls.Add(NotifierKRlink);
             KRtabPage1.Controls.Add(NotifierKRBox);
-            KRtabPage1.Controls.Add(linkLabel17);
+            KRtabPage1.Controls.Add(ClutterKRlink);
             KRtabPage1.Controls.Add(CluttererKRBox);
-            KRtabPage1.Controls.Add(linkLabel18);
+            KRtabPage1.Controls.Add(HudKRlink);
             KRtabPage1.Controls.Add(HudKRBox);
-            KRtabPage1.Controls.Add(linkLabel19);
+            KRtabPage1.Controls.Add(GraphicsKRlink);
             KRtabPage1.Controls.Add(GraphicsKRBox);
-            KRtabPage1.Controls.Add(linkLabel20);
+            KRtabPage1.Controls.Add(MapKRlink);
             KRtabPage1.Controls.Add(MapsKRBox);
-            KRtabPage1.Controls.Add(linkLabel21);
+            KRtabPage1.Controls.Add(QuestingKRlink);
             KRtabPage1.Controls.Add(QuestingBotsKRBox);
-            KRtabPage1.Controls.Add(linkLabel22);
+            KRtabPage1.Controls.Add(RealisemKRlink);
             KRtabPage1.Controls.Add(RealismKRBox);
-            KRtabPage1.Controls.Add(linkLabel23);
+            KRtabPage1.Controls.Add(DonutKRlink);
             KRtabPage1.Controls.Add(DonutKRBox);
-            KRtabPage1.Controls.Add(linkLabel24);
+            KRtabPage1.Controls.Add(SainKRlink);
             KRtabPage1.Controls.Add(SAINKRBox);
             KRtabPage1.Location = new Point(4, 44);
             KRtabPage1.Name = "KRtabPage1";
@@ -846,39 +875,39 @@
             KRtabPage1.Text = "1페이지";
             KRtabPage1.UseVisualStyleBackColor = true;
             // 
-            // linkLabel26
+            // A_IndicatorKRlink
             // 
-            linkLabel26.AutoSize = true;
-            linkLabel26.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel26.LinkColor = Color.Black;
-            linkLabel26.Location = new Point(253, 194);
-            linkLabel26.Name = "linkLabel26";
-            linkLabel26.Size = new Size(150, 42);
-            linkLabel26.TabIndex = 93;
-            linkLabel26.TabStop = true;
-            linkLabel26.Text = "Audio Accessibility\r\nIndicators - KR";
+            A_IndicatorKRlink.AutoSize = true;
+            A_IndicatorKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            A_IndicatorKRlink.LinkColor = Color.Black;
+            A_IndicatorKRlink.Location = new Point(253, 223);
+            A_IndicatorKRlink.Name = "A_IndicatorKRlink";
+            A_IndicatorKRlink.Size = new Size(150, 42);
+            A_IndicatorKRlink.TabIndex = 93;
+            A_IndicatorKRlink.TabStop = true;
+            A_IndicatorKRlink.Text = "Audio Accessibility\r\nIndicators - KR";
             // 
             // AudioKRBox
             // 
             AudioKRBox.AutoSize = true;
             AudioKRBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            AudioKRBox.Location = new Point(232, 200);
+            AudioKRBox.Location = new Point(232, 229);
             AudioKRBox.Name = "AudioKRBox";
             AudioKRBox.Size = new Size(15, 14);
             AudioKRBox.TabIndex = 92;
             AudioKRBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel32
+            // G_IndicatorKRlink
             // 
-            linkLabel32.AutoSize = true;
-            linkLabel32.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel32.LinkColor = Color.Black;
-            linkLabel32.Location = new Point(30, 193);
-            linkLabel32.Name = "linkLabel32";
-            linkLabel32.Size = new Size(181, 21);
-            linkLabel32.TabIndex = 63;
-            linkLabel32.TabStop = true;
-            linkLabel32.Text = "Grenade Indicator - KR";
+            G_IndicatorKRlink.AutoSize = true;
+            G_IndicatorKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            G_IndicatorKRlink.LinkColor = Color.Black;
+            G_IndicatorKRlink.Location = new Point(30, 193);
+            G_IndicatorKRlink.Name = "G_IndicatorKRlink";
+            G_IndicatorKRlink.Size = new Size(181, 21);
+            G_IndicatorKRlink.TabIndex = 63;
+            G_IndicatorKRlink.TabStop = true;
+            G_IndicatorKRlink.Text = "Grenade Indicator - KR";
             // 
             // GrenadeKRBox
             // 
@@ -890,39 +919,39 @@
             GrenadeKRBox.TabIndex = 62;
             GrenadeKRBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel12
+            // TrainerKRlink
             // 
-            linkLabel12.AutoSize = true;
-            linkLabel12.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel12.LinkColor = Color.Black;
-            linkLabel12.Location = new Point(253, 163);
-            linkLabel12.Name = "linkLabel12";
-            linkLabel12.Size = new Size(167, 21);
-            linkLabel12.TabIndex = 61;
-            linkLabel12.TabStop = true;
-            linkLabel12.Text = "Personal Trainer - KR";
+            TrainerKRlink.AutoSize = true;
+            TrainerKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            TrainerKRlink.LinkColor = Color.Black;
+            TrainerKRlink.Location = new Point(253, 192);
+            TrainerKRlink.Name = "TrainerKRlink";
+            TrainerKRlink.Size = new Size(167, 21);
+            TrainerKRlink.TabIndex = 61;
+            TrainerKRlink.TabStop = true;
+            TrainerKRlink.Text = "Personal Trainer - KR";
             // 
             // TrainerKRBox
             // 
             TrainerKRBox.AutoSize = true;
             TrainerKRBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            TrainerKRBox.Location = new Point(232, 169);
+            TrainerKRBox.Location = new Point(232, 198);
             TrainerKRBox.Name = "TrainerKRBox";
             TrainerKRBox.Size = new Size(15, 14);
             TrainerKRBox.TabIndex = 60;
             TrainerKRBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel13
+            // DadGamerKRlink
             // 
-            linkLabel13.AutoSize = true;
-            linkLabel13.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel13.LinkColor = Color.Black;
-            linkLabel13.Location = new Point(30, 163);
-            linkLabel13.Name = "linkLabel13";
-            linkLabel13.Size = new Size(181, 21);
-            linkLabel13.TabIndex = 59;
-            linkLabel13.TabStop = true;
-            linkLabel13.Text = "Dad Gamer Mode - KR";
+            DadGamerKRlink.AutoSize = true;
+            DadGamerKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            DadGamerKRlink.LinkColor = Color.Black;
+            DadGamerKRlink.Location = new Point(30, 163);
+            DadGamerKRlink.Name = "DadGamerKRlink";
+            DadGamerKRlink.Size = new Size(181, 21);
+            DadGamerKRlink.TabIndex = 59;
+            DadGamerKRlink.TabStop = true;
+            DadGamerKRlink.Text = "Dad Gamer Mode - KR";
             // 
             // DadGamerKRBox
             // 
@@ -934,39 +963,39 @@
             DadGamerKRBox.TabIndex = 58;
             DadGamerKRBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel14
+            // FovKRlink
             // 
-            linkLabel14.AutoSize = true;
-            linkLabel14.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel14.LinkColor = Color.Black;
-            linkLabel14.Location = new Point(253, 131);
-            linkLabel14.Name = "linkLabel14";
-            linkLabel14.Size = new Size(183, 21);
-            linkLabel14.TabIndex = 57;
-            linkLabel14.TabStop = true;
-            linkLabel14.Text = "Fontaine's FOV Fix - KR";
+            FovKRlink.AutoSize = true;
+            FovKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            FovKRlink.LinkColor = Color.Black;
+            FovKRlink.Location = new Point(253, 160);
+            FovKRlink.Name = "FovKRlink";
+            FovKRlink.Size = new Size(183, 21);
+            FovKRlink.TabIndex = 57;
+            FovKRlink.TabStop = true;
+            FovKRlink.Text = "Fontaine's FOV Fix - KR";
             // 
             // FOVFixKRBox
             // 
             FOVFixKRBox.AutoSize = true;
             FOVFixKRBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            FOVFixKRBox.Location = new Point(232, 137);
+            FOVFixKRBox.Location = new Point(232, 166);
             FOVFixKRBox.Name = "FOVFixKRBox";
             FOVFixKRBox.Size = new Size(15, 14);
             FOVFixKRBox.TabIndex = 56;
             FOVFixKRBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel15
+            // NotifierKRlink
             // 
-            linkLabel15.AutoSize = true;
-            linkLabel15.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel15.LinkColor = Color.Black;
-            linkLabel15.Location = new Point(30, 131);
-            linkLabel15.Name = "linkLabel15";
-            linkLabel15.Size = new Size(143, 21);
-            linkLabel15.TabIndex = 55;
-            linkLabel15.TabStop = true;
-            linkLabel15.Text = "Boss Notifier - KR";
+            NotifierKRlink.AutoSize = true;
+            NotifierKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            NotifierKRlink.LinkColor = Color.Black;
+            NotifierKRlink.Location = new Point(30, 131);
+            NotifierKRlink.Name = "NotifierKRlink";
+            NotifierKRlink.Size = new Size(143, 21);
+            NotifierKRlink.TabIndex = 55;
+            NotifierKRlink.TabStop = true;
+            NotifierKRlink.Text = "Boss Notifier - KR";
             // 
             // NotifierKRBox
             // 
@@ -978,39 +1007,39 @@
             NotifierKRBox.TabIndex = 54;
             NotifierKRBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel17
+            // ClutterKRlink
             // 
-            linkLabel17.AutoSize = true;
-            linkLabel17.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel17.LinkColor = Color.Black;
-            linkLabel17.Location = new Point(253, 101);
-            linkLabel17.Name = "linkLabel17";
-            linkLabel17.Size = new Size(140, 21);
-            linkLabel17.TabIndex = 53;
-            linkLabel17.TabStop = true;
-            linkLabel17.Text = "De-Clutterer - KR";
+            ClutterKRlink.AutoSize = true;
+            ClutterKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            ClutterKRlink.LinkColor = Color.Black;
+            ClutterKRlink.Location = new Point(253, 130);
+            ClutterKRlink.Name = "ClutterKRlink";
+            ClutterKRlink.Size = new Size(140, 21);
+            ClutterKRlink.TabIndex = 53;
+            ClutterKRlink.TabStop = true;
+            ClutterKRlink.Text = "De-Clutterer - KR";
             // 
             // CluttererKRBox
             // 
             CluttererKRBox.AutoSize = true;
             CluttererKRBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            CluttererKRBox.Location = new Point(232, 107);
+            CluttererKRBox.Location = new Point(232, 136);
             CluttererKRBox.Name = "CluttererKRBox";
             CluttererKRBox.Size = new Size(15, 14);
             CluttererKRBox.TabIndex = 52;
             CluttererKRBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel18
+            // HudKRlink
             // 
-            linkLabel18.AutoSize = true;
-            linkLabel18.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel18.LinkColor = Color.Black;
-            linkLabel18.Location = new Point(30, 101);
-            linkLabel18.Name = "linkLabel18";
-            linkLabel18.Size = new Size(181, 21);
-            linkLabel18.TabIndex = 51;
-            linkLabel18.TabStop = true;
-            linkLabel18.Text = "Game Pannel Hud - KR";
+            HudKRlink.AutoSize = true;
+            HudKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            HudKRlink.LinkColor = Color.Black;
+            HudKRlink.Location = new Point(30, 101);
+            HudKRlink.Name = "HudKRlink";
+            HudKRlink.Size = new Size(181, 21);
+            HudKRlink.TabIndex = 51;
+            HudKRlink.TabStop = true;
+            HudKRlink.Text = "Game Pannel Hud - KR";
             // 
             // HudKRBox
             // 
@@ -1022,39 +1051,39 @@
             HudKRBox.TabIndex = 50;
             HudKRBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel19
+            // GraphicsKRlink
             // 
-            linkLabel19.AutoSize = true;
-            linkLabel19.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel19.LinkColor = Color.Black;
-            linkLabel19.Location = new Point(253, 68);
-            linkLabel19.Name = "linkLabel19";
-            linkLabel19.Size = new Size(177, 21);
-            linkLabel19.TabIndex = 49;
-            linkLabel19.TabStop = true;
-            linkLabel19.Text = "Amanda Graphics - KR";
+            GraphicsKRlink.AutoSize = true;
+            GraphicsKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            GraphicsKRlink.LinkColor = Color.Black;
+            GraphicsKRlink.Location = new Point(253, 97);
+            GraphicsKRlink.Name = "GraphicsKRlink";
+            GraphicsKRlink.Size = new Size(177, 21);
+            GraphicsKRlink.TabIndex = 49;
+            GraphicsKRlink.TabStop = true;
+            GraphicsKRlink.Text = "Amanda Graphics - KR";
             // 
             // GraphicsKRBox
             // 
             GraphicsKRBox.AutoSize = true;
             GraphicsKRBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            GraphicsKRBox.Location = new Point(232, 74);
+            GraphicsKRBox.Location = new Point(232, 103);
             GraphicsKRBox.Name = "GraphicsKRBox";
             GraphicsKRBox.Size = new Size(15, 14);
             GraphicsKRBox.TabIndex = 48;
             GraphicsKRBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel20
+            // MapKRlink
             // 
-            linkLabel20.AutoSize = true;
-            linkLabel20.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel20.LinkColor = Color.Black;
-            linkLabel20.Location = new Point(30, 68);
-            linkLabel20.Name = "linkLabel20";
-            linkLabel20.Size = new Size(156, 21);
-            linkLabel20.TabIndex = 47;
-            linkLabel20.TabStop = true;
-            linkLabel20.Text = "Dynamic Maps - KR";
+            MapKRlink.AutoSize = true;
+            MapKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            MapKRlink.LinkColor = Color.Black;
+            MapKRlink.Location = new Point(30, 68);
+            MapKRlink.Name = "MapKRlink";
+            MapKRlink.Size = new Size(156, 21);
+            MapKRlink.TabIndex = 47;
+            MapKRlink.TabStop = true;
+            MapKRlink.Text = "Dynamic Maps - KR";
             // 
             // MapsKRBox
             // 
@@ -1066,39 +1095,39 @@
             MapsKRBox.TabIndex = 46;
             MapsKRBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel21
+            // QuestingKRlink
             // 
-            linkLabel21.AutoSize = true;
-            linkLabel21.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel21.LinkColor = Color.Black;
-            linkLabel21.Location = new Point(253, 36);
-            linkLabel21.Name = "linkLabel21";
-            linkLabel21.Size = new Size(152, 21);
-            linkLabel21.TabIndex = 45;
-            linkLabel21.TabStop = true;
-            linkLabel21.Text = "Questing Bots - KR";
+            QuestingKRlink.AutoSize = true;
+            QuestingKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            QuestingKRlink.LinkColor = Color.Black;
+            QuestingKRlink.Location = new Point(253, 65);
+            QuestingKRlink.Name = "QuestingKRlink";
+            QuestingKRlink.Size = new Size(152, 21);
+            QuestingKRlink.TabIndex = 45;
+            QuestingKRlink.TabStop = true;
+            QuestingKRlink.Text = "Questing Bots - KR";
             // 
             // QuestingBotsKRBox
             // 
             QuestingBotsKRBox.AutoSize = true;
             QuestingBotsKRBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            QuestingBotsKRBox.Location = new Point(232, 42);
+            QuestingBotsKRBox.Location = new Point(232, 71);
             QuestingBotsKRBox.Name = "QuestingBotsKRBox";
             QuestingBotsKRBox.Size = new Size(15, 14);
             QuestingBotsKRBox.TabIndex = 44;
             QuestingBotsKRBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel22
+            // RealisemKRlink
             // 
-            linkLabel22.AutoSize = true;
-            linkLabel22.Font = new Font("맑은 고딕", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel22.LinkColor = Color.Black;
-            linkLabel22.Location = new Point(30, 36);
-            linkLabel22.Name = "linkLabel22";
-            linkLabel22.Size = new Size(143, 34);
-            linkLabel22.TabIndex = 43;
-            linkLabel22.TabStop = true;
-            linkLabel22.Text = "SPT Realism Mod - KR\r\n(수동 설치)";
+            RealisemKRlink.AutoSize = true;
+            RealisemKRlink.Font = new Font("맑은 고딕", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            RealisemKRlink.LinkColor = Color.Black;
+            RealisemKRlink.Location = new Point(30, 36);
+            RealisemKRlink.Name = "RealisemKRlink";
+            RealisemKRlink.Size = new Size(143, 34);
+            RealisemKRlink.TabIndex = 43;
+            RealisemKRlink.TabStop = true;
+            RealisemKRlink.Text = "SPT Realism Mod - KR\r\n(수동 설치)";
             // 
             // RealismKRBox
             // 
@@ -1111,17 +1140,17 @@
             RealismKRBox.TabIndex = 42;
             RealismKRBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel23
+            // DonutKRlink
             // 
-            linkLabel23.AutoSize = true;
-            linkLabel23.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel23.LinkColor = Color.Black;
-            linkLabel23.Location = new Point(253, 6);
-            linkLabel23.Name = "linkLabel23";
-            linkLabel23.Size = new Size(93, 21);
-            linkLabel23.TabIndex = 41;
-            linkLabel23.TabStop = true;
-            linkLabel23.Text = "Donut - KR";
+            DonutKRlink.AutoSize = true;
+            DonutKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            DonutKRlink.LinkColor = Color.Black;
+            DonutKRlink.Location = new Point(253, 6);
+            DonutKRlink.Name = "DonutKRlink";
+            DonutKRlink.Size = new Size(93, 21);
+            DonutKRlink.TabIndex = 41;
+            DonutKRlink.TabStop = true;
+            DonutKRlink.Text = "Donut - KR";
             // 
             // DonutKRBox
             // 
@@ -1133,17 +1162,17 @@
             DonutKRBox.TabIndex = 40;
             DonutKRBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel24
+            // SainKRlink
             // 
-            linkLabel24.AutoSize = true;
-            linkLabel24.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel24.LinkColor = Color.Black;
-            linkLabel24.Location = new Point(30, 6);
-            linkLabel24.Name = "linkLabel24";
-            linkLabel24.Size = new Size(84, 21);
-            linkLabel24.TabIndex = 39;
-            linkLabel24.TabStop = true;
-            linkLabel24.Text = "SAIN - KR";
+            SainKRlink.AutoSize = true;
+            SainKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            SainKRlink.LinkColor = Color.Black;
+            SainKRlink.Location = new Point(30, 6);
+            SainKRlink.Name = "SainKRlink";
+            SainKRlink.Size = new Size(84, 21);
+            SainKRlink.TabIndex = 39;
+            SainKRlink.TabStop = true;
+            SainKRlink.Text = "SAIN - KR";
             // 
             // SAINKRBox
             // 
@@ -1157,13 +1186,13 @@
             // 
             // KRtabPage2
             // 
-            KRtabPage2.Controls.Add(linkLabel36);
+            KRtabPage2.Controls.Add(BloodyKRlink);
             KRtabPage2.Controls.Add(BloodyKRBox);
-            KRtabPage2.Controls.Add(linkLabel29);
+            KRtabPage2.Controls.Add(WeaponBuildingKRlink);
             KRtabPage2.Controls.Add(ModdingKRBox);
-            KRtabPage2.Controls.Add(linkLabel31);
+            KRtabPage2.Controls.Add(ViscreralKRlink);
             KRtabPage2.Controls.Add(VisceralBox);
-            KRtabPage2.Controls.Add(linkLabel34);
+            KRtabPage2.Controls.Add(FireSupportKRlink);
             KRtabPage2.Controls.Add(FireSupportKRBox);
             KRtabPage2.Location = new Point(4, 44);
             KRtabPage2.Name = "KRtabPage2";
@@ -1173,17 +1202,17 @@
             KRtabPage2.Text = "2페이지";
             KRtabPage2.UseVisualStyleBackColor = true;
             // 
-            // linkLabel36
+            // BloodyKRlink
             // 
-            linkLabel36.AutoSize = true;
-            linkLabel36.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel36.LinkColor = Color.Black;
-            linkLabel36.Location = new Point(31, 95);
-            linkLabel36.Name = "linkLabel36";
-            linkLabel36.Size = new Size(254, 42);
-            linkLabel36.TabIndex = 87;
-            linkLabel36.TabStop = true;
-            linkLabel36.Text = "Borkel's Bloody Bullet Wounds +\r\nParticles + Splatters - KR";
+            BloodyKRlink.AutoSize = true;
+            BloodyKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            BloodyKRlink.LinkColor = Color.Black;
+            BloodyKRlink.Location = new Point(31, 95);
+            BloodyKRlink.Name = "BloodyKRlink";
+            BloodyKRlink.Size = new Size(254, 42);
+            BloodyKRlink.TabIndex = 87;
+            BloodyKRlink.TabStop = true;
+            BloodyKRlink.Text = "Borkel's Bloody Bullet Wounds +\r\nParticles + Splatters - KR";
             // 
             // BloodyKRBox
             // 
@@ -1195,17 +1224,17 @@
             BloodyKRBox.TabIndex = 86;
             BloodyKRBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel29
+            // WeaponBuildingKRlink
             // 
-            linkLabel29.AutoSize = true;
-            linkLabel29.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel29.LinkColor = Color.Black;
-            linkLabel29.Location = new Point(34, 46);
-            linkLabel29.Name = "linkLabel29";
-            linkLabel29.Size = new Size(251, 42);
-            linkLabel29.TabIndex = 89;
-            linkLabel29.TabStop = true;
-            linkLabel29.Text = "Trader Modding and \r\nImproved Weapon Building - KR\r\n";
+            WeaponBuildingKRlink.AutoSize = true;
+            WeaponBuildingKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            WeaponBuildingKRlink.LinkColor = Color.Black;
+            WeaponBuildingKRlink.Location = new Point(34, 46);
+            WeaponBuildingKRlink.Name = "WeaponBuildingKRlink";
+            WeaponBuildingKRlink.Size = new Size(251, 42);
+            WeaponBuildingKRlink.TabIndex = 89;
+            WeaponBuildingKRlink.TabStop = true;
+            WeaponBuildingKRlink.Text = "Trader Modding and \r\nImproved Weapon Building - KR\r\n";
             // 
             // ModdingKRBox
             // 
@@ -1217,17 +1246,17 @@
             ModdingKRBox.TabIndex = 88;
             ModdingKRBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel31
+            // ViscreralKRlink
             // 
-            linkLabel31.AutoSize = true;
-            linkLabel31.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel31.LinkColor = Color.Black;
-            linkLabel31.Location = new Point(31, 146);
-            linkLabel31.Name = "linkLabel31";
-            linkLabel31.Size = new Size(237, 42);
-            linkLabel31.TabIndex = 87;
-            linkLabel31.TabStop = true;
-            linkLabel31.Text = "Visceral Dismemberment\r\n(포팅 - 한글화 포함, 수동 설치)";
+            ViscreralKRlink.AutoSize = true;
+            ViscreralKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            ViscreralKRlink.LinkColor = Color.Black;
+            ViscreralKRlink.Location = new Point(31, 146);
+            ViscreralKRlink.Name = "ViscreralKRlink";
+            ViscreralKRlink.Size = new Size(237, 42);
+            ViscreralKRlink.TabIndex = 87;
+            ViscreralKRlink.TabStop = true;
+            ViscreralKRlink.Text = "Visceral Dismemberment\r\n(포팅 - 한글화 포함, 수동 설치)";
             // 
             // VisceralBox
             // 
@@ -1240,17 +1269,17 @@
             VisceralBox.TabIndex = 86;
             VisceralBox.UseVisualStyleBackColor = true;
             // 
-            // linkLabel34
+            // FireSupportKRlink
             // 
-            linkLabel34.AutoSize = true;
-            linkLabel34.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel34.LinkColor = Color.Black;
-            linkLabel34.Location = new Point(34, 4);
-            linkLabel34.Name = "linkLabel34";
-            linkLabel34.Size = new Size(233, 21);
-            linkLabel34.TabIndex = 85;
-            linkLabel34.TabStop = true;
-            linkLabel34.Text = "SamSWAT's Fire Support - KR";
+            FireSupportKRlink.AutoSize = true;
+            FireSupportKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            FireSupportKRlink.LinkColor = Color.Black;
+            FireSupportKRlink.Location = new Point(34, 4);
+            FireSupportKRlink.Name = "FireSupportKRlink";
+            FireSupportKRlink.Size = new Size(233, 21);
+            FireSupportKRlink.TabIndex = 85;
+            FireSupportKRlink.TabStop = true;
+            FireSupportKRlink.Text = "SamSWAT's Fire Support - KR";
             // 
             // FireSupportKRBox
             // 
@@ -1337,96 +1366,98 @@
         private Panel panel4;
         private TabControl ModtabControl;
         private TabPage ModtabPage1;
-        private LinkLabel linkLabel1;
+        private LinkLabel Trainerlink;
         private CheckBox TrainerBox;
-        private LinkLabel linkLabel2;
+        private LinkLabel DadGamerlink;
         private CheckBox DadGamerBox;
-        private LinkLabel linkLabel3;
+        private LinkLabel Fovlink;
         private CheckBox FOVFixBox;
-        private LinkLabel linkLabel4;
+        private LinkLabel Notifierlink;
         private CheckBox NotifierBox;
-        private LinkLabel linkLabel5;
+        private LinkLabel Clutterlink;
         private CheckBox CluttererBox;
-        private LinkLabel linkLabel6;
+        private LinkLabel Hudlink;
         private CheckBox HudBox;
-        private LinkLabel linkLabel7;
+        private LinkLabel Graphicslink;
         private CheckBox GraphicsBox;
-        private LinkLabel linkLabel8;
+        private LinkLabel Maplink;
         private CheckBox MapsBox;
-        private LinkLabel linkLabel9;
+        private LinkLabel Questinglink;
         private CheckBox QuestingBotsBox;
-        private LinkLabel linkLabel10;
+        private LinkLabel Realisemlink;
         private CheckBox RealismBox;
-        private LinkLabel linkLabel11;
+        private LinkLabel Donutlink;
         private CheckBox DonutBox;
-        private LinkLabel linkLabel16;
+        private LinkLabel Sainlink;
         private CheckBox SAINBox;
         private TabPage ModtabPage2;
         private CheckBox checkBox26;
-        private LinkLabel linkLabel28;
+        private LinkLabel G_Indicatorlink;
         private CheckBox GrenadeBox;
         private CheckBox checkBox30;
-        private LinkLabel linkLabel25;
+        private LinkLabel A_Indicatorlink;
         private CheckBox AudioBox;
         private Panel panel3;
         private TabControl KRtabControl;
         private TabPage KRtabPage1;
         private TabPage KRtabPage2;
-        private LinkLabel linkLabel26;
+        private LinkLabel A_IndicatorKRlink;
         private CheckBox AudioKRBox;
-        private LinkLabel linkLabel32;
+        private LinkLabel G_IndicatorKRlink;
         private CheckBox GrenadeKRBox;
-        private LinkLabel linkLabel12;
+        private LinkLabel TrainerKRlink;
         private CheckBox TrainerKRBox;
-        private LinkLabel linkLabel13;
+        private LinkLabel DadGamerKRlink;
         private CheckBox DadGamerKRBox;
-        private LinkLabel linkLabel14;
+        private LinkLabel FovKRlink;
         private CheckBox FOVFixKRBox;
-        private LinkLabel linkLabel15;
+        private LinkLabel NotifierKRlink;
         private CheckBox NotifierKRBox;
-        private LinkLabel linkLabel17;
+        private LinkLabel ClutterKRlink;
         private CheckBox CluttererKRBox;
-        private LinkLabel linkLabel18;
+        private LinkLabel HudKRlink;
         private CheckBox HudKRBox;
-        private LinkLabel linkLabel19;
+        private LinkLabel GraphicsKRlink;
         private CheckBox GraphicsKRBox;
-        private LinkLabel linkLabel20;
+        private LinkLabel MapKRlink;
         private CheckBox MapsKRBox;
-        private LinkLabel linkLabel21;
+        private LinkLabel QuestingKRlink;
         private CheckBox QuestingBotsKRBox;
-        private LinkLabel linkLabel22;
+        private LinkLabel RealisemKRlink;
         private CheckBox RealismKRBox;
-        private LinkLabel linkLabel23;
+        private LinkLabel DonutKRlink;
         private CheckBox DonutKRBox;
-        private LinkLabel linkLabel24;
+        private LinkLabel SainKRlink;
         private CheckBox SAINKRBox;
-        private LinkLabel linkLabel27;
+        private LinkLabel Contentlink;
         private CheckBox ContextMenuBox;
-        private LinkLabel linkLabel30;
+        private LinkLabel WeaponBuildinglink;
         private CheckBox ModdingBox;
-        private LinkLabel linkLabel35;
+        private LinkLabel FireSupportlink;
         private CheckBox FireSupportBox;
-        private LinkLabel linkLabel29;
+        private LinkLabel WeaponBuildingKRlink;
         private CheckBox ModdingKRBox;
-        private LinkLabel linkLabel31;
+        private LinkLabel ViscreralKRlink;
         private CheckBox VisceralBox;
-        private LinkLabel linkLabel34;
+        private LinkLabel FireSupportKRlink;
         private CheckBox FireSupportKRBox;
-        private LinkLabel linkLabel33;
+        private LinkLabel Bloodylink;
         private CheckBox BloodyBox;
-        private LinkLabel linkLabel36;
+        private LinkLabel BloodyKRlink;
         private CheckBox BloodyKRBox;
         private Label label1;
         private Label label2;
-        private LinkLabel linkLabel37;
+        private LinkLabel TextureKRlink;
         private CheckBox SPTTexKRBox;
-        private LinkLabel linkLabel38;
+        private LinkLabel LogoKRlink;
         private CheckBox SPTLogoKRBox;
-        private LinkLabel linkLabel39;
+        private LinkLabel SPTKRlink;
         private CheckBox SPTKRBox;
         private Label label3;
         private RadioButton SPTTexDefaultBtn;
         private RadioButton SPTTex4096Btn;
-        private LinkLabel linkLabel40;
+        private LinkLabel Texture4Klink;
+        private LinkLabel linkLabel1;
+        private CheckBox SVMBox;
     }
 }

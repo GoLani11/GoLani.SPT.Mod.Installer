@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GoLani_ModPack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1055ea2dd9f57c52d4cd5324e71fa060eb5264dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("GoLani_ModPack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GoLani_ModPack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
