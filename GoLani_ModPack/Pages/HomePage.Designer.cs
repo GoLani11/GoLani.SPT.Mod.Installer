@@ -150,7 +150,7 @@
             label5.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
             label5.Location = new Point(3, 4);
             label5.Name = "label5";
-            label5.Size = new Size(805, 777);
+            label5.Size = new Size(789, 777);
             label5.TabIndex = 4;
             label5.Text = resources.GetString("label5.Text");
             // 

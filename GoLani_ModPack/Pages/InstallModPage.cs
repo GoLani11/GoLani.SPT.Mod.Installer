@@ -354,14 +354,193 @@ namespace GoLani_ModPack.Pages
             SPTTexDefaultBtn.Enabled = true;
         }
 
+        // 모드 출처 링크
+        private void SPTKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115296869") { UseShellExecute = true });
+        }
+
+        private void LogoKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115297842") { UseShellExecute = true });
+        }
+
+        private void TextureKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/2324-spt-item-texture-korean-change-patcher/") { UseShellExecute = true });
+        }
+
+        private void Texture4Klink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://drive.google.com/file/d/1bp2ewi3gx0kRkbkz1u1I0aCYBlPnceEC/view?usp=sharing") { UseShellExecute = true });
+        }
+
         private void Sainlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/1062-sain-solarint-s-ai-modifications-full-ai-combat-system-replacement/") { UseShellExecute = true });
+        }
+        private void SainKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115299538") { UseShellExecute = true });
         }
 
         private void Realisemlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/606-spt-realism-mod/") { UseShellExecute = true });
+        }
+        private void RealisemKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115303575") { UseShellExecute = true });
+        }
+
+        private void Maplink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/1981-dynamic-maps/") { UseShellExecute = true });
+        }
+        private void MapKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115302120") { UseShellExecute = true });
+        }
+
+        private void Hudlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/652-game-panel-hud/") { UseShellExecute = true });
+        }
+        private void HudKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115302623") { UseShellExecute = true });
+        }
+
+        private void Notifierlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/1737-boss-notifier/") { UseShellExecute = true });
+        }
+        private void NotifierKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115304391") { UseShellExecute = true });
+        }
+
+        private void DadGamerlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/926-dad-gamer-mode/") { UseShellExecute = true });
+        }
+        private void DadGamerKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115305801") { UseShellExecute = true });
+        }
+
+        private void G_Indicatorlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/2194-grenade-indicator/") { UseShellExecute = true });
+        }
+        private void G_IndicatorKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/116387330") { UseShellExecute = true });
+        }
+
+        private void Contentlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115306347") { UseShellExecute = true });
+        }
+
+        private void Donutlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/878-swag-donuts-dynamic-spawn-waves-and-custom-spawn-points/") { UseShellExecute = true });
+        }
+        private void DonutKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115301015") { UseShellExecute = true });
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/379-server-value-modifier-svm/") { UseShellExecute = true });
+        }
+
+        private void Questinglink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/1534-questing-bots/") { UseShellExecute = true });
+        }
+        private void QuestingKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115301775") { UseShellExecute = true });
+        }
+
+        private void Graphicslink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/813-amands-s-graphics/") { UseShellExecute = true });
+        }
+        private void GraphicsKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115302951") { UseShellExecute = true });
+        }
+
+        private void Clutterlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/1785-de-clutterer-updated-by-cj/") { UseShellExecute = true });
+        }
+        private void ClutterKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115303226") { UseShellExecute = true });
+        }
+
+        private void Fovlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/942-fontaine-s-fov-fix-variable-optics/") { UseShellExecute = true });
+        }
+        private void FovKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115305028") { UseShellExecute = true });
+        }
+
+        private void Trainerlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/1798-personal-trainer/") { UseShellExecute = true });
+        }
+        private void TrainerKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115305397") { UseShellExecute = true });
+        }
+
+        private void A_Indicatorlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/2395-audio-accessibility-indicators/") { UseShellExecute = true });
+        }
+        private void A_IndicatorKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/118291959") { UseShellExecute = true });
+        }
+
+        private void FireSupportlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/1654-samswat-s-fire-support-arys-reloaded/") { UseShellExecute = true });
+        }
+        private void FireSupportKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115305604") { UseShellExecute = true });
+        }
+
+        private void WeaponBuildinglink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/1795-trader-modding-and-improved-weapon-building/") { UseShellExecute = true });
+        }
+        private void WeaponBuildingKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115304705") { UseShellExecute = true });
+        }
+
+        private void Bloodylink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/1740-borkel-s-bloody-bullet-wounds-particles-splatters/") { UseShellExecute = true });
+        }
+        private void BloodyKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/119868249") { UseShellExecute = true });
+        }
+
+        private void ViscreralKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115306838") { UseShellExecute = true });
         }
     }
 

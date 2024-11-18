@@ -73,6 +73,8 @@
             BloodyBox = new CheckBox();
             WeaponBuildinglink = new LinkLabel();
             ModdingBox = new CheckBox();
+            ViscreralKRlink = new LinkLabel();
+            VisceralBox = new CheckBox();
             FireSupportlink = new LinkLabel();
             FireSupportBox = new CheckBox();
             panel4 = new Panel();
@@ -121,8 +123,6 @@
             BloodyKRBox = new CheckBox();
             WeaponBuildingKRlink = new LinkLabel();
             ModdingKRBox = new CheckBox();
-            ViscreralKRlink = new LinkLabel();
-            VisceralBox = new CheckBox();
             FireSupportKRlink = new LinkLabel();
             FireSupportKRBox = new CheckBox();
             label1 = new Label();
@@ -269,6 +269,7 @@
             linkLabel1.TabIndex = 93;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "SVM (공식 한글화)";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // SVMBox
             // 
@@ -291,6 +292,7 @@
             A_Indicatorlink.TabIndex = 91;
             A_Indicatorlink.TabStop = true;
             A_Indicatorlink.Text = "Audio Accessibility\r\nIndicators";
+            A_Indicatorlink.LinkClicked += A_Indicatorlink_LinkClicked;
             // 
             // AudioBox
             // 
@@ -313,6 +315,7 @@
             Contentlink.TabIndex = 89;
             Contentlink.TabStop = true;
             Contentlink.Text = "Item Context Menu\r\n(포팅 - 한글화 포함)";
+            Contentlink.LinkClicked += Contentlink_LinkClicked;
             // 
             // ContextMenuBox
             // 
@@ -335,6 +338,7 @@
             G_Indicatorlink.TabIndex = 87;
             G_Indicatorlink.TabStop = true;
             G_Indicatorlink.Text = "Grenade Indicator";
+            G_Indicatorlink.LinkClicked += G_Indicatorlink_LinkClicked;
             // 
             // GrenadeBox
             // 
@@ -357,6 +361,7 @@
             Trainerlink.TabIndex = 85;
             Trainerlink.TabStop = true;
             Trainerlink.Text = "Personal Trainer";
+            Trainerlink.LinkClicked += Trainerlink_LinkClicked;
             // 
             // TrainerBox
             // 
@@ -379,6 +384,7 @@
             DadGamerlink.TabIndex = 83;
             DadGamerlink.TabStop = true;
             DadGamerlink.Text = "Dad Gamer Mode";
+            DadGamerlink.LinkClicked += DadGamerlink_LinkClicked;
             // 
             // DadGamerBox
             // 
@@ -401,6 +407,7 @@
             Fovlink.TabIndex = 81;
             Fovlink.TabStop = true;
             Fovlink.Text = "Fontaine's FOV Fix";
+            Fovlink.LinkClicked += Fovlink_LinkClicked;
             // 
             // FOVFixBox
             // 
@@ -423,6 +430,7 @@
             Notifierlink.TabIndex = 79;
             Notifierlink.TabStop = true;
             Notifierlink.Text = "Boss Notifier";
+            Notifierlink.LinkClicked += Notifierlink_LinkClicked;
             // 
             // NotifierBox
             // 
@@ -445,6 +453,7 @@
             Clutterlink.TabIndex = 77;
             Clutterlink.TabStop = true;
             Clutterlink.Text = "De-Clutterer";
+            Clutterlink.LinkClicked += Clutterlink_LinkClicked;
             // 
             // CluttererBox
             // 
@@ -467,6 +476,7 @@
             Hudlink.TabIndex = 75;
             Hudlink.TabStop = true;
             Hudlink.Text = "Game Pannel Hud";
+            Hudlink.LinkClicked += Hudlink_LinkClicked;
             // 
             // HudBox
             // 
@@ -489,6 +499,7 @@
             Graphicslink.TabIndex = 73;
             Graphicslink.TabStop = true;
             Graphicslink.Text = "Amanda Graphics";
+            Graphicslink.LinkClicked += Graphicslink_LinkClicked;
             // 
             // GraphicsBox
             // 
@@ -511,6 +522,7 @@
             Maplink.TabIndex = 71;
             Maplink.TabStop = true;
             Maplink.Text = "Dynamic Maps";
+            Maplink.LinkClicked += Maplink_LinkClicked;
             // 
             // MapsBox
             // 
@@ -533,6 +545,7 @@
             Questinglink.TabIndex = 69;
             Questinglink.TabStop = true;
             Questinglink.Text = "Questing Bots";
+            Questinglink.LinkClicked += Questinglink_LinkClicked;
             // 
             // QuestingBotsBox
             // 
@@ -578,6 +591,7 @@
             Donutlink.TabIndex = 65;
             Donutlink.TabStop = true;
             Donutlink.Text = "Donut";
+            Donutlink.LinkClicked += Donutlink_LinkClicked;
             // 
             // DonutBox
             // 
@@ -618,6 +632,8 @@
             ModtabPage2.Controls.Add(BloodyBox);
             ModtabPage2.Controls.Add(WeaponBuildinglink);
             ModtabPage2.Controls.Add(ModdingBox);
+            ModtabPage2.Controls.Add(ViscreralKRlink);
+            ModtabPage2.Controls.Add(VisceralBox);
             ModtabPage2.Controls.Add(FireSupportlink);
             ModtabPage2.Controls.Add(FireSupportBox);
             ModtabPage2.Location = new Point(4, 44);
@@ -639,6 +655,7 @@
             Bloodylink.TabIndex = 85;
             Bloodylink.TabStop = true;
             Bloodylink.Text = "Borkel's Bloody Bullet Wounds +\r\nParticles + Splatters";
+            Bloodylink.LinkClicked += Bloodylink_LinkClicked;
             // 
             // BloodyBox
             // 
@@ -661,6 +678,7 @@
             WeaponBuildinglink.TabIndex = 83;
             WeaponBuildinglink.TabStop = true;
             WeaponBuildinglink.Text = "Trader Modding and \r\nImproved Weapon Building";
+            WeaponBuildinglink.LinkClicked += WeaponBuildinglink_LinkClicked;
             // 
             // ModdingBox
             // 
@@ -671,6 +689,30 @@
             ModdingBox.Size = new Size(15, 14);
             ModdingBox.TabIndex = 82;
             ModdingBox.UseVisualStyleBackColor = true;
+            // 
+            // ViscreralKRlink
+            // 
+            ViscreralKRlink.AutoSize = true;
+            ViscreralKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            ViscreralKRlink.LinkColor = Color.Black;
+            ViscreralKRlink.Location = new Point(40, 167);
+            ViscreralKRlink.Name = "ViscreralKRlink";
+            ViscreralKRlink.Size = new Size(237, 42);
+            ViscreralKRlink.TabIndex = 87;
+            ViscreralKRlink.TabStop = true;
+            ViscreralKRlink.Text = "Visceral Dismemberment\r\n(포팅 - 한글화 포함, 수동 설치)";
+            ViscreralKRlink.LinkClicked += ViscreralKRlink_LinkClicked;
+            // 
+            // VisceralBox
+            // 
+            VisceralBox.AutoSize = true;
+            VisceralBox.Enabled = false;
+            VisceralBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            VisceralBox.Location = new Point(19, 173);
+            VisceralBox.Name = "VisceralBox";
+            VisceralBox.Size = new Size(15, 14);
+            VisceralBox.TabIndex = 86;
+            VisceralBox.UseVisualStyleBackColor = true;
             // 
             // FireSupportlink
             // 
@@ -683,6 +725,7 @@
             FireSupportlink.TabIndex = 75;
             FireSupportlink.TabStop = true;
             FireSupportlink.Text = "SamSWAT's Fire Support";
+            FireSupportlink.LinkClicked += FireSupportlink_LinkClicked;
             // 
             // FireSupportBox
             // 
@@ -723,6 +766,7 @@
             Texture4Klink.TabIndex = 94;
             Texture4Klink.TabStop = true;
             Texture4Klink.Text = "4K 버전\r\n(수동 설치)";
+            Texture4Klink.LinkClicked += Texture4Klink_LinkClicked;
             // 
             // SPTTexDefaultBtn
             // 
@@ -760,6 +804,7 @@
             TextureKRlink.TabIndex = 91;
             TextureKRlink.TabStop = true;
             TextureKRlink.Text = "SPT 타르코프 \r\n아이템 텍스처 \r\n한글화 프로젝트";
+            TextureKRlink.LinkClicked += TextureKRlink_LinkClicked;
             // 
             // SPTTexKRBox
             // 
@@ -783,6 +828,7 @@
             LogoKRlink.TabIndex = 89;
             LogoKRlink.TabStop = true;
             LogoKRlink.Text = "타르코프 \r\n로고 한글화";
+            LogoKRlink.LinkClicked += LogoKRlink_LinkClicked;
             // 
             // SPTLogoKRBox
             // 
@@ -805,6 +851,7 @@
             SPTKRlink.TabIndex = 87;
             SPTKRlink.TabStop = true;
             SPTKRlink.Text = "SPT 타르코프 \r\n한글화 프로젝트";
+            SPTKRlink.LinkClicked += SPTKRlink_LinkClicked;
             // 
             // SPTKRBox
             // 
@@ -886,6 +933,7 @@
             A_IndicatorKRlink.TabIndex = 93;
             A_IndicatorKRlink.TabStop = true;
             A_IndicatorKRlink.Text = "Audio Accessibility\r\nIndicators - KR";
+            A_IndicatorKRlink.LinkClicked += A_IndicatorKRlink_LinkClicked;
             // 
             // AudioKRBox
             // 
@@ -908,6 +956,7 @@
             G_IndicatorKRlink.TabIndex = 63;
             G_IndicatorKRlink.TabStop = true;
             G_IndicatorKRlink.Text = "Grenade Indicator - KR";
+            G_IndicatorKRlink.LinkClicked += G_IndicatorKRlink_LinkClicked;
             // 
             // GrenadeKRBox
             // 
@@ -930,6 +979,7 @@
             TrainerKRlink.TabIndex = 61;
             TrainerKRlink.TabStop = true;
             TrainerKRlink.Text = "Personal Trainer - KR";
+            TrainerKRlink.LinkClicked += TrainerKRlink_LinkClicked;
             // 
             // TrainerKRBox
             // 
@@ -952,6 +1002,7 @@
             DadGamerKRlink.TabIndex = 59;
             DadGamerKRlink.TabStop = true;
             DadGamerKRlink.Text = "Dad Gamer Mode - KR";
+            DadGamerKRlink.LinkClicked += DadGamerKRlink_LinkClicked;
             // 
             // DadGamerKRBox
             // 
@@ -974,6 +1025,7 @@
             FovKRlink.TabIndex = 57;
             FovKRlink.TabStop = true;
             FovKRlink.Text = "Fontaine's FOV Fix - KR";
+            FovKRlink.LinkClicked += FovKRlink_LinkClicked;
             // 
             // FOVFixKRBox
             // 
@@ -996,6 +1048,7 @@
             NotifierKRlink.TabIndex = 55;
             NotifierKRlink.TabStop = true;
             NotifierKRlink.Text = "Boss Notifier - KR";
+            NotifierKRlink.LinkClicked += NotifierKRlink_LinkClicked;
             // 
             // NotifierKRBox
             // 
@@ -1018,6 +1071,7 @@
             ClutterKRlink.TabIndex = 53;
             ClutterKRlink.TabStop = true;
             ClutterKRlink.Text = "De-Clutterer - KR";
+            ClutterKRlink.LinkClicked += ClutterKRlink_LinkClicked;
             // 
             // CluttererKRBox
             // 
@@ -1040,6 +1094,7 @@
             HudKRlink.TabIndex = 51;
             HudKRlink.TabStop = true;
             HudKRlink.Text = "Game Pannel Hud - KR";
+            HudKRlink.LinkClicked += HudKRlink_LinkClicked;
             // 
             // HudKRBox
             // 
@@ -1062,6 +1117,7 @@
             GraphicsKRlink.TabIndex = 49;
             GraphicsKRlink.TabStop = true;
             GraphicsKRlink.Text = "Amanda Graphics - KR";
+            GraphicsKRlink.LinkClicked += GraphicsKRlink_LinkClicked;
             // 
             // GraphicsKRBox
             // 
@@ -1084,6 +1140,7 @@
             MapKRlink.TabIndex = 47;
             MapKRlink.TabStop = true;
             MapKRlink.Text = "Dynamic Maps - KR";
+            MapKRlink.LinkClicked += MapKRlink_LinkClicked;
             // 
             // MapsKRBox
             // 
@@ -1106,6 +1163,7 @@
             QuestingKRlink.TabIndex = 45;
             QuestingKRlink.TabStop = true;
             QuestingKRlink.Text = "Questing Bots - KR";
+            QuestingKRlink.LinkClicked += QuestingKRlink_LinkClicked;
             // 
             // QuestingBotsKRBox
             // 
@@ -1128,6 +1186,7 @@
             RealisemKRlink.TabIndex = 43;
             RealisemKRlink.TabStop = true;
             RealisemKRlink.Text = "SPT Realism Mod - KR\r\n(수동 설치)";
+            RealisemKRlink.LinkClicked += RealisemKRlink_LinkClicked;
             // 
             // RealismKRBox
             // 
@@ -1151,6 +1210,7 @@
             DonutKRlink.TabIndex = 41;
             DonutKRlink.TabStop = true;
             DonutKRlink.Text = "Donut - KR";
+            DonutKRlink.LinkClicked += DonutKRlink_LinkClicked;
             // 
             // DonutKRBox
             // 
@@ -1173,6 +1233,7 @@
             SainKRlink.TabIndex = 39;
             SainKRlink.TabStop = true;
             SainKRlink.Text = "SAIN - KR";
+            SainKRlink.LinkClicked += SainKRlink_LinkClicked;
             // 
             // SAINKRBox
             // 
@@ -1190,8 +1251,6 @@
             KRtabPage2.Controls.Add(BloodyKRBox);
             KRtabPage2.Controls.Add(WeaponBuildingKRlink);
             KRtabPage2.Controls.Add(ModdingKRBox);
-            KRtabPage2.Controls.Add(ViscreralKRlink);
-            KRtabPage2.Controls.Add(VisceralBox);
             KRtabPage2.Controls.Add(FireSupportKRlink);
             KRtabPage2.Controls.Add(FireSupportKRBox);
             KRtabPage2.Location = new Point(4, 44);
@@ -1207,18 +1266,19 @@
             BloodyKRlink.AutoSize = true;
             BloodyKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
             BloodyKRlink.LinkColor = Color.Black;
-            BloodyKRlink.Location = new Point(31, 95);
+            BloodyKRlink.Location = new Point(28, 110);
             BloodyKRlink.Name = "BloodyKRlink";
             BloodyKRlink.Size = new Size(254, 42);
             BloodyKRlink.TabIndex = 87;
             BloodyKRlink.TabStop = true;
             BloodyKRlink.Text = "Borkel's Bloody Bullet Wounds +\r\nParticles + Splatters - KR";
+            BloodyKRlink.LinkClicked += BloodyKRlink_LinkClicked;
             // 
             // BloodyKRBox
             // 
             BloodyKRBox.AutoSize = true;
             BloodyKRBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            BloodyKRBox.Location = new Point(10, 101);
+            BloodyKRBox.Location = new Point(7, 116);
             BloodyKRBox.Name = "BloodyKRBox";
             BloodyKRBox.Size = new Size(15, 14);
             BloodyKRBox.TabIndex = 86;
@@ -1229,63 +1289,42 @@
             WeaponBuildingKRlink.AutoSize = true;
             WeaponBuildingKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
             WeaponBuildingKRlink.LinkColor = Color.Black;
-            WeaponBuildingKRlink.Location = new Point(34, 46);
+            WeaponBuildingKRlink.Location = new Point(28, 55);
             WeaponBuildingKRlink.Name = "WeaponBuildingKRlink";
             WeaponBuildingKRlink.Size = new Size(251, 42);
             WeaponBuildingKRlink.TabIndex = 89;
             WeaponBuildingKRlink.TabStop = true;
             WeaponBuildingKRlink.Text = "Trader Modding and \r\nImproved Weapon Building - KR\r\n";
+            WeaponBuildingKRlink.LinkClicked += WeaponBuildingKRlink_LinkClicked;
             // 
             // ModdingKRBox
             // 
             ModdingKRBox.AutoSize = true;
             ModdingKRBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            ModdingKRBox.Location = new Point(13, 52);
+            ModdingKRBox.Location = new Point(7, 61);
             ModdingKRBox.Name = "ModdingKRBox";
             ModdingKRBox.Size = new Size(15, 14);
             ModdingKRBox.TabIndex = 88;
             ModdingKRBox.UseVisualStyleBackColor = true;
-            // 
-            // ViscreralKRlink
-            // 
-            ViscreralKRlink.AutoSize = true;
-            ViscreralKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            ViscreralKRlink.LinkColor = Color.Black;
-            ViscreralKRlink.Location = new Point(31, 146);
-            ViscreralKRlink.Name = "ViscreralKRlink";
-            ViscreralKRlink.Size = new Size(237, 42);
-            ViscreralKRlink.TabIndex = 87;
-            ViscreralKRlink.TabStop = true;
-            ViscreralKRlink.Text = "Visceral Dismemberment\r\n(포팅 - 한글화 포함, 수동 설치)";
-            // 
-            // VisceralBox
-            // 
-            VisceralBox.AutoSize = true;
-            VisceralBox.Enabled = false;
-            VisceralBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            VisceralBox.Location = new Point(10, 152);
-            VisceralBox.Name = "VisceralBox";
-            VisceralBox.Size = new Size(15, 14);
-            VisceralBox.TabIndex = 86;
-            VisceralBox.UseVisualStyleBackColor = true;
             // 
             // FireSupportKRlink
             // 
             FireSupportKRlink.AutoSize = true;
             FireSupportKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
             FireSupportKRlink.LinkColor = Color.Black;
-            FireSupportKRlink.Location = new Point(34, 4);
+            FireSupportKRlink.Location = new Point(30, 19);
             FireSupportKRlink.Name = "FireSupportKRlink";
             FireSupportKRlink.Size = new Size(233, 21);
             FireSupportKRlink.TabIndex = 85;
             FireSupportKRlink.TabStop = true;
             FireSupportKRlink.Text = "SamSWAT's Fire Support - KR";
+            FireSupportKRlink.LinkClicked += FireSupportKRlink_LinkClicked;
             // 
             // FireSupportKRBox
             // 
             FireSupportKRBox.AutoSize = true;
             FireSupportKRBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            FireSupportKRBox.Location = new Point(13, 10);
+            FireSupportKRBox.Location = new Point(9, 26);
             FireSupportKRBox.Name = "FireSupportKRBox";
             FireSupportKRBox.Size = new Size(15, 14);
             FireSupportKRBox.TabIndex = 84;
