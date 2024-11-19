@@ -1,0 +1,9 @@
+C:\Users\gomim\Desktop\새 폴더\GoLani_ModPack.pdb
+C:\Users\gomim\Desktop\새 폴더\x64\7z.dll
+C:\Users\gomim\Desktop\새 폴더\x86\7z.dll
+C:\Users\gomim\Desktop\새 폴더\D3DCompiler_47_cor3.dll
+C:\Users\gomim\Desktop\새 폴더\PenImc_cor3.dll
+C:\Users\gomim\Desktop\새 폴더\PresentationNative_cor3.dll
+C:\Users\gomim\Desktop\새 폴더\vcruntime140_cor3.dll
+C:\Users\gomim\Desktop\새 폴더\wpfgfx_cor3.dll
+C:\Users\gomim\Desktop\새 폴더\GoLani_ModPack.exe

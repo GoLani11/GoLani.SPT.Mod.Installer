@@ -6,7 +6,14 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Copyright>GoLani11,_고라니_</Copyright>
+    <Version>0.0.1</Version>
+    <ApplicationIcon>8ede80a1-1d0c-4839-bcc3-97bd4f357ecd.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="8ede80a1-1d0c-4839-bcc3-97bd4f357ecd.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MaterialSkin.2" Version="2.3.1" />

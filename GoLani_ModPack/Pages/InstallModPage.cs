@@ -69,18 +69,24 @@ namespace GoLani_ModPack.Pages
 
             //SVM
             mods.Add(new Mod("SVM", new List<string> {
-                "https://drive.google.com/uc?export=download&id=1JTimCEDlCsq6SG71dCBXkfwuONwWQmWS" }, SVMBox));
+                "" }, SVMBox));
+
+            //UI Fixes
+            mods.Add(new Mod("UI Fixes", new List<string> {
+                "https://github.com/tyfon7/UIFixes/releases/download/v2.5.3/Tyfon-UIFixes-2.5.3.zip" }, UIBox));
+            mods.Add(new Mod("UI Fixes - KR", new List<string> {
+                "https://drive.google.com/uc?export=download&id=1Ji0C9kvFCFBl1gm1ONrk4wv_zeG2vihM" }, UIKRBox));
 
             //Questing Bots
-            mods.Add(new Mod("Questing Bots", new List<string> { "https://github.com/dwesterwick/SPTQuestingBots/releases/download/0.8.0/DanW-SPTQuestingBots.zip",
+            mods.Add(new Mod("Questing Bots", new List<string> { "https://github.com/dwesterwick/SPTQuestingBots/releases/download/0.8.1/DanW-SPTQuestingBots.zip",
             "https://github.com/DrakiaXYZ/SPT-BigBrain/releases/download/1.1.0/DrakiaXYZ-BigBrain-1.1.0.7z",
             "https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.5.2/DrakiaXYZ-Waypoints-1.5.2.7z" }, QuestingBotsBox));
             mods.Add(new Mod("Questing Bots - KR", new List<string> {
-                "https://drive.google.com/uc?export=download&id=1VjkzFQuVKe2zfhFSAPjpVqfNvyzBcnw1" }, SAINKRBox));
+                "https://drive.google.com/uc?export=download&id=1VjkzFQuVKe2zfhFSAPjpVqfNvyzBcnw1" }, QuestingBotsKRBox));
 
             //Dynamic Maps
             mods.Add(new Mod("Dynamic Maps", new List<string> {
-                "https://github.com/CJ-SPT/SPT-DynamicMaps/releases/download/V0.4.3/DynamicMaps-0.4.3-d5be034f.zip" }, MapsBox));
+                "https://github.com/CJ-SPT/SPT-DynamicMaps/releases/download/V0.5.0/DynamicMaps-0.5.0.zip" }, MapsBox));
             mods.Add(new Mod("Dynamic Maps - KR", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1H7K8swBDfmrYAtBF_gTsDteReN7Nazax" }, MapsKRBox));
 
@@ -139,10 +145,6 @@ namespace GoLani_ModPack.Pages
             mods.Add(new Mod("Audio Accessibility Indicators - KR", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1B1Cz3TYXU5IxkodYiaHNYqKNRpP9tu9G" }, AudioKRBox));
 
-            //Item Context Menu 한글화 포함
-            mods.Add(new Mod("Item Context Menu - KR", new List<string> {
-                "https://drive.google.com/uc?export=download&id=1XDu3906GfomsoRL2EfR-mlQcbzR9FbMz" }, ContextMenuBox));
-
             //SamSWAT's Fire Support
             mods.Add(new Mod("SamSWAT's Fire Support", new List<string> {
                 "https://github.com/Nympfonic/SamSWAT.FireSupport.ArysReloaded/releases/download/v2.2.4/SamSWAT-FireSupport-ArysReloaded-2.2.4.7z", }, FireSupportBox));
@@ -164,6 +166,10 @@ namespace GoLani_ModPack.Pages
             //Visceral Dismemberment
             mods.Add(new Mod("Visceral Dismemberment - KR", new List<string> {
                 "" }, VisceralBox));
+
+            //Item Context Menu 한글화 포함
+            mods.Add(new Mod("Item Context Menu - KR", new List<string> {
+                "https://drive.google.com/uc?export=download&id=1XDu3906GfomsoRL2EfR-mlQcbzR9FbMz" }, ContextMenuBox));
 
             // 다른 모드들도 동일하게 추가
         }
@@ -351,7 +357,16 @@ namespace GoLani_ModPack.Pages
         // 텍스처 한글화 버튼 클릭시 라디오버튼 활성화
         private void SPTTexKRBox_CheckedChanged(object sender, EventArgs e)
         {
-            SPTTexDefaultBtn.Enabled = true;
+            if (SPTTexKRBox.Checked == true)
+            {
+                SPTTexDefaultBtn.Enabled = true;
+                SPTTexDefaultBtn.Checked = true;
+            }
+            else if (SPTTexKRBox.Checked == false)
+            {
+                SPTTexDefaultBtn.Enabled = false;
+                SPTTexDefaultBtn.Checked = false;
+            }
         }
 
         // 모드 출처 링크
@@ -541,6 +556,15 @@ namespace GoLani_ModPack.Pages
         private void ViscreralKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115306838") { UseShellExecute = true });
+        }
+
+        private void UIlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/1860-ui-fixes/") { UseShellExecute = true });
+        }
+        private void UIKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/121563203") { UseShellExecute = true });
         }
     }
 
