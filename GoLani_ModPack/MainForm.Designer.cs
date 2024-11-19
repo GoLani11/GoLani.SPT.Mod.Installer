@@ -191,7 +191,7 @@
             MaximizeBox = false;
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "고라니 모드팩";
+            Text = "고라니 모드팩 패치기";
             Load += StartLoadForm;
             MenuPanel.ResumeLayout(false);
             MainFramePanel.ResumeLayout(false);

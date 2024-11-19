@@ -467,7 +467,7 @@ namespace GoLani_ModPack.Pages
             Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115301015") { UseShellExecute = true });
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void SVM_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/379-server-value-modifier-svm/") { UseShellExecute = true });
         }
@@ -565,6 +565,11 @@ namespace GoLani_ModPack.Pages
         private void UIKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/121563203") { UseShellExecute = true });
+        }
+
+        private void Contentlink_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115306347") { UseShellExecute = true });
         }
     }
 

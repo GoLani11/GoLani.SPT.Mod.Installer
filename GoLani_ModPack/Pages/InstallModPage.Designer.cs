@@ -54,7 +54,7 @@
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
-            linkLabel1 = new LinkLabel();
+            SVMlink = new LinkLabel();
             SVMBox = new CheckBox();
             A_Indicatorlink = new LinkLabel();
             AudioBox = new CheckBox();
@@ -260,7 +260,7 @@
             ModtabPage1.Controls.Add(label6);
             ModtabPage1.Controls.Add(label5);
             ModtabPage1.Controls.Add(label4);
-            ModtabPage1.Controls.Add(linkLabel1);
+            ModtabPage1.Controls.Add(SVMlink);
             ModtabPage1.Controls.Add(SVMBox);
             ModtabPage1.Controls.Add(A_Indicatorlink);
             ModtabPage1.Controls.Add(AudioBox);
@@ -465,18 +465,18 @@
             label4.TabIndex = 94;
             label4.Text = "3.1.0";
             // 
-            // linkLabel1
+            // SVMlink
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            linkLabel1.LinkColor = Color.Black;
-            linkLabel1.Location = new Point(250, 36);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(112, 30);
-            linkLabel1.TabIndex = 93;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "SVM (공식 한글화, \r\n수동 설치)";
-            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            SVMlink.AutoSize = true;
+            SVMlink.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            SVMlink.LinkColor = Color.Black;
+            SVMlink.Location = new Point(250, 36);
+            SVMlink.Name = "SVMlink";
+            SVMlink.Size = new Size(112, 30);
+            SVMlink.TabIndex = 93;
+            SVMlink.TabStop = true;
+            SVMlink.Text = "SVM (공식 한글화, \r\n수동 설치)";
+            SVMlink.LinkClicked += SVM_LinkClicked;
             // 
             // SVMBox
             // 
@@ -838,7 +838,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(201, 239);
+            label11.Location = new Point(201, 234);
             label11.Name = "label11";
             label11.Size = new Size(34, 15);
             label11.TabIndex = 102;
@@ -849,18 +849,19 @@
             Contentlink.AutoSize = true;
             Contentlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
             Contentlink.LinkColor = Color.Black;
-            Contentlink.Location = new Point(40, 224);
+            Contentlink.Location = new Point(40, 219);
             Contentlink.Name = "Contentlink";
             Contentlink.Size = new Size(157, 42);
             Contentlink.TabIndex = 92;
             Contentlink.TabStop = true;
             Contentlink.Text = "Item Context Menu\r\n(포팅 - 한글화 포함)";
+            Contentlink.LinkClicked += Contentlink_LinkClicked_1;
             // 
             // ContextMenuBox
             // 
             ContextMenuBox.AutoSize = true;
             ContextMenuBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            ContextMenuBox.Location = new Point(19, 230);
+            ContextMenuBox.Location = new Point(19, 225);
             ContextMenuBox.Name = "ContextMenuBox";
             ContextMenuBox.Size = new Size(15, 14);
             ContextMenuBox.TabIndex = 91;
@@ -1768,7 +1769,7 @@
         private RadioButton SPTTexDefaultBtn;
         private RadioButton SPTTex4096Btn;
         private LinkLabel Texture4Klink;
-        private LinkLabel linkLabel1;
+        private LinkLabel SVMlink;
         private CheckBox SVMBox;
         private Label label4;
         private Label label19;
