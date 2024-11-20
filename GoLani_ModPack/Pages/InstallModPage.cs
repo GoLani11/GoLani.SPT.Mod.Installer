@@ -64,7 +64,7 @@ namespace GoLani_ModPack.Pages
             mods.Add(new Mod("SPT Realism Mod", new List<string> {
                 "https://github.com/space-commits/SPT-Realism-Mod-Client/releases/download/v1.4.8/Realism-Mod-v1.4.8-SPT-v3.9.8.zip" }, RealismBox));
             mods.Add(new Mod("SPT Realism Mod - KR", new List<string> {
-                "" }, RealismKRBox));
+                "https://github.com/GoLani11/GoLani_ModPack/raw/main/zip/Realism%20Mod%201.4.8.zip" }, RealismKRBox));
 
             //SVM
             mods.Add(new Mod("SVM", new List<string> {

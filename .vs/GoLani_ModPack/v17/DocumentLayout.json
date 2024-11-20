@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\gomim\\Documents\\GitHub\\GoLani_ModPack\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{74A5F78F-8C43-4251-B78C-0417CCD5B5C6}|GoLani_ModPack\\GoLani_ModPack.csproj|c:\\users\\gomim\\documents\\github\\golani_modpack\\golani_modpack\\pages\\installmodpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74A5F78F-8C43-4251-B78C-0417CCD5B5C6}|GoLani_ModPack\\GoLani_ModPack.csproj|solutionrelative:golani_modpack\\pages\\installmodpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{74A5F78F-8C43-4251-B78C-0417CCD5B5C6}|GoLani_ModPack\\GoLani_ModPack.csproj|c:\\users\\gomim\\documents\\github\\golani_modpack\\golani_modpack\\pages\\installmodpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{74A5F78F-8C43-4251-B78C-0417CCD5B5C6}|GoLani_ModPack\\GoLani_ModPack.csproj|solutionrelative:golani_modpack\\pages\\installmodpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{74A5F78F-8C43-4251-B78C-0417CCD5B5C6}|GoLani_ModPack\\GoLani_ModPack.csproj|c:\\users\\gomim\\documents\\github\\golani_modpack\\golani_modpack\\pages\\installmodpage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74A5F78F-8C43-4251-B78C-0417CCD5B5C6}|GoLani_ModPack\\GoLani_ModPack.csproj|solutionrelative:golani_modpack\\pages\\installmodpage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74A5F78F-8C43-4251-B78C-0417CCD5B5C6}|GoLani_ModPack\\GoLani_ModPack.csproj|c:\\users\\gomim\\documents\\github\\golani_modpack\\golani_modpack\\pages\\installmodpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74A5F78F-8C43-4251-B78C-0417CCD5B5C6}|GoLani_ModPack\\GoLani_ModPack.csproj|solutionrelative:golani_modpack\\pages\\installmodpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{74A5F78F-8C43-4251-B78C-0417CCD5B5C6}|GoLani_ModPack\\GoLani_ModPack.csproj|c:\\users\\gomim\\documents\\github\\golani_modpack\\golani_modpack\\golani_modpack.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
@@ -58,11 +58,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "InstallModPage.Designer.cs",
               "DocumentMoniker": "C:\\Users\\gomim\\Documents\\GitHub\\GoLani_ModPack\\GoLani_ModPack\\Pages\\InstallModPage.Designer.cs",
               "RelativeDocumentMoniker": "GoLani_ModPack\\Pages\\InstallModPage.Designer.cs",
@@ -109,20 +109,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "InstallModPage.cs",
               "DocumentMoniker": "C:\\Users\\gomim\\Documents\\GitHub\\GoLani_ModPack\\GoLani_ModPack\\Pages\\InstallModPage.cs",
               "RelativeDocumentMoniker": "GoLani_ModPack\\Pages\\InstallModPage.cs",
               "ToolTip": "C:\\Users\\gomim\\Documents\\GitHub\\GoLani_ModPack\\GoLani_ModPack\\Pages\\InstallModPage.cs",
               "RelativeToolTip": "GoLani_ModPack\\Pages\\InstallModPage.cs",
-              "ViewState": "AgIAAD4CAAAAAAAAAAAkwFUCAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAAEIAAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T09:59:26.293Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "InstallModPage.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\gomim\\Documents\\GitHub\\GoLani_ModPack\\GoLani_ModPack\\Pages\\InstallModPage.cs",
               "RelativeDocumentMoniker": "GoLani_ModPack\\Pages\\InstallModPage.cs",
