@@ -386,7 +386,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(368, 43);
+            label13.Location = new Point(395, 41);
             label13.Name = "label13";
             label13.Size = new Size(34, 15);
             label13.TabIndex = 103;
@@ -467,14 +467,14 @@
             // SVMlink
             // 
             SVMlink.AutoSize = true;
-            SVMlink.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            SVMlink.Font = new Font("맑은 고딕", 12F);
             SVMlink.LinkColor = Color.Black;
             SVMlink.Location = new Point(250, 36);
             SVMlink.Name = "SVMlink";
-            SVMlink.Size = new Size(112, 30);
+            SVMlink.Size = new Size(146, 21);
             SVMlink.TabIndex = 93;
             SVMlink.TabStop = true;
-            SVMlink.Text = "SVM (공식 한글화, \r\n수동 설치)";
+            SVMlink.Text = "SVM (공식 한글화)";
             SVMlink.LinkClicked += SVM_LinkClicked;
             // 
             // SVMBox
@@ -945,10 +945,10 @@
             ViscreralKRlink.LinkColor = Color.Black;
             ViscreralKRlink.Location = new Point(40, 167);
             ViscreralKRlink.Name = "ViscreralKRlink";
-            ViscreralKRlink.Size = new Size(237, 42);
+            ViscreralKRlink.Size = new Size(194, 42);
             ViscreralKRlink.TabIndex = 87;
             ViscreralKRlink.TabStop = true;
-            ViscreralKRlink.Text = "Visceral Dismemberment\r\n(포팅 - 한글화 포함, 수동 설치)";
+            ViscreralKRlink.Text = "Visceral Dismemberment\r\n(포팅 - 한글화 포함)";
             ViscreralKRlink.LinkClicked += ViscreralKRlink_LinkClicked;
             // 
             // VisceralBox

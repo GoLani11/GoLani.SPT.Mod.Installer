@@ -596,8 +596,6 @@ namespace GoLani_ModPack.Pages
         {
             Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115306347") { UseShellExecute = true });
         }
-
-       
     }
 
 
