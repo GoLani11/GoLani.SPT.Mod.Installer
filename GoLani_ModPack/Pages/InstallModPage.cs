@@ -38,12 +38,11 @@ namespace GoLani_ModPack.Pages
 
             //SPT 타르코프 아이템 텍스처 한글화 프로젝트 - 기본
             mods.Add(new Mod("SPT 타르코프 아이템 텍스처 한글화 프로젝트 - 기본", new List<string> {
-                "https://github.com/GoLani11/GoLani.ItemTextureKoreanChange/releases/download/v1.0.2/GoLani-ItemTextureKoreanChange.zip" }, SPTTexDefaultBtn));
+                "https://github.com/GoLani11/GoLani.ItemTextureKoreanChange/releases/download/v1.0.2/GoLani-ItemTextureKoreanChange.zip" }, SPTTexDefaultBox));
 
             //SPT 타르코프 아이템 텍스처 한글화 프로젝트 - 4096
             mods.Add(new Mod("SPT 타르코프 아이템 텍스처 한글화 프로젝트 - 4096", new List<string> {
-                "https://drive.google.com/uc?export=download&id=1bp2ewi3gx0kRkbkz1u1I0aCYBlPnceEC" }, SPTTex4096Btn));
-
+                "https://drive.usercontent.google.com/download?id=1bp2ewi3gx0kRkbkz1u1I0aCYBlPnceEC&export=download&authuser=0&confirm=t&uuid=b7288437-6ce7-4c76-a1d4-e245df0b6fdb&at=AENtkXY1lx4XT0hIv7dKf2dvIG09%3A1732102493030" }, SPTTex4096Box));
 
 
 
@@ -69,7 +68,7 @@ namespace GoLani_ModPack.Pages
 
             //SVM
             mods.Add(new Mod("SVM", new List<string> {
-                "" }, SVMBox));
+                "https://docs.google.com/uc?export=download&id=1JTimCEDlCsq6SG71dCBXkfwuONwWQmWS&confirm=t" }, SVMBox));
 
             //UI Fixes
             mods.Add(new Mod("UI Fixes", new List<string> {
@@ -165,7 +164,7 @@ namespace GoLani_ModPack.Pages
 
             //Visceral Dismemberment
             mods.Add(new Mod("Visceral Dismemberment - KR", new List<string> {
-                "" }, VisceralBox));
+                "https://drive.usercontent.google.com/download?id=1PSxItGZIoE1uPI_XZIOtINgBPaB1deKF&export=download&authuser=0&confirm=t&uuid=fdec7cf4-443a-4e41-93e0-ded0d23c84f6&at=AENtkXbvz0mkUJExiGhkHxLWSkgq%3A1732105918439" }, VisceralBox));
 
             //Item Context Menu 한글화 포함
             mods.Add(new Mod("Item Context Menu - KR", new List<string> {
@@ -236,10 +235,20 @@ namespace GoLani_ModPack.Pages
                                     // 파일 이름 추출
                                     string fileName = GetFileNameFromResponse(response, mod.Name);
 
-                                    // SVM 버튼 기준으로 경로 설정
-                                    string targetPath = mod.CheckBox == SVMBox // SVM 버튼 변수를 조건으로 추가
-                                        ? Path.Combine(installPath, "user", "mods")
-                                        : installPath;
+                                    // 기본 경로 설정
+                                    string targetPath = installPath;
+
+                                    // Texture4096 버튼이 선택된 경우 추가 경로 설정
+                                    if (mod.CheckBox == SPTTex4096Box && SPTTex4096Box.Checked)
+                                    {
+                                        targetPath = Path.Combine(installPath, "user", "mods", "GoLani-ItemTextureKoreanChange", "bundles");
+                                    }
+
+                                    // SVM 버튼이 선택된 경우 추가 경로 설정
+                                    if (mod.CheckBox == SVMBox && SVMBox.Checked)
+                                    {
+                                        targetPath = Path.Combine(installPath, "user", "mods");
+                                    }
 
                                     // 디렉토리 존재 여부 확인 및 생성
                                     if (!Directory.Exists(targetPath))
@@ -359,13 +368,29 @@ namespace GoLani_ModPack.Pages
         {
             if (SPTTexKRBox.Checked == true)
             {
-                SPTTexDefaultBtn.Enabled = true;
-                SPTTexDefaultBtn.Checked = true;
+                SPTTexDefaultBox.Enabled = true;
+                SPTTexDefaultBox.Checked = true;
+                SPTTex4096Box.Enabled = true;
             }
             else if (SPTTexKRBox.Checked == false)
             {
-                SPTTexDefaultBtn.Enabled = false;
-                SPTTexDefaultBtn.Checked = false;
+                SPTTexDefaultBox.Enabled = false;
+                SPTTexDefaultBox.Checked = false;
+                SPTTex4096Box.Enabled = false;
+                SPTTex4096Box.Checked = false;
+            }
+        }
+
+        private void SPTTexDefaultBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (SPTTexDefaultBox.Checked == true)
+            {
+                SPTTex4096Box.Enabled = true;
+            }
+            else if (SPTTexDefaultBox.Checked == false)
+            {
+                SPTTex4096Box.Enabled = false;
+                SPTTex4096Box.Checked = false;
             }
         }
 
@@ -571,7 +596,11 @@ namespace GoLani_ModPack.Pages
         {
             Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115306347") { UseShellExecute = true });
         }
+
+       
     }
+
+
 
     // 모드 정보를 담는 클래스
     public class Mod
@@ -588,15 +617,6 @@ namespace GoLani_ModPack.Pages
             DownloadUrls = downloadUrls;
             CheckBox = checkBox;
             RadioButton = null;
-        }
-
-        // 라디오버튼용 생성자
-        public Mod(string name, List<string> downloadUrls, RadioButton radioButton)
-        {
-            Name = name;
-            DownloadUrls = downloadUrls;
-            CheckBox = null;
-            RadioButton = radioButton;
         }
     }
 

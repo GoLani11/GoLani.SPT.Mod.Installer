@@ -66,22 +66,22 @@ C:\Users\MJC\Desktop\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\Shar
 C:\Users\MJC\Desktop\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\ZstdSharp.dll
 C:\Users\gomim\Desktop\모드작업\고라니 모드팩 - C#\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\SharpCompress.dll
 C:\Users\gomim\Desktop\모드작업\고라니 모드팩 - C#\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\ZstdSharp.dll
-C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\GoLani_ModPack.exe
-C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\GoLani_ModPack.dll
-C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\SharpCompress.dll
-C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\Microsoft.WindowsAPICodePack.Core.dll
-C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\Microsoft.WindowsAPICodePack.Shell.dll
-C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\ZstdSharp.dll
 C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\x64\7z.dll
 C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\x86\7z.dll
+C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\GoLani_ModPack.exe
 C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\GoLani_ModPack.deps.json
 C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\GoLani_ModPack.runtimeconfig.json
+C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\GoLani_ModPack.dll
 C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\GoLani_ModPack.pdb
 C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\MaterialSkin.dll
 C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\SevenZipExtractor.dll
+C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\SharpCompress.dll
+C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\Microsoft.WindowsAPICodePack.Core.dll
 C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll
 C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\Microsoft.WindowsAPICodePack.Sensors.dll
+C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\Microsoft.WindowsAPICodePack.Shell.dll
 C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows\ZstdSharp.dll
 C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\obj\Debug\net8.0-windows\GoLani_ModPack.csproj.AssemblyReference.cache
 C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\obj\Debug\net8.0-windows\GoLani_ModPack.MainForm.resources
 C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\obj\Debug\net8.0-windows\GoLani_ModPack.Pages.DeleteModPage.resources

@@ -100,9 +100,8 @@
             FireSupportlink = new LinkLabel();
             FireSupportBox = new CheckBox();
             panel4 = new Panel();
-            Texture4Klink = new LinkLabel();
-            SPTTexDefaultBtn = new RadioButton();
-            SPTTex4096Btn = new RadioButton();
+            SPTTexDefaultBox = new CheckBox();
+            SPTTex4096Box = new CheckBox();
             TextureKRlink = new LinkLabel();
             SPTTexKRBox = new CheckBox();
             LogoKRlink = new LinkLabel();
@@ -481,7 +480,6 @@
             // SVMBox
             // 
             SVMBox.AutoSize = true;
-            SVMBox.Enabled = false;
             SVMBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
             SVMBox.Location = new Point(229, 42);
             SVMBox.Name = "SVMBox";
@@ -956,7 +954,6 @@
             // VisceralBox
             // 
             VisceralBox.AutoSize = true;
-            VisceralBox.Enabled = false;
             VisceralBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
             VisceralBox.Location = new Point(19, 173);
             VisceralBox.Name = "VisceralBox";
@@ -991,9 +988,8 @@
             // 
             panel4.BackColor = SystemColors.ButtonHighlight;
             panel4.BorderStyle = BorderStyle.FixedSingle;
-            panel4.Controls.Add(Texture4Klink);
-            panel4.Controls.Add(SPTTexDefaultBtn);
-            panel4.Controls.Add(SPTTex4096Btn);
+            panel4.Controls.Add(SPTTexDefaultBox);
+            panel4.Controls.Add(SPTTex4096Box);
             panel4.Controls.Add(TextureKRlink);
             panel4.Controls.Add(SPTTexKRBox);
             panel4.Controls.Add(LogoKRlink);
@@ -1005,43 +1001,30 @@
             panel4.Size = new Size(638, 110);
             panel4.TabIndex = 8;
             // 
-            // Texture4Klink
+            // SPTTexDefaultBox
             // 
-            Texture4Klink.AutoSize = true;
-            Texture4Klink.Font = new Font("맑은 고딕", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            Texture4Klink.LinkColor = Color.Black;
-            Texture4Klink.Location = new Point(513, 48);
-            Texture4Klink.Name = "Texture4Klink";
-            Texture4Klink.Size = new Size(84, 40);
-            Texture4Klink.TabIndex = 94;
-            Texture4Klink.TabStop = true;
-            Texture4Klink.Text = "4K 버전\r\n(수동 설치)";
-            Texture4Klink.LinkClicked += Texture4Klink_LinkClicked;
+            SPTTexDefaultBox.AutoSize = true;
+            SPTTexDefaultBox.Enabled = false;
+            SPTTexDefaultBox.Font = new Font("맑은 고딕", 12F);
+            SPTTexDefaultBox.Location = new Point(482, 19);
+            SPTTexDefaultBox.Name = "SPTTexDefaultBox";
+            SPTTexDefaultBox.Size = new Size(99, 25);
+            SPTTexDefaultBox.TabIndex = 95;
+            SPTTexDefaultBox.Text = "기본 버전";
+            SPTTexDefaultBox.UseVisualStyleBackColor = true;
+            SPTTexDefaultBox.CheckedChanged += SPTTexDefaultBox_CheckedChanged;
             // 
-            // SPTTexDefaultBtn
+            // SPTTex4096Box
             // 
-            SPTTexDefaultBtn.AutoSize = true;
-            SPTTexDefaultBtn.Enabled = false;
-            SPTTexDefaultBtn.Font = new Font("맑은 고딕", 11.25F);
-            SPTTexDefaultBtn.Location = new Point(493, 21);
-            SPTTexDefaultBtn.Name = "SPTTexDefaultBtn";
-            SPTTexDefaultBtn.Size = new Size(92, 24);
-            SPTTexDefaultBtn.TabIndex = 93;
-            SPTTexDefaultBtn.TabStop = true;
-            SPTTexDefaultBtn.Text = "기본 버전";
-            SPTTexDefaultBtn.UseVisualStyleBackColor = true;
-            // 
-            // SPTTex4096Btn
-            // 
-            SPTTex4096Btn.AutoSize = true;
-            SPTTex4096Btn.Enabled = false;
-            SPTTex4096Btn.Font = new Font("맑은 고딕", 11.25F);
-            SPTTex4096Btn.Location = new Point(493, 62);
-            SPTTex4096Btn.Name = "SPTTex4096Btn";
-            SPTTex4096Btn.Size = new Size(14, 13);
-            SPTTex4096Btn.TabIndex = 92;
-            SPTTex4096Btn.TabStop = true;
-            SPTTex4096Btn.UseVisualStyleBackColor = true;
+            SPTTex4096Box.AutoSize = true;
+            SPTTex4096Box.Enabled = false;
+            SPTTex4096Box.Font = new Font("맑은 고딕", 9F);
+            SPTTex4096Box.Location = new Point(482, 50);
+            SPTTex4096Box.Name = "SPTTex4096Box";
+            SPTTex4096Box.Size = new Size(126, 49);
+            SPTTex4096Box.TabIndex = 94;
+            SPTTex4096Box.Text = "4K 버전\r\n(기본 버전 체크 후\r\n받아주세요.)";
+            SPTTex4096Box.UseVisualStyleBackColor = true;
             // 
             // TextureKRlink
             // 
@@ -1766,9 +1749,6 @@
         private LinkLabel SPTKRlink;
         private CheckBox SPTKRBox;
         private Label label3;
-        private RadioButton SPTTexDefaultBtn;
-        private RadioButton SPTTex4096Btn;
-        private LinkLabel Texture4Klink;
         private LinkLabel SVMlink;
         private CheckBox SVMBox;
         private Label label4;
@@ -1797,5 +1777,7 @@
         private CheckBox UIBox;
         private LinkLabel UIKRlink;
         private CheckBox UIKRBox;
+        private CheckBox SPTTex4096Box;
+        private CheckBox SPTTexDefaultBox;
     }
 }

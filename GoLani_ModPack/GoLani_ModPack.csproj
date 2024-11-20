@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <Copyright>GoLani11,_고라니_</Copyright>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <ApplicationIcon>8ede80a1-1d0c-4839-bcc3-97bd4f357ecd.ico</ApplicationIcon>
   </PropertyGroup>
 

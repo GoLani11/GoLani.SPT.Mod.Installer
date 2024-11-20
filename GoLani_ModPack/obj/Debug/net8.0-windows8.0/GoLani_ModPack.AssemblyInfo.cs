@@ -19,8 +19,8 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyProductAttribute("GoLani_ModPack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GoLani_ModPack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.0.2.0")]
-[assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
-[assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]
+[assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows8.0")]
+[assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows8.0")]
 
 // MSBuild WriteCodeFragment 클래스에서 생성되었습니다.
 
