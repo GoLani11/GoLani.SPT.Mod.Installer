@@ -3,12 +3,12 @@
     partial class MainForm
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -22,14 +22,12 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             MenuPanel = new Panel();
+            downloadProgressBar = new ProgressBar();
+            label1 = new Label();
             ModInfoBtn = new Button();
             InstallBtn = new Button();
             DeleteModBtn = new Button();
@@ -45,6 +43,8 @@
             // MenuPanel
             // 
             MenuPanel.BackColor = Color.FromArgb(229, 230, 228);
+            MenuPanel.Controls.Add(downloadProgressBar);
+            MenuPanel.Controls.Add(label1);
             MenuPanel.Controls.Add(ModInfoBtn);
             MenuPanel.Controls.Add(InstallBtn);
             MenuPanel.Controls.Add(DeleteModBtn);
@@ -56,6 +56,23 @@
             MenuPanel.Name = "MenuPanel";
             MenuPanel.Size = new Size(250, 761);
             MenuPanel.TabIndex = 0;
+            // 
+            // downloadProgressBar
+            // 
+            downloadProgressBar.Location = new Point(12, 688);
+            downloadProgressBar.Name = "downloadProgressBar";
+            downloadProgressBar.Size = new Size(220, 20);
+            downloadProgressBar.TabIndex = 8;
+            downloadProgressBar.Visible = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(22, 726);
+            label1.Name = "label1";
+            label1.Size = new Size(59, 15);
+            label1.TabIndex = 6;
+            label1.Text = "버전 확인";
             // 
             // ModInfoBtn
             // 
@@ -73,7 +90,6 @@
             ModInfoBtn.Size = new Size(247, 75);
             ModInfoBtn.TabIndex = 5;
             ModInfoBtn.Text = "모드 설명\r\n(추가 예정)";
-            ModInfoBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             ModInfoBtn.UseVisualStyleBackColor = true;
             ModInfoBtn.Click += ModInfoBtn_Click;
             // 
@@ -111,7 +127,6 @@
             DeleteModBtn.Size = new Size(247, 75);
             DeleteModBtn.TabIndex = 2;
             DeleteModBtn.Text = "모드 초기화\r\n(추가 예정)";
-            DeleteModBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             DeleteModBtn.UseVisualStyleBackColor = true;
             DeleteModBtn.Click += DeleteModBtn_Click;
             // 
@@ -191,9 +206,10 @@
             MaximizeBox = false;
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "고라니 모드팩 패치기";
+            Text = "고라니 한글화 모드 패치기";
             Load += StartLoadForm;
             MenuPanel.ResumeLayout(false);
+            MenuPanel.PerformLayout();
             MainFramePanel.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -209,5 +225,7 @@
         private Panel MainPanel;
         private TableLayoutPanel MainFramePanel;
         private Panel TopTextpanel;
+        private Label label1;
+        private ProgressBar downloadProgressBar;
     }
 }

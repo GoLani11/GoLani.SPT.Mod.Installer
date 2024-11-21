@@ -7,7 +7,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <Copyright>GoLani11,_고라니_</Copyright>
-    <Version>0.1.2</Version>
+    <Version>0.2.1</Version>
     <ApplicationIcon>8ede80a1-1d0c-4839-bcc3-97bd4f357ecd.ico</ApplicationIcon>
   </PropertyGroup>
 
@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <PackageReference Include="MaterialSkin.2" Version="2.3.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="SevenZipExtractor" Version="1.0.17" />
     <PackageReference Include="SharpCompress" Version="0.38.0" />
     <PackageReference Include="WindowsAPICodePack" Version="8.0.6" />

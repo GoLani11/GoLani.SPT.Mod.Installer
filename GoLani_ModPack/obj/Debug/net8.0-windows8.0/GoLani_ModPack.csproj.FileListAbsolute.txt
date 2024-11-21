@@ -33,3 +33,4 @@ C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\obj\Debug\net8.0-w
 C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\obj\Debug\net8.0-windows8.0\GoLani_ModPack.pdb
 C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\obj\Debug\net8.0-windows8.0\GoLani_ModPack.genruntimeconfig.cache
 C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\obj\Debug\net8.0-windows8.0\ref\GoLani_ModPack.dll
+C:\Users\gomim\Documents\GitHub\GoLani_ModPack\GoLani_ModPack\bin\Debug\net8.0-windows8.0\Newtonsoft.Json.dll

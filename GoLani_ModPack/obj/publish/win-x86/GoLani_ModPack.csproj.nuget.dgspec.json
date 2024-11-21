@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\gomim\\Documents\\GitHub\\GoLani_ModPack\\GoLani_ModPack\\GoLani_ModPack.csproj": {
-      "version": "0.1.2",
+      "version": "0.2.1",
       "restore": {
         "projectUniqueName": "C:\\Users\\gomim\\Documents\\GitHub\\GoLani_ModPack\\GoLani_ModPack\\GoLani_ModPack.csproj",
         "projectName": "GoLani_ModPack",
@@ -54,6 +54,10 @@
               "target": "Package",
               "version": "[8.0.8, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "SevenZipExtractor": {
               "target": "Package",
