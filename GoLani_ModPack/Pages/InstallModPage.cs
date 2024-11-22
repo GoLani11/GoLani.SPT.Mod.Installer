@@ -76,6 +76,12 @@ namespace GoLani_ModPack.Pages
             mods.Add(new Mod("UI Fixes - KR", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1Ji0C9kvFCFBl1gm1ONrk4wv_zeG2vihM" }, UIKRBox));
 
+            //MOAR
+            mods.Add(new Mod("MOAR", new List<string> {
+                "https://drive.google.com/uc?export=download&id=1XvBIGGaEIg60b089s5KeS4e6ng7Zw8lu" }, MOARBox));
+            mods.Add(new Mod("MOAR - KR", new List<string> {
+                "https://drive.google.com/uc?export=download&id=1IgwdRl863HZmAxsB6Gb-j_OEuHP_lFRx" }, MOARKRBox));
+
             //Questing Bots
             mods.Add(new Mod("Questing Bots", new List<string> { "https://github.com/dwesterwick/SPTQuestingBots/releases/download/0.8.1/DanW-SPTQuestingBots.zip",
             "https://github.com/DrakiaXYZ/SPT-BigBrain/releases/download/1.1.0/DrakiaXYZ-BigBrain-1.1.0.7z",
