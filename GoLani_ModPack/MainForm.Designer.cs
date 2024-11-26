@@ -36,8 +36,10 @@
             MainPanel = new Panel();
             MainFramePanel = new TableLayoutPanel();
             TopTextpanel = new Panel();
+            label2 = new Label();
             MenuPanel.SuspendLayout();
             MainFramePanel.SuspendLayout();
+            TopTextpanel.SuspendLayout();
             SuspendLayout();
             // 
             // MenuPanel
@@ -186,12 +188,24 @@
             // TopTextpanel
             // 
             TopTextpanel.BackColor = Color.FromArgb(229, 230, 228);
+            TopTextpanel.Controls.Add(label2);
             TopTextpanel.Dock = DockStyle.Fill;
             TopTextpanel.Location = new Point(0, 0);
             TopTextpanel.Margin = new Padding(0);
             TopTextpanel.Name = "TopTextpanel";
             TopTextpanel.Size = new Size(934, 100);
             TopTextpanel.TabIndex = 3;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Lime;
+            label2.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label2.Location = new Point(87, 5);
+            label2.Name = "label2";
+            label2.Size = new Size(775, 90);
+            label2.TabIndex = 0;
+            label2.Text = "** 현재 SPT 3.10 버전으로 업데이트되었습니다.\r\n잠겨있는 모드 설치시 오류가 발생할 수 있습니다. **\r\n";
             // 
             // MainForm
             // 
@@ -211,6 +225,8 @@
             MenuPanel.ResumeLayout(false);
             MenuPanel.PerformLayout();
             MainFramePanel.ResumeLayout(false);
+            TopTextpanel.ResumeLayout(false);
+            TopTextpanel.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -227,5 +243,6 @@
         private Panel TopTextpanel;
         private Label label1;
         private ProgressBar downloadProgressBar;
+        private Label label2;
     }
 }

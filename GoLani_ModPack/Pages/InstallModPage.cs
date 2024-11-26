@@ -29,7 +29,7 @@ namespace GoLani_ModPack.Pages
         {
             //SPT 타르코프 한글화 프로젝트
             mods.Add(new Mod("SPT 타르코프 한글화 프로젝트", new List<string> {
-                "https://github.com/GoLani11/SPT-Korean-Project/releases/download/v1.0.4/spt_korean_localization_G.M.zip",
+                "https://github.com/GoLani11/SPT-Korean-Project/releases/download/v1.1.1/SPT_Korean_Localization_G.M.zip",
                 "https://drive.google.com/uc?export=download&id=1ZHAS0Ns3lTrMLrWKy00W3alzp-9gT8Ni" }, SPTKRBox));
 
             //타르코프 로고 한글화
@@ -68,7 +68,7 @@ namespace GoLani_ModPack.Pages
 
             //SVM
             mods.Add(new Mod("SVM", new List<string> {
-                "https://docs.google.com/uc?export=download&id=1JTimCEDlCsq6SG71dCBXkfwuONwWQmWS&confirm=t" }, SVMBox));
+                "https://docs.google.com/uc?export=download&id=1mGVv47i38hWewXlJ62vTzLFjHX-WwOKS&confirm=t" }, SVMBox));
 
             //UI Fixes
             mods.Add(new Mod("UI Fixes", new List<string> {
