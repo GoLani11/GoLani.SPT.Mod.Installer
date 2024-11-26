@@ -30,7 +30,7 @@ namespace GoLani_ModPack.Pages
             //SPT 타르코프 한글화 프로젝트
             mods.Add(new Mod("SPT 타르코프 한글화 프로젝트", new List<string> {
                 "https://github.com/GoLani11/SPT-Korean-Project/releases/download/v1.1.1/SPT_Korean_Localization_G.M.zip",
-                "https://drive.google.com/uc?export=download&id=1ZHAS0Ns3lTrMLrWKy00W3alzp-9gT8Ni" }, SPTKRBox));
+                "https://drive.google.com/uc?export=download&id=1RbtlPzjqcQEsl_S-INKWaOxvpTZYeKWe" }, SPTKRBox));
 
             //타르코프 로고 한글화
             mods.Add(new Mod("타르코프 로고 한글화", new List<string> {
