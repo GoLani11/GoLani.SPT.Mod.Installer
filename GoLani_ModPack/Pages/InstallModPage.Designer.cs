@@ -871,6 +871,7 @@
             A_Indicatorlink.TabIndex = 111;
             A_Indicatorlink.TabStop = true;
             A_Indicatorlink.Text = "Audio Accessibility\r\nIndicators";
+            A_Indicatorlink.LinkClicked += A_Indicatorlink_LinkClicked;
             // 
             // AudioBox
             // 
@@ -1597,6 +1598,7 @@
             A_IndicatorKRlink.TabIndex = 95;
             A_IndicatorKRlink.TabStop = true;
             A_IndicatorKRlink.Text = "Audio Accessibility\r\nIndicators - KR";
+            A_IndicatorKRlink.LinkClicked += A_IndicatorKRlink_LinkClicked;
             // 
             // AudioKRBox
             // 
