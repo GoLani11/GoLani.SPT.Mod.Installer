@@ -341,7 +341,7 @@
             label23.Name = "label23";
             label23.Size = new Size(34, 15);
             label23.TabIndex = 112;
-            label23.Text = "2.5.3";
+            label23.Text = "3.0.0";
             // 
             // UIlink
             // 
@@ -359,7 +359,6 @@
             // UIBox
             // 
             UIBox.AutoSize = true;
-            UIBox.Enabled = false;
             UIBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
             UIBox.Location = new Point(6, 73);
             UIBox.Name = "UIBox";
@@ -392,7 +391,7 @@
             label16.Name = "label16";
             label16.Size = new Size(34, 15);
             label16.TabIndex = 106;
-            label16.Text = "1.2.4";
+            label16.Text = "1.2.5";
             // 
             // label15
             // 
@@ -415,11 +414,11 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(395, 41);
+            label13.Location = new Point(391, 42);
             label13.Name = "label13";
-            label13.Size = new Size(34, 15);
+            label13.Size = new Size(41, 15);
             label13.TabIndex = 103;
-            label13.Text = "1.9.1";
+            label13.Text = "1.10.0";
             // 
             // label12
             // 
@@ -473,7 +472,7 @@
             label6.Name = "label6";
             label6.Size = new Size(34, 15);
             label6.TabIndex = 96;
-            label6.Text = "0.5.0";
+            label6.Text = "0.5.1";
             // 
             // label5
             // 
@@ -652,7 +651,6 @@
             // CluttererBox
             // 
             CluttererBox.AutoSize = true;
-            CluttererBox.Enabled = false;
             CluttererBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
             CluttererBox.Location = new Point(229, 170);
             CluttererBox.Name = "CluttererBox";
@@ -676,7 +674,6 @@
             // HudBox
             // 
             HudBox.AutoSize = true;
-            HudBox.Enabled = false;
             HudBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
             HudBox.Location = new Point(6, 138);
             HudBox.Name = "HudBox";
@@ -724,7 +721,6 @@
             // MapsBox
             // 
             MapsBox.AutoSize = true;
-            MapsBox.Enabled = false;
             MapsBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
             MapsBox.Location = new Point(6, 105);
             MapsBox.Name = "MapsBox";
@@ -862,7 +858,7 @@
             label19.Name = "label19";
             label19.Size = new Size(34, 15);
             label19.TabIndex = 112;
-            label19.Text = "1.2.0";
+            label19.Text = "1.3.0";
             // 
             // A_Indicatorlink
             // 
@@ -1256,7 +1252,6 @@
             // UIKRBox
             // 
             UIKRBox.AutoSize = true;
-            UIKRBox.Enabled = false;
             UIKRBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
             UIKRBox.Location = new Point(9, 72);
             UIKRBox.Name = "UIKRBox";
@@ -1400,7 +1395,6 @@
             // CluttererKRBox
             // 
             CluttererKRBox.AutoSize = true;
-            CluttererKRBox.Enabled = false;
             CluttererKRBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
             CluttererKRBox.Location = new Point(226, 167);
             CluttererKRBox.Name = "CluttererKRBox";
@@ -1424,7 +1418,6 @@
             // HudKRBox
             // 
             HudKRBox.AutoSize = true;
-            HudKRBox.Enabled = false;
             HudKRBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
             HudKRBox.Location = new Point(9, 136);
             HudKRBox.Name = "HudKRBox";
@@ -1472,7 +1465,6 @@
             // MapsKRBox
             // 
             MapsKRBox.AutoSize = true;
-            MapsKRBox.Enabled = false;
             MapsKRBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
             MapsKRBox.Location = new Point(9, 103);
             MapsKRBox.Name = "MapsKRBox";
@@ -1609,7 +1601,6 @@
             // AudioKRBox
             // 
             AudioKRBox.AutoSize = true;
-            AudioKRBox.Enabled = false;
             AudioKRBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
             AudioKRBox.Location = new Point(249, 166);
             AudioKRBox.Name = "AudioKRBox";

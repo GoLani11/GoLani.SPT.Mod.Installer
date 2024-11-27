@@ -72,7 +72,7 @@ namespace GoLani_ModPack.Pages
 
             //UI Fixes
             mods.Add(new Mod("UI Fixes", new List<string> {
-                "https://github.com/tyfon7/UIFixes/releases/download/v2.5.3/Tyfon-UIFixes-2.5.3.zip" }, UIBox));
+                "https://github.com/tyfon7/UIFixes/releases/download/v3.0.0/Tyfon-UIFixes-3.0.0.zip" }, UIBox));
             mods.Add(new Mod("UI Fixes - KR", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1Ji0C9kvFCFBl1gm1ONrk4wv_zeG2vihM" }, UIKRBox));
 
@@ -91,7 +91,7 @@ namespace GoLani_ModPack.Pages
 
             //Dynamic Maps
             mods.Add(new Mod("Dynamic Maps", new List<string> {
-                "https://github.com/CJ-SPT/SPT-DynamicMaps/releases/download/V0.5.0/DynamicMaps-0.5.0.zip" }, MapsBox));
+                "https://github.com/CJ-SPT/SPT-DynamicMaps/releases/download/V0.5.1/DynamicMaps.7z" }, MapsBox));
             mods.Add(new Mod("Dynamic Maps - KR", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1H7K8swBDfmrYAtBF_gTsDteReN7Nazax" }, MapsKRBox));
 
@@ -103,14 +103,14 @@ namespace GoLani_ModPack.Pages
 
             //Game Panel HUD
             mods.Add(new Mod("Game Panel HUD", new List<string> {
-                "https://www.dropbox.com/scl/fi/0ghv6uqfile37uft1p8i5/kmyuhkyuk-GamePanelHUD-Release_3.1.1.7z?rlkey=23wkbn0tfx8ltligrbx4efyq9&st=rzvypvzl&dl=1",
-            "https://dev.sp-tarkov.com/kmyuhkyuk/EFTApi/releases/download/1.2.2/kmyuhkyuk-EFTApi-%28Release_1.2.2%29.7z" }, HudBox));
+                "https://github.com/kmyuhkyuk/GamePanelHUD/releases/download/3.2.0/kmyuhkyuk-GamePanelHUD.Release_3.2.0.7z",
+                "https://github.com/kmyuhkyuk/EFTApi/releases/download/1.3.0/kmyuhkyuk-EFTApi.Release_1.3.0.7z" }, HudBox));
             mods.Add(new Mod("Game Panel HUD - KR", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1g6wJqsjctHsqDlYsRVNsbpbr3sSnHscD" }, HudKRBox));
 
             //De-Clutterer
             mods.Add(new Mod("De-Clutterer", new List<string> {
-                "https://github.com/CJ-SPT/DeClutterer/releases/download/V1.2.4/Declutterer.7z", }, CluttererBox));
+                "https://github.com/CJ-SPT/DeClutterer/releases/download/V1.2.5/Declutterer.7z", }, CluttererBox));
             mods.Add(new Mod("De-Clutterer - KR", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1TcjGPg4KRaW3zdXP49fCDOhiErnejy8E" }, CluttererKRBox));
 
@@ -146,7 +146,7 @@ namespace GoLani_ModPack.Pages
 
             //Audio Accessibility Indicators
             mods.Add(new Mod("Audio Accessibility Indicators", new List<string> {
-                "https://github.com/acidphantasm/acidphantasm-accessibilityindicators/releases/download/1.2.0/acidphantasm-accessibilityindicators.zip", }, AudioBox));
+                "https://github.com/acidphantasm/acidphantasm-accessibilityindicators/releases/download/1.3.0/acidphantasm-accessibilityindicators.zip", }, AudioBox));
             mods.Add(new Mod("Audio Accessibility Indicators - KR", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1B1Cz3TYXU5IxkodYiaHNYqKNRpP9tu9G" }, AudioKRBox));
 
