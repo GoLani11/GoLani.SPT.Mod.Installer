@@ -29,7 +29,7 @@ namespace GoLani_ModPack.Pages
         {
             //SPT 타르코프 한글화 프로젝트
             mods.Add(new Mod("SPT 타르코프 한글화 프로젝트", new List<string> {
-                "https://github.com/GoLani11/SPT-Korean-Project/releases/download/v1.1.1/SPT_Korean_Localization_G.M.zip",
+                "https://github.com/GoLani11/SPT-Korean-Project/releases/download/v1.1.2/SPT_Korean_Localization_G.M.zip",
                 "https://drive.google.com/uc?export=download&id=1RbtlPzjqcQEsl_S-INKWaOxvpTZYeKWe" }, SPTKRBox));
 
             //타르코프 로고 한글화
@@ -97,7 +97,7 @@ namespace GoLani_ModPack.Pages
 
             //Amands Graphics
             mods.Add(new Mod("Amands Graphics", new List<string> {
-                "https://github.com/Amands2Mello/AmandsGraphics/releases/download/1.6.3/AmandsGraphics.1.6.3.zip" }, GraphicsBox));
+                "https://github.com/Amands2Mello/AmandsGraphics/releases/download/1.6.4/AmandsGraphics.1.6.4.7z" }, GraphicsBox));
             mods.Add(new Mod("Amands Graphics - KR", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1ZeTWNfvnFoycyUE9yRNdznBY-Mgj7LGC" }, GraphicsKRBox));
 

@@ -400,7 +400,7 @@
             label15.Name = "label15";
             label15.Size = new Size(34, 15);
             label15.TabIndex = 105;
-            label15.Text = "1.6.3";
+            label15.Text = "1.6.4";
             // 
             // label14
             // 
@@ -697,7 +697,6 @@
             // GraphicsBox
             // 
             GraphicsBox.AutoSize = true;
-            GraphicsBox.Enabled = false;
             GraphicsBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
             GraphicsBox.Location = new Point(229, 137);
             GraphicsBox.Name = "GraphicsBox";
@@ -1442,7 +1441,6 @@
             // GraphicsKRBox
             // 
             GraphicsKRBox.AutoSize = true;
-            GraphicsKRBox.Enabled = false;
             GraphicsKRBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
             GraphicsKRBox.Location = new Point(226, 134);
             GraphicsKRBox.Name = "GraphicsKRBox";
