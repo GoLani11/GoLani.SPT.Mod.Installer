@@ -88,6 +88,13 @@
             label19 = new Label();
             A_Indicatorlink = new LinkLabel();
             AudioBox = new CheckBox();
+            label26 = new Label();
+            label28 = new Label();
+            QuestTrackerlink = new LinkLabel();
+            QuestTrackerBox = new CheckBox();
+            Performancelink = new LinkLabel();
+            PerformanceBox = new CheckBox();
+            ModtabPage3 = new TabPage();
             label11 = new Label();
             Contentlink = new LinkLabel();
             ContextMenuBox = new CheckBox();
@@ -147,6 +154,11 @@
             KRtabPage2 = new TabPage();
             A_IndicatorKRlink = new LinkLabel();
             AudioKRBox = new CheckBox();
+            PerformanceKRlink = new LinkLabel();
+            PerformanceKRBox = new CheckBox();
+            QuestTrackerKRlink = new LinkLabel();
+            QuestTrackerKRBox = new CheckBox();
+            KRtabPage3 = new TabPage();
             BloodyKRlink = new LinkLabel();
             BloodyKRBox = new CheckBox();
             WeaponBuildingKRlink = new LinkLabel();
@@ -161,11 +173,13 @@
             ModtabControl.SuspendLayout();
             ModtabPage1.SuspendLayout();
             ModtabPage2.SuspendLayout();
+            ModtabPage3.SuspendLayout();
             panel4.SuspendLayout();
             panel3.SuspendLayout();
             KRtabControl.SuspendLayout();
             KRtabPage1.SuspendLayout();
             KRtabPage2.SuspendLayout();
+            KRtabPage3.SuspendLayout();
             SuspendLayout();
             // 
             // LinkBtn
@@ -236,6 +250,7 @@
             // 
             ModtabControl.Controls.Add(ModtabPage1);
             ModtabControl.Controls.Add(ModtabPage2);
+            ModtabControl.Controls.Add(ModtabPage3);
             ModtabControl.Dock = DockStyle.Fill;
             ModtabControl.ItemSize = new Size(55, 40);
             ModtabControl.Location = new Point(0, 0);
@@ -828,35 +843,27 @@
             ModtabPage2.Controls.Add(label19);
             ModtabPage2.Controls.Add(A_Indicatorlink);
             ModtabPage2.Controls.Add(AudioBox);
-            ModtabPage2.Controls.Add(label11);
-            ModtabPage2.Controls.Add(Contentlink);
-            ModtabPage2.Controls.Add(ContextMenuBox);
-            ModtabPage2.Controls.Add(label22);
-            ModtabPage2.Controls.Add(label21);
-            ModtabPage2.Controls.Add(label20);
-            ModtabPage2.Controls.Add(Bloodylink);
-            ModtabPage2.Controls.Add(BloodyBox);
-            ModtabPage2.Controls.Add(WeaponBuildinglink);
-            ModtabPage2.Controls.Add(ModdingBox);
-            ModtabPage2.Controls.Add(ViscreralKRlink);
-            ModtabPage2.Controls.Add(VisceralBox);
-            ModtabPage2.Controls.Add(FireSupportlink);
-            ModtabPage2.Controls.Add(FireSupportBox);
+            ModtabPage2.Controls.Add(label26);
+            ModtabPage2.Controls.Add(label28);
+            ModtabPage2.Controls.Add(QuestTrackerlink);
+            ModtabPage2.Controls.Add(QuestTrackerBox);
+            ModtabPage2.Controls.Add(Performancelink);
+            ModtabPage2.Controls.Add(PerformanceBox);
             ModtabPage2.Location = new Point(4, 44);
             ModtabPage2.Name = "ModtabPage2";
             ModtabPage2.Padding = new Padding(3);
             ModtabPage2.Size = new Size(435, 270);
-            ModtabPage2.TabIndex = 1;
+            ModtabPage2.TabIndex = 2;
             ModtabPage2.Text = "2페이지";
             ModtabPage2.UseVisualStyleBackColor = true;
             // 
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new Point(359, 187);
+            label19.Location = new Point(358, 63);
             label19.Name = "label19";
             label19.Size = new Size(34, 15);
-            label19.TabIndex = 112;
+            label19.TabIndex = 117;
             label19.Text = "1.3.0";
             // 
             // A_Indicatorlink
@@ -864,23 +871,111 @@
             A_Indicatorlink.AutoSize = true;
             A_Indicatorlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
             A_Indicatorlink.LinkColor = Color.Black;
-            A_Indicatorlink.Location = new Point(264, 161);
+            A_Indicatorlink.Location = new Point(263, 37);
             A_Indicatorlink.Name = "A_Indicatorlink";
             A_Indicatorlink.Size = new Size(150, 42);
-            A_Indicatorlink.TabIndex = 111;
+            A_Indicatorlink.TabIndex = 116;
             A_Indicatorlink.TabStop = true;
             A_Indicatorlink.Text = "Audio Accessibility\r\nIndicators";
-            A_Indicatorlink.LinkClicked += A_Indicatorlink_LinkClicked;
+            A_Indicatorlink.LinkClicked += A_Indicatorlink_LinkClicked_1;
             // 
             // AudioBox
             // 
             AudioBox.AutoSize = true;
             AudioBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            AudioBox.Location = new Point(243, 167);
+            AudioBox.Location = new Point(242, 43);
             AudioBox.Name = "AudioBox";
             AudioBox.Size = new Size(15, 14);
-            AudioBox.TabIndex = 110;
+            AudioBox.TabIndex = 115;
             AudioBox.UseVisualStyleBackColor = true;
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.Location = new Point(148, 43);
+            label26.Name = "label26";
+            label26.Size = new Size(34, 15);
+            label26.TabIndex = 114;
+            label26.Text = "3.5.1";
+            // 
+            // label28
+            // 
+            label28.AutoSize = true;
+            label28.Location = new Point(250, 15);
+            label28.Name = "label28";
+            label28.Size = new Size(34, 15);
+            label28.TabIndex = 112;
+            label28.Text = "3.1.0";
+            // 
+            // QuestTrackerlink
+            // 
+            QuestTrackerlink.AutoSize = true;
+            QuestTrackerlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            QuestTrackerlink.LinkColor = Color.Black;
+            QuestTrackerlink.Location = new Point(29, 37);
+            QuestTrackerlink.Name = "QuestTrackerlink";
+            QuestTrackerlink.Size = new Size(113, 21);
+            QuestTrackerlink.TabIndex = 107;
+            QuestTrackerlink.TabStop = true;
+            QuestTrackerlink.Text = "Quest Tracker";
+            QuestTrackerlink.LinkClicked += QuestTrackerlink_LinkClicked;
+            // 
+            // QuestTrackerBox
+            // 
+            QuestTrackerBox.AutoSize = true;
+            QuestTrackerBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            QuestTrackerBox.Location = new Point(8, 43);
+            QuestTrackerBox.Name = "QuestTrackerBox";
+            QuestTrackerBox.Size = new Size(15, 14);
+            QuestTrackerBox.TabIndex = 106;
+            QuestTrackerBox.UseVisualStyleBackColor = true;
+            // 
+            // Performancelink
+            // 
+            Performancelink.AutoSize = true;
+            Performancelink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            Performancelink.LinkColor = Color.Black;
+            Performancelink.Location = new Point(29, 7);
+            Performancelink.Name = "Performancelink";
+            Performancelink.Size = new Size(215, 21);
+            Performancelink.TabIndex = 105;
+            Performancelink.TabStop = true;
+            Performancelink.Text = "Performance Improvements";
+            Performancelink.LinkClicked += Performancelink_LinkClicked;
+            // 
+            // PerformanceBox
+            // 
+            PerformanceBox.AutoSize = true;
+            PerformanceBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            PerformanceBox.Location = new Point(8, 13);
+            PerformanceBox.Name = "PerformanceBox";
+            PerformanceBox.Size = new Size(15, 14);
+            PerformanceBox.TabIndex = 104;
+            PerformanceBox.UseVisualStyleBackColor = true;
+            // 
+            // ModtabPage3
+            // 
+            ModtabPage3.Controls.Add(label11);
+            ModtabPage3.Controls.Add(Contentlink);
+            ModtabPage3.Controls.Add(ContextMenuBox);
+            ModtabPage3.Controls.Add(label22);
+            ModtabPage3.Controls.Add(label21);
+            ModtabPage3.Controls.Add(label20);
+            ModtabPage3.Controls.Add(Bloodylink);
+            ModtabPage3.Controls.Add(BloodyBox);
+            ModtabPage3.Controls.Add(WeaponBuildinglink);
+            ModtabPage3.Controls.Add(ModdingBox);
+            ModtabPage3.Controls.Add(ViscreralKRlink);
+            ModtabPage3.Controls.Add(VisceralBox);
+            ModtabPage3.Controls.Add(FireSupportlink);
+            ModtabPage3.Controls.Add(FireSupportBox);
+            ModtabPage3.Location = new Point(4, 44);
+            ModtabPage3.Name = "ModtabPage3";
+            ModtabPage3.Padding = new Padding(3);
+            ModtabPage3.Size = new Size(435, 270);
+            ModtabPage3.TabIndex = 1;
+            ModtabPage3.Text = "3페이지";
+            ModtabPage3.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -1165,6 +1260,7 @@
             // 
             KRtabControl.Controls.Add(KRtabPage1);
             KRtabControl.Controls.Add(KRtabPage2);
+            KRtabControl.Controls.Add(KRtabPage3);
             KRtabControl.Dock = DockStyle.Fill;
             KRtabControl.ItemSize = new Size(55, 40);
             KRtabControl.Location = new Point(0, 0);
@@ -1571,17 +1667,15 @@
             // 
             KRtabPage2.Controls.Add(A_IndicatorKRlink);
             KRtabPage2.Controls.Add(AudioKRBox);
-            KRtabPage2.Controls.Add(BloodyKRlink);
-            KRtabPage2.Controls.Add(BloodyKRBox);
-            KRtabPage2.Controls.Add(WeaponBuildingKRlink);
-            KRtabPage2.Controls.Add(ModdingKRBox);
-            KRtabPage2.Controls.Add(FireSupportKRlink);
-            KRtabPage2.Controls.Add(FireSupportKRBox);
+            KRtabPage2.Controls.Add(PerformanceKRlink);
+            KRtabPage2.Controls.Add(PerformanceKRBox);
+            KRtabPage2.Controls.Add(QuestTrackerKRlink);
+            KRtabPage2.Controls.Add(QuestTrackerKRBox);
             KRtabPage2.Location = new Point(4, 44);
             KRtabPage2.Name = "KRtabPage2";
             KRtabPage2.Padding = new Padding(3);
             KRtabPage2.Size = new Size(435, 270);
-            KRtabPage2.TabIndex = 1;
+            KRtabPage2.TabIndex = 2;
             KRtabPage2.Text = "2페이지";
             KRtabPage2.UseVisualStyleBackColor = true;
             // 
@@ -1590,23 +1684,85 @@
             A_IndicatorKRlink.AutoSize = true;
             A_IndicatorKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
             A_IndicatorKRlink.LinkColor = Color.Black;
-            A_IndicatorKRlink.Location = new Point(270, 160);
+            A_IndicatorKRlink.Location = new Point(270, 42);
             A_IndicatorKRlink.Name = "A_IndicatorKRlink";
             A_IndicatorKRlink.Size = new Size(150, 42);
-            A_IndicatorKRlink.TabIndex = 95;
+            A_IndicatorKRlink.TabIndex = 120;
             A_IndicatorKRlink.TabStop = true;
             A_IndicatorKRlink.Text = "Audio Accessibility\r\nIndicators - KR";
-            A_IndicatorKRlink.LinkClicked += A_IndicatorKRlink_LinkClicked;
+            A_IndicatorKRlink.LinkClicked += A_IndicatorKRlink_LinkClicked_1;
             // 
             // AudioKRBox
             // 
             AudioKRBox.AutoSize = true;
             AudioKRBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            AudioKRBox.Location = new Point(249, 166);
+            AudioKRBox.Location = new Point(249, 48);
             AudioKRBox.Name = "AudioKRBox";
             AudioKRBox.Size = new Size(15, 14);
-            AudioKRBox.TabIndex = 94;
+            AudioKRBox.TabIndex = 119;
             AudioKRBox.UseVisualStyleBackColor = true;
+            // 
+            // PerformanceKRlink
+            // 
+            PerformanceKRlink.AutoSize = true;
+            PerformanceKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            PerformanceKRlink.LinkColor = Color.Black;
+            PerformanceKRlink.Location = new Point(30, 12);
+            PerformanceKRlink.Name = "PerformanceKRlink";
+            PerformanceKRlink.Size = new Size(253, 21);
+            PerformanceKRlink.TabIndex = 116;
+            PerformanceKRlink.TabStop = true;
+            PerformanceKRlink.Text = "Performance Improvements - KR";
+            PerformanceKRlink.LinkClicked += PerformanceKRlink_LinkClicked;
+            // 
+            // PerformanceKRBox
+            // 
+            PerformanceKRBox.AutoSize = true;
+            PerformanceKRBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            PerformanceKRBox.Location = new Point(9, 18);
+            PerformanceKRBox.Name = "PerformanceKRBox";
+            PerformanceKRBox.Size = new Size(15, 14);
+            PerformanceKRBox.TabIndex = 115;
+            PerformanceKRBox.UseVisualStyleBackColor = true;
+            // 
+            // QuestTrackerKRlink
+            // 
+            QuestTrackerKRlink.AutoSize = true;
+            QuestTrackerKRlink.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            QuestTrackerKRlink.LinkColor = Color.Black;
+            QuestTrackerKRlink.Location = new Point(30, 42);
+            QuestTrackerKRlink.Name = "QuestTrackerKRlink";
+            QuestTrackerKRlink.Size = new Size(151, 21);
+            QuestTrackerKRlink.TabIndex = 118;
+            QuestTrackerKRlink.TabStop = true;
+            QuestTrackerKRlink.Text = "Quest Tracker - KR";
+            QuestTrackerKRlink.LinkClicked += QuestTrackerKRlink_LinkClicked;
+            // 
+            // QuestTrackerKRBox
+            // 
+            QuestTrackerKRBox.AutoSize = true;
+            QuestTrackerKRBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            QuestTrackerKRBox.Location = new Point(9, 48);
+            QuestTrackerKRBox.Name = "QuestTrackerKRBox";
+            QuestTrackerKRBox.Size = new Size(15, 14);
+            QuestTrackerKRBox.TabIndex = 117;
+            QuestTrackerKRBox.UseVisualStyleBackColor = true;
+            // 
+            // KRtabPage3
+            // 
+            KRtabPage3.Controls.Add(BloodyKRlink);
+            KRtabPage3.Controls.Add(BloodyKRBox);
+            KRtabPage3.Controls.Add(WeaponBuildingKRlink);
+            KRtabPage3.Controls.Add(ModdingKRBox);
+            KRtabPage3.Controls.Add(FireSupportKRlink);
+            KRtabPage3.Controls.Add(FireSupportKRBox);
+            KRtabPage3.Location = new Point(4, 44);
+            KRtabPage3.Name = "KRtabPage3";
+            KRtabPage3.Padding = new Padding(3);
+            KRtabPage3.Size = new Size(435, 270);
+            KRtabPage3.TabIndex = 1;
+            KRtabPage3.Text = "3페이지";
+            KRtabPage3.UseVisualStyleBackColor = true;
             // 
             // BloodyKRlink
             // 
@@ -1733,6 +1889,8 @@
             ModtabPage1.PerformLayout();
             ModtabPage2.ResumeLayout(false);
             ModtabPage2.PerformLayout();
+            ModtabPage3.ResumeLayout(false);
+            ModtabPage3.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             panel3.ResumeLayout(false);
@@ -1741,6 +1899,8 @@
             KRtabPage1.PerformLayout();
             KRtabPage2.ResumeLayout(false);
             KRtabPage2.PerformLayout();
+            KRtabPage3.ResumeLayout(false);
+            KRtabPage3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1779,7 +1939,7 @@
         private CheckBox DonutBox;
         private LinkLabel Sainlink;
         private CheckBox SAINBox;
-        private TabPage ModtabPage2;
+        private TabPage ModtabPage3;
         private CheckBox checkBox26;
         private LinkLabel G_Indicatorlink;
         private CheckBox GrenadeBox;
@@ -1787,7 +1947,7 @@
         private Panel panel3;
         private TabControl KRtabControl;
         private TabPage KRtabPage1;
-        private TabPage KRtabPage2;
+        private TabPage KRtabPage3;
         private LinkLabel G_IndicatorKRlink;
         private CheckBox GrenadeKRBox;
         private LinkLabel TrainerKRlink;
@@ -1869,11 +2029,23 @@
         private Label label24;
         private LinkLabel linkLabel1;
         private CheckBox MOARBox;
+        private LinkLabel linkLabel2;
+        private CheckBox MOARKRBox;
+        private TabPage ModtabPage2;
+        private TabPage KRtabPage2;
+        private Label label26;
+        private Label label28;
+        private LinkLabel QuestTrackerlink;
+        private CheckBox QuestTrackerBox;
+        private LinkLabel Performancelink;
+        private CheckBox PerformanceBox;
+        private LinkLabel PerformanceKRlink;
+        private CheckBox PerformanceKRBox;
+        private LinkLabel QuestTrackerKRlink;
+        private CheckBox QuestTrackerKRBox;
         private Label label19;
         private LinkLabel A_Indicatorlink;
         private CheckBox AudioBox;
-        private LinkLabel linkLabel2;
-        private CheckBox MOARKRBox;
         private LinkLabel A_IndicatorKRlink;
         private CheckBox AudioKRBox;
     }

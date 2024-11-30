@@ -2,6 +2,7 @@
 using SharpCompress.Archives;
 using SharpCompress.Common;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -110,25 +111,25 @@ namespace GoLani_ModPack.Pages
 
             //De-Clutterer
             mods.Add(new Mod("De-Clutterer", new List<string> {
-                "https://github.com/CJ-SPT/DeClutterer/releases/download/V1.2.5/Declutterer.7z", }, CluttererBox));
+                "https://github.com/CJ-SPT/DeClutterer/releases/download/V1.2.5/Declutterer.7z" }, CluttererBox));
             mods.Add(new Mod("De-Clutterer - KR", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1TcjGPg4KRaW3zdXP49fCDOhiErnejy8E" }, CluttererKRBox));
 
             //Boss Notifier
             mods.Add(new Mod("Boss Notifier", new List<string> {
-                "https://github.com/m-barneto/BossNotifier/releases/download/v1.5.0/BossNotifier.zip", }, NotifierBox));
+                "https://github.com/m-barneto/BossNotifier/releases/download/v1.5.0/BossNotifier.zip" }, NotifierBox));
             mods.Add(new Mod("Boss Notifier - KR", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1vvwt0ihzeUH6dZCT6m7xKjAsHLSYklDt" }, NotifierKRBox));
 
             //Fontaine's FOV Fix
             mods.Add(new Mod("Fontaine's FOV Fix", new List<string> {
-                "https://github.com/space-commits/SPT-FOV-Fix/releases/download/v2.1.8/Fontaine-FOV-Fix-v2.1.8-SPT-v3.9.8.zip", }, FOVFixBox));
+                "https://github.com/space-commits/SPT-FOV-Fix/releases/download/v2.1.8/Fontaine-FOV-Fix-v2.1.8-SPT-v3.9.8.zip" }, FOVFixBox));
             mods.Add(new Mod("Fontaine's FOV Fix - KR", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1lUPX3Rere4DxGDVUNvfmEjBoP1dkMroM" }, FOVFixKRBox));
 
             //Dad Gamer Mode
             mods.Add(new Mod("Dad Gamer Mode", new List<string> {
-                "https://github.com/dvize/DadGamerMode/releases/download/v1.9.3/dvize.DadGamerMode-v1.9.3.0.zip", }, DadGamerBox));
+                "https://github.com/dvize/DadGamerMode/releases/download/v1.9.3/dvize.DadGamerMode-v1.9.3.0.zip" }, DadGamerBox));
             mods.Add(new Mod("Dad Gamer Mode - KR", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1qpY8QtM9bRl0GZUEFHuT87Op4ihCQNai" }, DadGamerKRBox));
 
@@ -140,31 +141,44 @@ namespace GoLani_ModPack.Pages
 
             //Grenade Indicator
             mods.Add(new Mod("Grenade Indicator", new List<string> {
-                "https://github.com/Solarint/GrenadeIndicator/releases/download/v1.0/GrenadeIndicator-1.0-Release.7z", }, GrenadeBox));
+                "https://github.com/Solarint/GrenadeIndicator/releases/download/v1.0/GrenadeIndicator-1.0-Release.7z" }, GrenadeBox));
             mods.Add(new Mod("Grenade Indicator - KR", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1mBjrkeRceF4SXJDt9nvN_8acKgXzBTo4" }, GrenadeKRBox));
 
+            //Performance Improvements
+            mods.Add(new Mod("Performance Improvements", new List<string> {
+                "https://github.com/CJ-SPT/PerformanceImprovements/releases/download/V0.1.1/PerformanceImprovements.7z",
+                "https://github.com/Nympfonic/UnityToolkit/releases/download/v1.0.1/UnityToolkit-1.0.1.7z"}, PerformanceBox));
+            mods.Add(new Mod("Performance Improvements - KR", new List<string> {
+                "https://drive.google.com/uc?export=download&id=1kyaReXGU2B7YorqwzDuBfPlWB7uEqMR5" }, PerformanceKRBox));
+
+            //Quest Tracker
+            mods.Add(new Mod("Quest Tracker", new List<string> {
+                "https://github.com/DrakiaXYZ/SPT-QuestTracker/releases/download/1.4.0/DrakiaXYZ-QuestTracker-1.4.0.7z" }, QuestTrackerBox));
+            mods.Add(new Mod("Quest Tracker - KR", new List<string> {
+                "https://drive.google.com/uc?export=download&id=1a7jqr-q9vzqbLbj6n00d5X6uY_EHmTsb" }, QuestTrackerKRBox));
+
             //Audio Accessibility Indicators
             mods.Add(new Mod("Audio Accessibility Indicators", new List<string> {
-                "https://github.com/acidphantasm/acidphantasm-accessibilityindicators/releases/download/1.3.0/acidphantasm-accessibilityindicators.zip", }, AudioBox));
+                "https://github.com/acidphantasm/acidphantasm-accessibilityindicators/releases/download/1.3.0/acidphantasm-accessibilityindicators.zip" }, AudioBox));
             mods.Add(new Mod("Audio Accessibility Indicators - KR", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1B1Cz3TYXU5IxkodYiaHNYqKNRpP9tu9G" }, AudioKRBox));
 
             //SamSWAT's Fire Support
             mods.Add(new Mod("SamSWAT's Fire Support", new List<string> {
-                "https://github.com/Nympfonic/SamSWAT.FireSupport.ArysReloaded/releases/download/v2.2.4/SamSWAT-FireSupport-ArysReloaded-2.2.4.7z", }, FireSupportBox));
+                "https://github.com/Nympfonic/SamSWAT.FireSupport.ArysReloaded/releases/download/v2.2.4/SamSWAT-FireSupport-ArysReloaded-2.2.4.7z" }, FireSupportBox));
             mods.Add(new Mod("SamSWAT's Fire Support - KR", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1cEDPJOowm4EBuNBhv69zKRkrN2XDFVe7" }, FireSupportKRBox));
 
             //Trader Modding and Improved Weapon Building
             mods.Add(new Mod("Trader Modding and Improved Weapon Building", new List<string> {
-                "https://github.com/Soulztorm/ChooChoo-TraderModding/releases/download/1.8.0/ChooChoo-Tradermodding-1.8.0.zip", }, ModdingBox));
+                "https://github.com/Soulztorm/ChooChoo-TraderModding/releases/download/1.8.0/ChooChoo-Tradermodding-1.8.0.zip" }, ModdingBox));
             mods.Add(new Mod("Trader Modding and Improved Weapon Building - KR", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1_o2h9qGeaZT00uF7tk2PNOJKb8QoBUQn" }, ModdingKRBox));
 
             //Borkel's Bloody Bullet Wounds + Particles + Splatters
             mods.Add(new Mod("Borkel's Bloody Bullet Wounds + Particles + Splatters", new List<string> {
-                "https://github.com/Borkel/Blood-Particles/releases/download/1.2.3/BBBWP-1.2.3.zip", }, BloodyBox));
+                "https://github.com/Borkel/Blood-Particles/releases/download/1.2.3/BBBWP-1.2.3.zip" }, BloodyBox));
             mods.Add(new Mod("Borkel's Bloody Bullet Wounds + Particles + Splatters - KR", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1WuWkvepJiiifZb3kleA7FeOPSnPrZDQK" }, BloodyKRBox));
 
@@ -602,6 +616,35 @@ namespace GoLani_ModPack.Pages
         {
             Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/115306347") { UseShellExecute = true });
         }
+
+        private void Performancelink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/2505-performance-improvements/") { UseShellExecute = true });
+        }
+        private void PerformanceKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/122564786") { UseShellExecute = true });
+        }
+
+        private void QuestTrackerlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/1574-quest-tracker/") { UseShellExecute = true });
+        }
+        private void QuestTrackerKRlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/122563185") { UseShellExecute = true });
+        }
+
+        private void A_Indicatorlink_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://hub.sp-tarkov.com/files/file/2395-audio-accessibility-indicators/") { UseShellExecute = true });
+        }
+        private void A_IndicatorKRlink_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://arca.live/b/tarkovspt/118291959") { UseShellExecute = true });
+        }
+
+
     }
 
 
