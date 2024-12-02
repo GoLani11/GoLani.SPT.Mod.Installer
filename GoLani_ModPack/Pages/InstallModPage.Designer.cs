@@ -487,7 +487,7 @@
             label6.Name = "label6";
             label6.Size = new Size(34, 15);
             label6.TabIndex = 96;
-            label6.Text = "0.5.1";
+            label6.Text = "0.5.2";
             // 
             // label5
             // 
@@ -896,7 +896,7 @@
             label26.Name = "label26";
             label26.Size = new Size(34, 15);
             label26.TabIndex = 114;
-            label26.Text = "3.5.1";
+            label26.Text = "1.4.0";
             // 
             // label28
             // 
@@ -905,7 +905,7 @@
             label28.Name = "label28";
             label28.Size = new Size(34, 15);
             label28.TabIndex = 112;
-            label28.Text = "3.1.0";
+            label28.Text = "0.1.2";
             // 
             // QuestTrackerlink
             // 
@@ -1191,7 +1191,6 @@
             // SPTTexKRBox
             // 
             SPTTexKRBox.AutoSize = true;
-            SPTTexKRBox.Enabled = false;
             SPTTexKRBox.Font = new Font("맑은 고딕", 9F, FontStyle.Regular, GraphicsUnit.Point, 129);
             SPTTexKRBox.Location = new Point(327, 27);
             SPTTexKRBox.Name = "SPTTexKRBox";

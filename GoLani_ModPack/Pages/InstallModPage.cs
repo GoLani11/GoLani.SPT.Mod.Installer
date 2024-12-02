@@ -39,7 +39,7 @@ namespace GoLani_ModPack.Pages
 
             //SPT 타르코프 아이템 텍스처 한글화 프로젝트 - 기본
             mods.Add(new Mod("SPT 타르코프 아이템 텍스처 한글화 프로젝트 - 기본", new List<string> {
-                "https://github.com/GoLani11/GoLani.ItemTextureKoreanChange/releases/download/v1.0.2/GoLani-ItemTextureKoreanChange.zip" }, SPTTexDefaultBox));
+                "https://github.com/GoLani11/GoLani.ItemTextureKoreanChange/releases/download/v1.1.0/GoLani-ItemTextureKoreanChange.zip" }, SPTTexDefaultBox));
 
             //SPT 타르코프 아이템 텍스처 한글화 프로젝트 - 4096
             mods.Add(new Mod("SPT 타르코프 아이템 텍스처 한글화 프로젝트 - 4096", new List<string> {
@@ -92,7 +92,7 @@ namespace GoLani_ModPack.Pages
 
             //Dynamic Maps
             mods.Add(new Mod("Dynamic Maps", new List<string> {
-                "https://github.com/CJ-SPT/SPT-DynamicMaps/releases/download/V0.5.1/DynamicMaps.7z" }, MapsBox));
+                "https://github.com/CJ-SPT/SPT-DynamicMaps/releases/download/V0.5.2/DynamicMaps-0.5.2.zip" }, MapsBox));
             mods.Add(new Mod("Dynamic Maps - KR", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1H7K8swBDfmrYAtBF_gTsDteReN7Nazax" }, MapsKRBox));
 
@@ -147,7 +147,7 @@ namespace GoLani_ModPack.Pages
 
             //Performance Improvements
             mods.Add(new Mod("Performance Improvements", new List<string> {
-                "https://github.com/CJ-SPT/PerformanceImprovements/releases/download/V0.1.1/PerformanceImprovements.7z",
+                "https://github.com/CJ-SPT/PerformanceImprovements/releases/download/V0.1.2/PerformanceImprovements.7z",
                 "https://github.com/Nympfonic/UnityToolkit/releases/download/v1.0.1/UnityToolkit-1.0.1.7z"}, PerformanceBox));
             mods.Add(new Mod("Performance Improvements - KR", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1kyaReXGU2B7YorqwzDuBfPlWB7uEqMR5" }, PerformanceKRBox));
