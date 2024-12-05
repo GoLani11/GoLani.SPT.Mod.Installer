@@ -73,7 +73,7 @@ namespace GoLani_ModPack.Pages
 
             //UI Fixes
             mods.Add(new Mod("UI Fixes", new List<string> {
-                "https://github.com/tyfon7/UIFixes/releases/download/v3.0.0/Tyfon-UIFixes-3.0.0.zip" }, UIBox));
+                "https://github.com/tyfon7/UIFixes/releases/download/v3.0.1/Tyfon-UIFixes-3.0.1.zip" }, UIBox));
             mods.Add(new Mod("UI Fixes - KR", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1Ji0C9kvFCFBl1gm1ONrk4wv_zeG2vihM" }, UIKRBox));
 

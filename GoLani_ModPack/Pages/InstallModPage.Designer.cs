@@ -356,7 +356,7 @@
             label23.Name = "label23";
             label23.Size = new Size(34, 15);
             label23.TabIndex = 112;
-            label23.Text = "3.0.0";
+            label23.Text = "3.0.1";
             // 
             // UIlink
             // 
