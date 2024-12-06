@@ -7,7 +7,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <Copyright>GoLani11,_고라니_</Copyright>
-    <Version>0.2.9</Version>
+    <Version>0.2.10</Version>
     <ApplicationIcon>8ede80a1-1d0c-4839-bcc3-97bd4f357ecd.ico</ApplicationIcon>
   </PropertyGroup>
 

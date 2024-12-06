@@ -147,7 +147,7 @@ namespace GoLani_ModPack.Pages
 
             //Performance Improvements
             mods.Add(new Mod("Performance Improvements", new List<string> {
-                "https://github.com/CJ-SPT/PerformanceImprovements/releases/download/V0.1.2/PerformanceImprovements.7z",
+                "https://github.com/CJ-SPT/PerformanceImprovements/releases/download/V0.1.3/PerformanceImprovements.7z",
                 "https://github.com/Nympfonic/UnityToolkit/releases/download/v1.0.1/UnityToolkit-1.0.1.7z"}, PerformanceBox));
             mods.Add(new Mod("Performance Improvements - KR", new List<string> {
                 "https://drive.google.com/uc?export=download&id=1kyaReXGU2B7YorqwzDuBfPlWB7uEqMR5" }, PerformanceKRBox));

@@ -905,7 +905,7 @@
             label28.Name = "label28";
             label28.Size = new Size(34, 15);
             label28.TabIndex = 112;
-            label28.Text = "0.1.2";
+            label28.Text = "0.1.3";
             // 
             // QuestTrackerlink
             // 
