@@ -23,6 +23,7 @@ namespace GoLani_ModPack.Pages
         {
             InitializeComponent();
             this.Load += async (s, e) => await LoadMetadataAsync(); // 비동기적으로 메타데이터 로드
+            LinkButtonsInitialize(); // 링크 버튼 초기화
         }
 
         private async Task LoadMetadataAsync()
@@ -134,6 +135,56 @@ namespace GoLani_ModPack.Pages
                 LinkBox.Text = $"SPT 모드 설치 경로: {installPath}";
             }
         }
+
+        // 링크 버튼 초기화
+        private void LinkButtonsInitialize()
+        {
+            // SPT 한글화 관련 링크
+            SPTKRlink.LinkClicked += (s, e) => OpenSourceLink("SPT 타르코프 한글화 프로젝트");
+            LogoKRlink.LinkClicked += (s, e) => OpenSourceLink("타르코프 로고 한글화");
+            TextureKRlink.LinkClicked += (s, e) => OpenSourceLink("SPT 타르코프 아이템 텍스처 한글화 프로젝트");
+
+            // 원본 모드 링크
+            Sainlink.LinkClicked += (s, e) => OpenSourceLink("SAIN");
+            Donutlink.LinkClicked += (s, e) => OpenSourceLink("Donut");
+            Realisemlink.LinkClicked += (s, e) => OpenSourceLink("SPT Realism Mod");
+            Questinglink.LinkClicked += (s, e) => OpenSourceLink("Questing Bots");
+            Graphicslink.LinkClicked += (s, e) => OpenSourceLink("Amands Graphics");
+            Hudlink.LinkClicked += (s, e) => OpenSourceLink("Game Panel HUD");
+            Clutterlink.LinkClicked += (s, e) => OpenSourceLink("De-Clutterer");
+            Notifierlink.LinkClicked += (s, e) => OpenSourceLink("Boss Notifier");
+            Fovlink.LinkClicked += (s, e) => OpenSourceLink("Fontaine's FOV Fix");
+            Trainerlink.LinkClicked += (s, e) => OpenSourceLink("Personal Trainer");
+            G_Indicatorlink.LinkClicked += (s, e) => OpenSourceLink("Grenade Indicator");
+            SVMlink.LinkClicked += (s, e) => OpenSourceLink("SVM");
+            Performancelink.LinkClicked += (s, e) => OpenSourceLink("Performance Improvements");
+            QuestTrackerlink.LinkClicked += (s, e) => OpenSourceLink("Quest Tracker");
+            A_Indicatorlink.LinkClicked += (s, e) => OpenSourceLink("Audio Accessibility Indicators");
+            FireSupportlink.LinkClicked += (s, e) => OpenSourceLink("SamSWAT's Fire Support");
+            WeaponBuildinglink.LinkClicked += (s, e) => OpenSourceLink("Trader Modding and Improved Weapon Building");
+            Bloodylink.LinkClicked += (s, e) => OpenSourceLink("Borkel's Bloody Bullet Wounds + Particles + Splatters");
+
+            // 한글화 모드 링크
+            SainKRlink.LinkClicked += (s, e) => OpenSourceLink("SAIN-KR");
+            DonutKRlink.LinkClicked += (s, e) => OpenSourceLink("Donut-KR");
+            RealisemKRlink.LinkClicked += (s, e) => OpenSourceLink("SPT Realism Mod - KR");
+            QuestingKRlink.LinkClicked += (s, e) => OpenSourceLink("Questing Bots - KR");
+            GraphicsKRlink.LinkClicked += (s, e) => OpenSourceLink("Amands Graphics - KR");
+            HudKRlink.LinkClicked += (s, e) => OpenSourceLink("Game Panel HUD - KR");
+            ClutterKRlink.LinkClicked += (s, e) => OpenSourceLink("De-Clutterer - KR");
+            NotifierKRlink.LinkClicked += (s, e) => OpenSourceLink("Boss Notifier - KR");
+            FovKRlink.LinkClicked += (s, e) => OpenSourceLink("Fontaine's FOV Fix - KR");
+            TrainerKRlink.LinkClicked += (s, e) => OpenSourceLink("Personal Trainer - KR");
+            G_IndicatorKRlink.LinkClicked += (s, e) => OpenSourceLink("Grenade Indicator - KR");
+            UIKRlink.LinkClicked += (s, e) => OpenSourceLink("UI Fixes - KR");
+            PerformanceKRlink.LinkClicked += (s, e) => OpenSourceLink("Performance Improvements - KR");
+            QuestTrackerKRlink.LinkClicked += (s, e) => OpenSourceLink("Quest Tracker - KR");
+            A_IndicatorKRlink.LinkClicked += (s, e) => OpenSourceLink("Audio Accessibility Indicators - KR");
+            FireSupportKRlink.LinkClicked += (s, e) => OpenSourceLink("SamSWAT's Fire Support - KR");
+            WeaponBuildingKRlink.LinkClicked += (s, e) => OpenSourceLink("Trader Modding and Improved Weapon Building - KR");
+            BloodyKRlink.LinkClicked += (s, e) => OpenSourceLink("Borkel's Bloody Bullet Wounds - KR");
+        }
+
     }
 
     // 메타데이터 클래스 정의

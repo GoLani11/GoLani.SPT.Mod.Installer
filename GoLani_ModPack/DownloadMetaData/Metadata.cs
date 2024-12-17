@@ -2,45 +2,25 @@
 
 namespace GoLani_ModPack
 {
-    /// <summary>
-    /// 전체 메타데이터 구조를 나타냅니다.
-    /// </summary>
+    // 전체 메타데이터 구조를 나타냅니다.
     public class Metadata
     {
-        /// <summary>
         /// 모드 리스트
-        /// </summary>
         public List<MetadataMod> Mods { get; set; }
     }
-
-    /// <summary>
-    /// 개별 모드의 메타데이터 구조를 나타냅니다.
-    /// </summary>
+    // 개별 모드의 메타데이터 구조를 나타냅니다.
+    
     public class MetadataMod
     {
-        /// <summary>
-        /// 모드 이름 (예: "SAIN")
-        /// </summary>
+        // 모드 이름 (예: "SAIN")
         public string Name { get; set; }
-
-        /// <summary>
-        /// 모드 버전 (예: "3.2.0")
-        /// </summary>
+        // 모드 버전 (예: "3.2.0")
         public string Version { get; set; }
-
-        /// <summary>
-        /// 다운로드 가능한 URL 리스트
-        /// </summary>
+        // 다운로드 가능한 URL 리스트
         public List<string> DownloadUrls { get; set; }
-
-        /// <summary>
-        /// 한글화 버전 여부
-        /// </summary>
+        // 한글화 버전 여부
         public bool KrVersion { get; set; }
-
-        /// <summary>
-        /// 출처 링크 URL
-        /// </summary>
+        // 출처 링크 URL
         public string SourceUrl { get; set; }
     }
 }
