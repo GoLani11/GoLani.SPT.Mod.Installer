@@ -1,0 +1,436 @@
+{
+	"mods": [
+		{
+			"name": "SPT 타르코프 한글화 프로젝트",
+			"version": "1.1.2",
+			"downloadUrls": [
+				"https://github.com/GoLani11/SPT-Korean-Project/releases/download/v1.1.2/SPT_Korean_Localization_G.M.zip",
+				"https://drive.google.com/uc?export=download&id=1RbtlPzjqcQEsl_S-INKWaOxvpTZYeKWe"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/115296869"
+		},
+		{
+			"name": "타르코프 로고 한글화",
+			"version": "1.0.1",
+			"downloadUrls": [
+				"https://github.com/GoLani11/GoLani.KoreanLogoChange/releases/download/v1.0.1/GoLani-LogoChange.zip"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/115297842"
+		},
+		{
+			"name": "SPT 타르코프 아이템 텍스처 한글화 프로젝트 - 기본",
+			"version": "1.1.0",
+			"downloadUrls": [
+				"https://github.com/GoLani11/GoLani.ItemTextureKoreanChange/releases/download/v1.1.0/GoLani-ItemTextureKoreanChange.zip"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://hub.sp-tarkov.com/files/file/2324-spt-item-texture-korean-change-patcher/"
+		},
+		{
+			"name": "SPT 타르코프 아이템 텍스처 한글화 프로젝트 - 4096",
+			"version": "1.1.0",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=1bp2ewi3gx0kRkbkz1u1I0aCYBlPnceEC&export=download"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://drive.google.com/file/d/1bp2ewi3gx0kRkbkz1u1I0aCYBlPnceEC/view?usp=sharing"
+		},
+		{
+			"name": "SAIN",
+			"version": "3.1.0",
+			"downloadUrls": [
+				"https://github.com/Solarint/SAIN/releases/download/v3.1.0-Release/SAIN-3.1.0-Release.7z",
+				"https://github.com/DrakiaXYZ/SPT-BigBrain/releases/download/1.1.0/DrakiaXYZ-BigBrain-1.1.0.7z",
+				"https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.5.2/DrakiaXYZ-Waypoints-1.5.2.7z"
+			],
+			"krVersion": false,
+			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1062-sain-solarint-s-ai-modifications-full-ai-combat-system-replacement/"
+		},
+		{
+			"name": "SAIN-KR",
+			"version": "3.1.0",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=1rdV7fuioPYAPVuhrdM8kZ-wONnpRmOor"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/115299538"
+		},
+		{
+			"name": "Donut",
+			"version": "3.5.1",
+			"downloadUrls": [
+				"https://github.com/p-kossa/nookys-swag-presets-spt/releases/download/v3.5.1/SWAG-Donuts-v3.5.1-SPT39x.zip",
+				"https://github.com/Nympfonic/UnityToolkit/releases/download/v1.0.1/UnityToolkit-1.0.1.7z",
+				"https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.5.2/DrakiaXYZ-Waypoints-1.5.2.7z"
+			],
+			"krVersion": false,
+			"sourceUrl": "https://hub.sp-tarkov.com/files/file/878-swag-donuts-dynamic-spawn-waves-and-custom-spawn-points/"
+		},
+		{
+			"name": "Donut-KR",
+			"version": "3.5.1",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=1_J1vetb4_lkBRP-qlHTw_I1_8BPDAZkl"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/115301015"
+		},
+		{
+			"name": "Realism",
+			"version": "1.4.8",
+			"downloadUrls": [
+				"https://github.com/space-commits/SPT-Realism-Mod-Client/releases/download/v1.4.8/Realism-Mod-v1.4.8-SPT-v3.9.8.zip"
+			],
+			"krVersion": false,
+			"sourceUrl": "https://arca.live/b/tarkovspt/115301015"
+		},
+		{
+			"name": "Realism-KR",
+			"version": "1.4.8",
+			"downloadUrls": [
+				"https://github.com/GoLani11/GoLani_ModPack/raw/main/zip/Realism%20Mod%201.4.8.zip"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/115301015"
+		},
+		{
+			"name": "SVM",
+			"version": "1.4.8",
+			"downloadUrls": [
+				"https://docs.google.com/uc?export=download&id=1mGVv47i38hWewXlJ62vTzLFjHX-WwOKS&confirm=t"
+			],
+			"krVersion": false,
+			"sourceUrl": "https://arca.live/b/tarkovspt/115301015"
+		},
+		{
+			"name": "UI Fixes",
+			"version": "1.4.8",
+			"downloadUrls": [
+				"https://github.com/tyfon7/UIFixes/releases/download/v3.0.1/Tyfon-UIFixes-3.0.1.zip"
+			],
+			"krVersion": false,
+			"sourceUrl": "https://arca.live/b/tarkovspt/115301015"
+		},
+		{
+			"name": "MOAR",
+			"version": "1.0.0",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=1XvBIGGaEIg60b089s5KeS4e6ng7Zw8lu"
+			],
+			"krVersion": false,
+			"sourceUrl": "https://hub.sp-tarkov.com/files/file/878-moar/"
+		},
+		{
+			"name": "MOAR-KR",
+			"version": "1.0.0",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=1IgwdRl863HZmAxsB6Gb-j_OEuHP_lFRx"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/"
+		},
+		{
+			"name": "Questing Bots",
+			"version": "0.8.1",
+			"downloadUrls": [
+				"https://github.com/dwesterwick/SPTQuestingBots/releases/download/0.8.1/DanW-SPTQuestingBots.zip",
+				"https://github.com/DrakiaXYZ/SPT-BigBrain/releases/download/1.1.0/DrakiaXYZ-BigBrain-1.1.0.7z",
+				"https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.5.2/DrakiaXYZ-Waypoints-1.5.2.7z"
+			],
+			"krVersion": false,
+			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1534-questing-bots/"
+		},
+		{
+			"name": "Questing Bots-KR",
+			"version": "0.8.1",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=1VjkzFQuVKe2zfhFSAPjpVqfNvyzBcnw1"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/115301775"
+		},
+		{
+			"name": "Dynamic Maps",
+			"version": "0.5.2",
+			"downloadUrls": [
+				"https://github.com/CJ-SPT/SPT-DynamicMaps/releases/download/V0.5.2/DynamicMaps-0.5.2.zip"
+			],
+			"krVersion": false,
+			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1981-dynamic-maps/"
+		},
+		{
+			"name": "Dynamic Maps-KR",
+			"version": "0.5.2",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=1H7K8swBDfmrYAtBF_gTsDteReN7Nazax"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/115302120"
+		},
+		{
+			"name": "Amands Graphics",
+			"version": "1.6.4",
+			"downloadUrls": [
+				"https://github.com/Amands2Mello/AmandsGraphics/releases/download/1.6.4/AmandsGraphics.1.6.4.7z"
+			],
+			"krVersion": false,
+			"sourceUrl": "https://hub.sp-tarkov.com/files/file/813-amands-s-graphics/"
+		},
+		{
+			"name": "Amands Graphics - KR",
+			"version": "1.6.4",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=1ZeTWNfvnFoycyUE9yRNdznBY-Mgj7LGC"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/115302951"
+		},
+		{
+			"name": "De-Clutterer",
+			"version": "1.2.5",
+			"downloadUrls": [
+				"https://github.com/CJ-SPT/DeClutterer/releases/download/V1.2.5/Declutterer.7z"
+			],
+			"krVersion": false,
+			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1785-de-clutterer-updated-by-cj/"
+		},
+		{
+			"name": "De-Clutterer - KR",
+			"version": "1.2.5",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=1TcjGPg4KRaW3zdXP49fCDOhiErnejy8E"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/115303226"
+		},
+		{
+			"name": "Fontaine's FOV Fix",
+			"version": "2.1.8",
+			"downloadUrls": [
+				"https://github.com/space-commits/SPT-FOV-Fix/releases/download/v2.1.8/Fontaine-FOV-Fix-v2.1.8-SPT-v3.9.8.zip"
+			],
+			"krVersion": false,
+			"sourceUrl": "https://hub.sp-tarkov.com/files/file/942-fontaine-s-fov-fix-variable-optics/"
+		},
+		{
+			"name": "Fontaine's FOV Fix - KR",
+			"version": "2.1.8",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=1lUPX3Rere4DxGDVUNvfmEjBoP1dkMroM"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/115305028"
+		},
+		{
+			"name": "Personal Trainer",
+			"version": "1.0.0",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=19KooBlV5GSDlKSpOV2qR6ZmVyRTIT-0z"
+			],
+			"krVersion": false,
+			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1798-personal-trainer/"
+		},
+		{
+			"name": "Personal Trainer - KR",
+			"version": "1.0.0",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=1gTZQ0WgFN0b5gXqJPczXjJNE7nRhc31u"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/115305397"
+		},
+		{
+			"name": "Game Panel HUD",
+			"version": "3.2.0",
+			"downloadUrls": [
+				"https://github.com/kmyuhkyuk/GamePanelHUD/releases/download/3.2.0/kmyuhkyuk-GamePanelHUD.Release_3.2.0.7z",
+				"https://github.com/kmyuhkyuk/EFTApi/releases/download/1.3.0/kmyuhkyuk-EFTApi.Release_1.3.0.7z"
+			],
+			"krVersion": false,
+			"sourceUrl": "https://hub.sp-tarkov.com/files/file/652-game-panel-hud/"
+		},
+		{
+			"name": "Game Panel HUD - KR",
+			"version": "3.2.0",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=1g6wJqsjctHsqDlYsRVNsbpbr3sSnHscD"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/115302623"
+		},
+		{
+			"name": "Boss Notifier",
+			"version": "1.5.0",
+			"downloadUrls": [
+				"https://github.com/m-barneto/BossNotifier/releases/download/v1.5.0/BossNotifier.zip"
+			],
+			"krVersion": false,
+			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1737-boss-notifier/"
+		},
+		{
+			"name": "Boss Notifier - KR",
+			"version": "1.5.0",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=1vvwt0ihzeUH6dZCT6m7xKjAsHLSYklDt"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/115304391"
+		},
+		{
+			"name": "Dad Gamer Mode",
+			"version": "1.9.3",
+			"downloadUrls": [
+				"https://github.com/dvize/DadGamerMode/releases/download/v1.9.3/dvize.DadGamerMode-v1.9.3.0.zip"
+			],
+			"krVersion": false,
+			"sourceUrl": "https://hub.sp-tarkov.com/files/file/926-dad-gamer-mode/"
+		},
+		{
+			"name": "Dad Gamer Mode - KR",
+			"version": "1.9.3",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=1qpY8QtM9bRl0GZUEFHuT87Op4ihCQNai"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/115305801"
+		},
+		{
+			"name": "Grenade Indicator",
+			"version": "1.0.0",
+			"downloadUrls": [
+				"https://github.com/Solarint/GrenadeIndicator/releases/download/v1.0/GrenadeIndicator-1.0-Release.7z"
+			],
+			"krVersion": false,
+			"sourceUrl": "https://hub.sp-tarkov.com/files/file/2194-grenade-indicator/"
+		},
+		{
+			"name": "Grenade Indicator - KR",
+			"version": "1.0.0",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=1mBjrkeRceF4SXJDt9nvN_8acKgXzBTo4"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/116387330"
+		},
+		{
+			"name": "Performance Improvements",
+			"version": "0.1.3",
+			"downloadUrls": [
+				"https://github.com/CJ-SPT/PerformanceImprovements/releases/download/V0.1.3/PerformanceImprovements.7z",
+				"https://github.com/Nympfonic/UnityToolkit/releases/download/v1.0.1/UnityToolkit-1.0.1.7z"
+			],
+			"krVersion": false,
+			"sourceUrl": "https://hub.sp-tarkov.com/files/file/2505-performance-improvements/"
+		},
+		{
+			"name": "Performance Improvements - KR",
+			"version": "0.1.3",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=1kyaReXGU2B7YorqwzDuBfPlWB7uEqMR5"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/122564786"
+		},
+		{
+			"name": "Quest Tracker",
+			"version": "1.4.0",
+			"downloadUrls": [
+				"https://github.com/DrakiaXYZ/SPT-QuestTracker/releases/download/1.4.0/DrakiaXYZ-QuestTracker-1.4.0.7z"
+			],
+			"krVersion": false,
+			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1574-quest-tracker/"
+		},
+		{
+			"name": "Quest Tracker - KR",
+			"version": "1.4.0",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=1a7jqr-q9vzqbLbj6n00d5X6uY_EHmTsb"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/122563185"
+		},
+		{
+			"name": "Audio Accessibility Indicators",
+			"version": "1.3.0",
+			"downloadUrls": [
+				"https://github.com/acidphantasm/acidphantasm-accessibilityindicators/releases/download/1.3.0/acidphantasm-accessibilityindicators.zip"
+			],
+			"krVersion": false,
+			"sourceUrl": "https://hub.sp-tarkov.com/files/file/2395-audio-accessibility-indicators/"
+		},
+		{
+			"name": "Audio Accessibility Indicators - KR",
+			"version": "1.3.0",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=1B1Cz3TYXU5IxkodYiaHNYqKNRpP9tu9G"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/118291959"
+		},
+		{
+			"name": "SamSWAT's Fire Support",
+			"version": "2.2.4",
+			"downloadUrls": [
+				"https://github.com/Nympfonic/SamSWAT.FireSupport.ArysReloaded/releases/download/v2.2.4/SamSWAT-FireSupport-ArysReloaded-2.2.4.7z"
+			],
+			"krVersion": false,
+			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1654-samswat-s-fire-support-arys-reloaded/"
+		},
+		{
+			"name": "SamSWAT's Fire Support - KR",
+			"version": "2.2.4",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=1cEDPJOowm4EBuNBhv69zKRkrN2XDFVe7"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/115305604"
+		},
+		{
+			"name": "Trader Modding",
+			"version": "1.8.0",
+			"downloadUrls": [
+				"https://github.com/Soulztorm/ChooChoo-TraderModding/releases/download/1.8.0/ChooChoo-Tradermodding-1.8.0.zip"
+			],
+			"krVersion": false,
+			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1795-trader-modding-and-improved-weapon-building/"
+		},
+		{
+			"name": "Trader Modding - KR",
+			"version": "1.8.0",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=1_o2h9qGeaZT00uF7tk2PNOJKb8QoBUQn"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/115304705"
+		},
+		{
+			"name": "Borkel's Bloody Bullet Wounds",
+			"version": "1.2.3",
+			"downloadUrls": [
+				"https://github.com/Borkel/Blood-Particles/releases/download/1.2.3/BBBWP-1.2.3.zip"
+			],
+			"krVersion": false,
+			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1740-borkel-s-bloody-bullet-wounds-particles-splatters/"
+		},
+		{
+			"name": "Borkel's Bloody Bullet Wounds - KR",
+			"version": "1.2.3",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=1WuWkvepJiiifZb3kleA7FeOPSnPrZDQK"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/119868249"
+		},
+		{
+			"name": "Visceral Dismemberment - KR",
+			"version": "1.0.0",
+			"downloadUrls": [
+				"https://drive.google.com/uc?export=download&id=1PSxItGZIoE1uPI_XZIOtINgBPaB1deKF"
+			],
+			"krVersion": true,
+			"sourceUrl": "https://arca.live/b/tarkovspt/115306838"
+		}
+	]
+}
