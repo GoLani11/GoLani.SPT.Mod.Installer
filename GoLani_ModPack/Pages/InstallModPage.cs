@@ -290,7 +290,7 @@ namespace GoLani_ModPack.Pages
                 case "Grenade Indicator - KR":
                     G_IndicatorKRlink.Text += $" - {mod.Version}";
                     G_IndicatorKRlink.Tag = mod;
-                    GrenadeKRBox.Tag = mod.Name; // 수정: G_IndicatorKRBox 연결
+                    GrenadeKRBox.Tag = mod.Name;
                     targetCheckBox = GrenadeKRBox;
                     break;
                 case "UI Fixes - KR":
