@@ -56,7 +56,7 @@
 		},
 		{
 			"name": "SAIN - KR",
-			"version": "3.2.1",
+			"version": "3.1.0",
 			"SPTversion": "3.10",
 			"downloadUrls": [
 				"https://drive.google.com/uc?export=download&id=1rdV7fuioPYAPVuhrdM8kZ-wONnpRmOor"
@@ -127,7 +127,7 @@
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1860-ui-fixes/"
 		},
 		{
-			"name": "UI Fixes-KR",
+			"name": "UI Fixes - KR",
 			"version": "3.0.1",
 			"SPTversion": "3.10",
 			"downloadUrls": [
@@ -331,7 +331,7 @@
 		},
 		{
 			"name": "Performance Improvements - KR",
-			"version": "1.0.0",
+			"version": "0.1.3",
 			"SPTversion": "3.10",
 			"downloadUrls": [
 				"https://drive.google.com/uc?export=download&id=1kyaReXGU2B7YorqwzDuBfPlWB7uEqMR5"

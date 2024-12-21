@@ -36,7 +36,7 @@
             BackColor = SystemColors.MenuHighlight;
             Margin = new Padding(0);
             Name = "ModInfomationPage";
-            Size = new Size(934, 661);
+            Size = new Size(997, 661);
             ResumeLayout(false);
         }
 

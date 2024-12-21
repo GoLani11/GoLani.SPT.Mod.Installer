@@ -26,8 +26,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             MenuPanel = new Panel();
+            SPTVersionlabel = new Label();
             downloadProgressBar = new ProgressBar();
-            label1 = new Label();
+            VersionLabel = new Label();
             ModInfoBtn = new Button();
             InstallBtn = new Button();
             DeleteModBtn = new Button();
@@ -45,8 +46,9 @@
             // MenuPanel
             // 
             MenuPanel.BackColor = Color.FromArgb(229, 230, 228);
+            MenuPanel.Controls.Add(SPTVersionlabel);
             MenuPanel.Controls.Add(downloadProgressBar);
-            MenuPanel.Controls.Add(label1);
+            MenuPanel.Controls.Add(VersionLabel);
             MenuPanel.Controls.Add(ModInfoBtn);
             MenuPanel.Controls.Add(InstallBtn);
             MenuPanel.Controls.Add(DeleteModBtn);
@@ -56,25 +58,34 @@
             MenuPanel.Location = new Point(0, 0);
             MenuPanel.Margin = new Padding(0);
             MenuPanel.Name = "MenuPanel";
-            MenuPanel.Size = new Size(250, 761);
+            MenuPanel.Size = new Size(187, 761);
             MenuPanel.TabIndex = 0;
+            // 
+            // SPTVersionlabel
+            // 
+            SPTVersionlabel.AutoSize = true;
+            SPTVersionlabel.Location = new Point(12, 737);
+            SPTVersionlabel.Name = "SPTVersionlabel";
+            SPTVersionlabel.Size = new Size(55, 15);
+            SPTVersionlabel.TabIndex = 9;
+            SPTVersionlabel.Text = "SPT 버전";
             // 
             // downloadProgressBar
             // 
             downloadProgressBar.Location = new Point(12, 688);
             downloadProgressBar.Name = "downloadProgressBar";
-            downloadProgressBar.Size = new Size(220, 20);
+            downloadProgressBar.Size = new Size(163, 20);
             downloadProgressBar.TabIndex = 8;
             downloadProgressBar.Visible = false;
             // 
-            // label1
+            // VersionLabel
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(22, 726);
-            label1.Name = "label1";
-            label1.Size = new Size(59, 15);
-            label1.TabIndex = 6;
-            label1.Text = "버전 확인";
+            VersionLabel.AutoSize = true;
+            VersionLabel.Location = new Point(12, 716);
+            VersionLabel.Name = "VersionLabel";
+            VersionLabel.Size = new Size(71, 15);
+            VersionLabel.TabIndex = 6;
+            VersionLabel.Text = "모드팩 버전";
             // 
             // ModInfoBtn
             // 
@@ -89,9 +100,10 @@
             ModInfoBtn.Location = new Point(0, 178);
             ModInfoBtn.Margin = new Padding(0);
             ModInfoBtn.Name = "ModInfoBtn";
-            ModInfoBtn.Size = new Size(247, 75);
+            ModInfoBtn.Size = new Size(187, 75);
             ModInfoBtn.TabIndex = 5;
-            ModInfoBtn.Text = "모드 설명\r\n(추가 예정)";
+            ModInfoBtn.Text = "   모드 설명   \r\n(추가 예정)";
+            ModInfoBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             ModInfoBtn.UseVisualStyleBackColor = true;
             ModInfoBtn.Click += ModInfoBtn_Click;
             // 
@@ -107,9 +119,9 @@
             InstallBtn.Location = new Point(0, 253);
             InstallBtn.Margin = new Padding(0);
             InstallBtn.Name = "InstallBtn";
-            InstallBtn.Size = new Size(247, 75);
+            InstallBtn.Size = new Size(187, 75);
             InstallBtn.TabIndex = 3;
-            InstallBtn.Text = "모드 설치";
+            InstallBtn.Text = "    모드 설치";
             InstallBtn.UseVisualStyleBackColor = true;
             InstallBtn.Click += InstallBtn_Click;
             // 
@@ -126,9 +138,9 @@
             DeleteModBtn.Location = new Point(0, 328);
             DeleteModBtn.Margin = new Padding(0);
             DeleteModBtn.Name = "DeleteModBtn";
-            DeleteModBtn.Size = new Size(247, 75);
+            DeleteModBtn.Size = new Size(187, 75);
             DeleteModBtn.TabIndex = 2;
-            DeleteModBtn.Text = "모드 초기화\r\n(추가 예정)";
+            DeleteModBtn.Text = "   모드 초기화\r (추가 예정)";
             DeleteModBtn.UseVisualStyleBackColor = true;
             DeleteModBtn.Click += DeleteModBtn_Click;
             // 
@@ -144,7 +156,7 @@
             HomeBtn.Location = new Point(0, 103);
             HomeBtn.Margin = new Padding(0);
             HomeBtn.Name = "HomeBtn";
-            HomeBtn.Size = new Size(247, 75);
+            HomeBtn.Size = new Size(187, 75);
             HomeBtn.TabIndex = 1;
             HomeBtn.Text = "홈";
             HomeBtn.UseVisualStyleBackColor = true;
@@ -158,7 +170,7 @@
             LogoPanel.Location = new Point(0, 0);
             LogoPanel.Margin = new Padding(0);
             LogoPanel.Name = "LogoPanel";
-            LogoPanel.Size = new Size(250, 100);
+            LogoPanel.Size = new Size(187, 100);
             LogoPanel.TabIndex = 0;
             // 
             // MainPanel
@@ -166,7 +178,7 @@
             MainPanel.Location = new Point(0, 100);
             MainPanel.Margin = new Padding(0);
             MainPanel.Name = "MainPanel";
-            MainPanel.Size = new Size(934, 661);
+            MainPanel.Size = new Size(997, 661);
             MainPanel.TabIndex = 2;
             // 
             // MainFramePanel
@@ -176,13 +188,13 @@
             MainFramePanel.Controls.Add(MainPanel, 0, 1);
             MainFramePanel.Controls.Add(TopTextpanel, 0, 0);
             MainFramePanel.Dock = DockStyle.Fill;
-            MainFramePanel.Location = new Point(250, 0);
+            MainFramePanel.Location = new Point(187, 0);
             MainFramePanel.Margin = new Padding(0);
             MainFramePanel.Name = "MainFramePanel";
             MainFramePanel.RowCount = 2;
             MainFramePanel.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             MainFramePanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 661F));
-            MainFramePanel.Size = new Size(934, 761);
+            MainFramePanel.Size = new Size(997, 761);
             MainFramePanel.TabIndex = 1;
             // 
             // TopTextpanel
@@ -193,7 +205,7 @@
             TopTextpanel.Location = new Point(0, 0);
             TopTextpanel.Margin = new Padding(0);
             TopTextpanel.Name = "TopTextpanel";
-            TopTextpanel.Size = new Size(934, 100);
+            TopTextpanel.Size = new Size(997, 100);
             TopTextpanel.TabIndex = 3;
             // 
             // label2
@@ -220,7 +232,7 @@
             MaximizeBox = false;
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "고라니 한글화 모드 패치기";
+            Text = "고라니 한글화 모드 간편설치기";
             Load += StartLoadForm;
             MenuPanel.ResumeLayout(false);
             MenuPanel.PerformLayout();
@@ -233,7 +245,6 @@
         #endregion
 
         private Panel MenuPanel;
-        private Panel LogoPanel;
         private Button HomeBtn;
         private Button InstallBtn;
         private Button DeleteModBtn;
@@ -241,8 +252,10 @@
         private Panel MainPanel;
         private TableLayoutPanel MainFramePanel;
         private Panel TopTextpanel;
-        private Label label1;
+        private Label VersionLabel;
         private ProgressBar downloadProgressBar;
         private Label label2;
+        private Panel LogoPanel;
+        private Label SPTVersionlabel;
     }
 }

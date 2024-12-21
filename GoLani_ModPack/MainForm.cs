@@ -5,6 +5,7 @@ using System.IO;
 using SharpCompress.Archives;
 using SharpCompress.Common;
 using GoLani_ModPack.Pages;
+using static GoLani_ModPack.MainForm;
 
 namespace GoLani_ModPack
 {
@@ -15,6 +16,7 @@ namespace GoLani_ModPack
         private const string GitHubExeUrl = "https://github.com/GoLani11/GoLani_ModPack/releases/latest/download/GoLani_ModPack.7z";
         private const string GitHubLatestApiUrl = "https://api.github.com/repos/GoLani11/GoLani_ModPack/releases/latest";
         private const string LocalExePath = "GoLaniModPack.exe"; // 로컬 exe 파일 경로
+        private const string MetadataUrl = "https://raw.githubusercontent.com/GoLani11/GoLani_ModPack/main/GoLani_ModPack/DownloadMetaData/DownloadMetaData.json"; // 메타데이터 URL
 
         public MainForm()
         {
@@ -23,11 +25,40 @@ namespace GoLani_ModPack
             pages = new UserControl[] { new HomePage(), new ModInfomationPage(), new InstallModPage(), new DeleteModPage(), };
         }
 
+        public class Metadata
+        {
+            [JsonProperty("SPTDefaultVersion")] // JSON 속성 이름과 매핑
+            public string SPTDefaultVersion { get; set; }
+        }
+
         private async void StartLoadForm(object sender, EventArgs e)
         {
-            // 현재 버전을 label1에 출력
+            // 현재 모드팩 버전 출력
             string localVersion = GetLocalProjectVersion();
-            label1.Text = $"현재 버전: {localVersion}";
+            VersionLabel.Text = $"현재 패치기 버전: {localVersion}";
+
+            // 현재 SPT 버전 출력
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    string json = await client.GetStringAsync(MetadataUrl);
+                    Metadata metadata = JsonConvert.DeserializeObject<Metadata>(json);
+                    SPTVersionlabel.Text = $"현재 SPT 버전: {metadata?.SPTDefaultVersion}";
+                }
+            }
+            catch (HttpRequestException ex)
+            {
+                SPTVersionlabel.Text = $"SPT 버전 정보 로드 실패: 네트워크 오류 - {ex.Message}";
+            }
+            catch (JsonException ex)
+            {
+                SPTVersionlabel.Text = $"SPT 버전 정보 로드 실패: JSON 파싱 오류 - {ex.Message}";
+            }
+            catch (Exception ex)
+            {
+                SPTVersionlabel.Text = $"SPT 버전 정보 로드 실패: 알 수 없는 오류 - {ex.Message}";
+            }
 
             // 최신 버전 확인 및 업데이트 메시지
             await CheckAndPromptForUpdateAsync();
@@ -116,7 +147,6 @@ namespace GoLani_ModPack
             }
         }
 
-
         private string GetDownloadFolder()
         {
             using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
@@ -132,7 +162,7 @@ namespace GoLani_ModPack
 
             return null; // 사용자가 취소한 경우
         }
-        
+
         // 압축 파일 해제
         private async Task ExtractAndDeleteArchiveAsync(string archivePath, string destinationFolder)
         {
@@ -171,7 +201,6 @@ namespace GoLani_ModPack
             }
         }
 
-
         private void DisableButtons()
         {
             HomeBtn.Enabled = false;
@@ -203,7 +232,6 @@ namespace GoLani_ModPack
             // 모든 값 포함
             return version.ToString();
         }
-
 
         private async Task<string> GetLatestVersionFromGitHubAsync()
         {

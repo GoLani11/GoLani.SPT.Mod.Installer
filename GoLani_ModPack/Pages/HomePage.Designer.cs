@@ -58,7 +58,7 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(31, 23);
             panel1.Name = "panel1";
-            panel1.Size = new Size(864, 302);
+            panel1.Size = new Size(936, 302);
             panel1.TabIndex = 0;
             // 
             // label8
@@ -66,7 +66,7 @@
             label8.AutoSize = true;
             label8.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 129);
             label8.ForeColor = Color.Red;
-            label8.Location = new Point(19, 204);
+            label8.Location = new Point(49, 201);
             label8.Name = "label8";
             label8.Size = new Size(824, 30);
             label8.TabIndex = 6;
@@ -77,7 +77,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("맑은 고딕", 20.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 129);
             label7.ForeColor = Color.Red;
-            label7.Location = new Point(19, 167);
+            label7.Location = new Point(49, 164);
             label7.Name = "label7";
             label7.Size = new Size(651, 37);
             label7.TabIndex = 5;
@@ -88,7 +88,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("맑은 고딕", 20.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 129);
             label6.ForeColor = Color.Red;
-            label6.Location = new Point(19, 130);
+            label6.Location = new Point(49, 127);
             label6.Name = "label6";
             label6.Size = new Size(648, 37);
             label6.TabIndex = 4;
@@ -99,7 +99,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("맑은 고딕", 20.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 129);
             label4.ForeColor = Color.Red;
-            label4.Location = new Point(19, 93);
+            label4.Location = new Point(49, 90);
             label4.Name = "label4";
             label4.Size = new Size(817, 37);
             label4.TabIndex = 3;
@@ -108,9 +108,9 @@
             // panel3
             // 
             panel3.BackColor = Color.MidnightBlue;
-            panel3.Location = new Point(17, 43);
+            panel3.Location = new Point(17, 41);
             panel3.Name = "panel3";
-            panel3.Size = new Size(824, 5);
+            panel3.Size = new Size(876, 3);
             panel3.TabIndex = 1;
             // 
             // label1
@@ -132,7 +132,7 @@
             panel2.Controls.Add(label2);
             panel2.Location = new Point(31, 331);
             panel2.Name = "panel2";
-            panel2.Size = new Size(864, 302);
+            panel2.Size = new Size(936, 302);
             panel2.TabIndex = 1;
             // 
             // panel5
@@ -141,7 +141,7 @@
             panel5.Controls.Add(label5);
             panel5.Location = new Point(16, 53);
             panel5.Name = "panel5";
-            panel5.Size = new Size(825, 245);
+            panel5.Size = new Size(896, 245);
             panel5.TabIndex = 4;
             // 
             // label5
@@ -157,9 +157,9 @@
             // panel4
             // 
             panel4.BackColor = Color.MidnightBlue;
-            panel4.Location = new Point(17, 44);
+            panel4.Location = new Point(17, 42);
             panel4.Name = "panel4";
-            panel4.Size = new Size(824, 5);
+            panel4.Size = new Size(876, 3);
             panel4.TabIndex = 3;
             // 
             // label2
@@ -180,7 +180,7 @@
             Controls.Add(panel1);
             Margin = new Padding(0);
             Name = "HomePage";
-            Size = new Size(934, 661);
+            Size = new Size(997, 661);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

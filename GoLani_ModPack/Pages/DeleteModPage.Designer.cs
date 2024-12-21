@@ -36,7 +36,7 @@
             BackColor = Color.FromArgb(255, 224, 192);
             Margin = new Padding(0);
             Name = "DeleteModPage";
-            Size = new Size(934, 661);
+            Size = new Size(997, 661);
             ResumeLayout(false);
         }
 
