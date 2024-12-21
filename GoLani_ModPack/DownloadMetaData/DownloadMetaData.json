@@ -138,17 +138,17 @@
 		},
 		{
 			"name": "MOAR",
-			"version": "2.5.6",
+			"version": "2.5.7",
 			"SPTversion": "3.10",
 			"downloadUrls": [
-				"https://drive.google.com/uc?export=download&id=1XvBIGGaEIg60b089s5KeS4e6ng7Zw8lu"
+				"https://github.com/Andrewgdewar/MOAR/releases/download/2.5.7/DewardianDev-MOAR-2.5.7.zip"
 			],
 			"krVersion": false,
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1059-moar-ultra-lite-spawn-mod/"
 		},
 		{
 			"name": "MOAR - KR",
-			"version": "1.0.0",
+			"version": "2.5.7",
 			"SPTversion": "3.10",
 			"downloadUrls": [
 				"https://drive.google.com/uc?export=download&id=1IgwdRl863HZmAxsB6Gb-j_OEuHP_lFRx"
