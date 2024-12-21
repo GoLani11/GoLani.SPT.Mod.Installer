@@ -445,11 +445,11 @@
             // 
             SVMlink.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             SVMlink.AutoSize = true;
-            SVMlink.Font = new Font("맑은 고딕", 10F);
+            SVMlink.Font = new Font("맑은 고딕", 9F);
             SVMlink.LinkColor = Color.Black;
-            SVMlink.Location = new Point(255, 40);
+            SVMlink.Location = new Point(255, 42);
             SVMlink.Name = "SVMlink";
-            SVMlink.Size = new Size(202, 19);
+            SVMlink.Size = new Size(202, 15);
             SVMlink.TabIndex = 93;
             SVMlink.TabStop = true;
             SVMlink.Text = "SVM (공식 한글화)";

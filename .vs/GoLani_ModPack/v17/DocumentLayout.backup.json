@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\gomim\\Documents\\GitHub\\GoLani_ModPack\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{74A5F78F-8C43-4251-B78C-0417CCD5B5C6}|GoLani_ModPack\\GoLani_ModPack.csproj|c:\\users\\gomim\\documents\\github\\golani_modpack\\golani_modpack\\golani_modpack.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{74A5F78F-8C43-4251-B78C-0417CCD5B5C6}|GoLani_ModPack\\GoLani_ModPack.csproj|solutionrelative:golani_modpack\\golani_modpack.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{74A5F78F-8C43-4251-B78C-0417CCD5B5C6}|GoLani_ModPack\\GoLani_ModPack.csproj|c:\\users\\gomim\\documents\\github\\golani_modpack\\golani_modpack\\pages\\installmodpage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74A5F78F-8C43-4251-B78C-0417CCD5B5C6}|GoLani_ModPack\\GoLani_ModPack.csproj|solutionrelative:golani_modpack\\pages\\installmodpage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74A5F78F-8C43-4251-B78C-0417CCD5B5C6}|GoLani_ModPack\\GoLani_ModPack.csproj|c:\\users\\gomim\\documents\\github\\golani_modpack\\golani_modpack\\golani_modpack.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{74A5F78F-8C43-4251-B78C-0417CCD5B5C6}|GoLani_ModPack\\GoLani_ModPack.csproj|solutionrelative:golani_modpack\\golani_modpack.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{74A5F78F-8C43-4251-B78C-0417CCD5B5C6}|GoLani_ModPack\\GoLani_ModPack.csproj|C:\\Users\\gomim\\Documents\\GitHub\\GoLani_ModPack\\golani_modpack\\pages\\installmodpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -60,7 +60,7 @@
               "RelativeDocumentMoniker": "GoLani_ModPack\\MainForm.cs",
               "ToolTip": "C:\\Users\\gomim\\Documents\\GitHub\\GoLani_ModPack\\GoLani_ModPack\\MainForm.cs",
               "RelativeToolTip": "GoLani_ModPack\\MainForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkBAABVAAAAAAAAAA==",
+              "ViewState": "AgIAAPwAAAAAAAAAAAAAAA8BAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T02:20:55.221Z",
               "IsPinned": true,
@@ -68,26 +68,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GoLani_ModPack.csproj",
               "DocumentMoniker": "C:\\Users\\gomim\\Documents\\GitHub\\GoLani_ModPack\\GoLani_ModPack\\GoLani_ModPack.csproj",
               "RelativeDocumentMoniker": "GoLani_ModPack\\GoLani_ModPack.csproj",
               "ToolTip": "C:\\Users\\gomim\\Documents\\GitHub\\GoLani_ModPack\\GoLani_ModPack\\GoLani_ModPack.csproj",
               "RelativeToolTip": "GoLani_ModPack\\GoLani_ModPack.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-11-19T11:09:56.086Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "InstallModPage.Designer.cs",
               "DocumentMoniker": "C:\\Users\\gomim\\Documents\\GitHub\\GoLani_ModPack\\GoLani_ModPack\\Pages\\InstallModPage.Designer.cs",
               "RelativeDocumentMoniker": "GoLani_ModPack\\Pages\\InstallModPage.Designer.cs",
               "ToolTip": "C:\\Users\\gomim\\Documents\\GitHub\\GoLani_ModPack\\GoLani_ModPack\\Pages\\InstallModPage.Designer.cs",
               "RelativeToolTip": "GoLani_ModPack\\Pages\\InstallModPage.Designer.cs",
-              "ViewState": "AgIAAJ8DAAAAAAAAAAAmwL0DAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAG8DAAAAAAAAAAAmwLkDAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-20T09:11:03.595Z",
               "EditorCaption": ""
@@ -100,7 +100,7 @@
               "RelativeDocumentMoniker": "GoLani_ModPack\\Pages\\InstallModPage.cs",
               "ToolTip": "C:\\Users\\gomim\\Documents\\GitHub\\GoLani_ModPack\\GoLani_ModPack\\Pages\\InstallModPage.cs",
               "RelativeToolTip": "GoLani_ModPack\\Pages\\InstallModPage.cs",
-              "ViewState": "AgIAAIYBAAAAAAAAAAAAAJsBAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAOQAAAAAAAAAAAAowJsBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T09:59:26.293Z",
               "EditorCaption": ""
@@ -138,20 +138,19 @@
               "RelativeToolTip": "GoLani_ModPack\\MainForm.Designer.cs",
               "ViewState": "AgIAAM8AAAAAAAAAAAAQwOQAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T03:29:10.175Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T03:29:10.175Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "MainForm.cs [\uB514\uC790\uC778]",
+              "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\gomim\\Documents\\GitHub\\GoLani_ModPack\\GoLani_ModPack\\MainForm.cs",
               "RelativeDocumentMoniker": "GoLani_ModPack\\MainForm.cs",
-              "ToolTip": "C:\\Users\\gomim\\Documents\\GitHub\\GoLani_ModPack\\GoLani_ModPack\\MainForm.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "GoLani_ModPack\\MainForm.cs [\uB514\uC790\uC778]",
+              "ToolTip": "C:\\Users\\gomim\\Documents\\GitHub\\GoLani_ModPack\\GoLani_ModPack\\MainForm.cs [Design]",
+              "RelativeToolTip": "GoLani_ModPack\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T13:44:52.081Z",
-              "EditorCaption": " [\uB514\uC790\uC778]"
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
