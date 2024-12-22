@@ -385,14 +385,14 @@
 			"version": "1.5.3",
 			"SPTversion": "3.10",
 			"downloadUrls": [
-				"https://github.com/m-barneto/BossNotifier/releases/download/v1.5.0/BossNotifier.zip"
+				"https://github.com/m-barneto/BossNotifier/releases/download/v1.5.3/BossNotifier.zip"
 			],
 			"krVersion": false,
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1737-boss-notifier/"
 		},
 		{
 			"name": "Boss Notifier - KR",
-			"version": "1.5.0",
+			"version": "1.5.3",
 			"SPTversion": "3.10",
 			"downloadUrls": [
 				"https://drive.google.com/uc?export=download&id=1vvwt0ihzeUH6dZCT6m7xKjAsHLSYklDt"
