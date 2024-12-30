@@ -49,7 +49,7 @@
 			"downloadUrls": [
 				"https://github.com/Solarint/SAIN/releases/download/v3.2.1-Release/SAIN-3.2.1-Release.7z",
 				"https://github.com/DrakiaXYZ/SPT-BigBrain/releases/download/1.2.0/DrakiaXYZ-BigBrain-1.2.0.7z",
-				"https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.6.0/DrakiaXYZ-Waypoints-1.6.0.7z"
+				"https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.6.1/DrakiaXYZ-Waypoints-1.6.1.7z"
 			],
 			"krVersion": false,
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1062-sain-solarint-s-ai-modifications-full-ai-combat-system-replacement/"
@@ -71,7 +71,7 @@
 			"downloadUrls": [
 				"https://github.com/p-kossa/nookys-swag-presets-spt/releases/download/v3.5.1/SWAG-Donuts-v3.5.1-SPT39x.zip",
 				"https://github.com/Nympfonic/UnityToolkit/releases/download/v1.0.1/UnityToolkit-1.0.1.7z",
-				"https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.6.0/DrakiaXYZ-Waypoints-1.6.0.7z"
+				"https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.6.1/DrakiaXYZ-Waypoints-1.6.1.7z"
 			],
 			"krVersion": false,
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/878-swag-donuts-dynamic-spawn-waves-and-custom-spawn-points/"
@@ -138,17 +138,17 @@
 		},
 		{
 			"name": "MOAR",
-			"version": "2.6.1",
+			"version": "2.6.2",
 			"SPTversion": "3.10",
 			"downloadUrls": [
-				"https://github.com/Andrewgdewar/MOAR/releases/download/2.6.1/DewardianDev-MOAR-2.6.1.zip"
+				"https://github.com/Andrewgdewar/MOAR/releases/download/2.6.2/DewardianDev-MOAR-2.6.2.zip"
 			],
 			"krVersion": false,
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1059-moar-ultra-lite-spawn-mod/"
 		},
 		{
 			"name": "MOAR - KR",
-			"version": "2.6.1",
+			"version": "2.6.2",
 			"SPTversion": "3.10",
 			"downloadUrls": [
 				"https://drive.google.com/uc?export=download&id=1IgwdRl863HZmAxsB6Gb-j_OEuHP_lFRx"
@@ -163,7 +163,7 @@
 			"downloadUrls": [
 				"https://github.com/dwesterwick/SPTQuestingBots/releases/download/0.8.1/DanW-SPTQuestingBots.zip",
 				"https://github.com/DrakiaXYZ/SPT-BigBrain/releases/download/1.2.0/DrakiaXYZ-BigBrain-1.2.0.7z",
-				"https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.6.0/DrakiaXYZ-Waypoints-1.6.0.7z"
+				"https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.6.1/DrakiaXYZ-Waypoints-1.6.1.7z"
 			],
 			"krVersion": false,
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1534-questing-bots/"
