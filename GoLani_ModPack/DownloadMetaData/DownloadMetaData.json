@@ -108,10 +108,10 @@
 		},
 		{
 			"name": "SVM",
-			"version": "1.10.0_H4",
+			"version": "1.10.1",
 			"SPTversion": "3.10",
 			"downloadUrls": [
-				"https://docs.google.com/uc?export=download&id=1mGVv47i38hWewXlJ62vTzLFjHX-WwOKS&confirm=t"
+				"hhttps://github.com/GhostFenixx/SVM/releases/download/v.1.10.1/SVM.Server.Value.Modifier1.10.1.zip"
 			],
 			"krVersion": false,
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/379-server-value-modifier-svm/"
