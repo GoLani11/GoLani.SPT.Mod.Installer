@@ -280,18 +280,18 @@
 		},
 		{
 			"name": "Personal Trainer",
-			"version": "1.1.1",
-			"SPTversion": "3.9",
+			"version": "1.2.0",
+			"SPTversion": "3.10",
 			"downloadUrls": [
-				"https://drive.google.com/uc?export=download&id=19KooBlV5GSDlKSpOV2qR6ZmVyRTIT-0z"
+				"https://drive.google.com/uc?export=download&id=1XOPs5xlnKExJOy6xfPkob5dG4TW6YaTx"
 			],
 			"krVersion": false,
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1798-personal-trainer/"
 		},
 		{
 			"name": "Personal Trainer - KR",
-			"version": "1.1.1",
-			"SPTversion": "3.9",
+			"version": "1.2.0",
+			"SPTversion": "3.10",
 			"downloadUrls": [
 				"https://drive.google.com/uc?export=download&id=1gTZQ0WgFN0b5gXqJPczXjJNE7nRhc31u"
 			],
