@@ -320,10 +320,10 @@
 		},
 		{
 			"name": "Performance Improvements",
-			"version": "0.2.2",
+			"version": "0.2.3",
 			"SPTversion": "3.10",
 			"downloadUrls": [
-				"https://github.com/CJ-SPT/PerformanceImprovements/releases/download/V0.2.2/PerformanceImprovements-Release-0.2.2-51b595c5.zip",
+				"https://github.com/CJ-SPT/PerformanceImprovements/releases/download/V0.2.3/PerformanceImprovements-Release-0.2.3-e8fd7fc3.zip",
 				"https://github.com/Nympfonic/UnityToolkit/releases/download/v1.0.1/UnityToolkit-1.0.1.7z"
 			],
 			"krVersion": false,
@@ -331,7 +331,7 @@
 		},
 		{
 			"name": "Performance Improvements - KR",
-			"version": "0.2.2",
+			"version": "0.2.3",
 			"SPTversion": "3.10",
 			"downloadUrls": [
 				"https://drive.google.com/uc?export=download&id=1kyaReXGU2B7YorqwzDuBfPlWB7uEqMR5"
