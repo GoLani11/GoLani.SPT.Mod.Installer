@@ -462,18 +462,18 @@
 		},
 		{
 			"name": "Borkel's Bloody Bullet Wounds + Particles + Splatters",
-			"version": "1.2.3",
-			"SPTversion": "3.9",
+			"version": "1.2.4",
+			"SPTversion": "3.10",
 			"downloadUrls": [
-				"https://github.com/Borkel/Blood-Particles/releases/download/1.2.3/BBBWP-1.2.3.zip"
+				"https://github.com/Borkel/Blood-Particles/releases/download/1.2.4/BBBW-1.2.4.zip"
 			],
 			"krVersion": false,
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1740-borkel-s-bloody-bullet-wounds-particles-splatters/"
 		},
 		{
 			"name": "Borkel's Bloody Bullet Wounds + Particles + Splatters - KR",
-			"version": "1.2.3",
-			"SPTversion": "3.9",
+			"version": "1.2.4",
+			"SPTversion": "3.10",
 			"downloadUrls": [
 				"https://drive.google.com/uc?export=download&id=1WuWkvepJiiifZb3kleA7FeOPSnPrZDQK"
 			],
