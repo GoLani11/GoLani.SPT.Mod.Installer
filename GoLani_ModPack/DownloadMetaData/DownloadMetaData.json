@@ -161,7 +161,7 @@
 			"version": "0.9.0",
 			"SPTversion": "3.10",
 			"downloadUrls": [
-				"https://github.com/dwesterwick/SPTQuestingBots/releases/download/0.8.1/DanW-SPTQuestingBots.zip",
+				"https://github.com/dwesterwick/SPTQuestingBots/releases/download/0.9.0/DanW-SPTQuestingBots.zip",
 				"https://github.com/DrakiaXYZ/SPT-BigBrain/releases/download/1.2.0/DrakiaXYZ-BigBrain-1.2.0.7z",
 				"https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.6.2/DrakiaXYZ-Waypoints-1.6.2.7z"
 			],
