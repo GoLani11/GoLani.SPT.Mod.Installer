@@ -158,8 +158,8 @@
 		},
 		{
 			"name": "Questing Bots",
-			"version": "0.8.1",
-			"SPTversion": "3.9",
+			"version": "0.9.0",
+			"SPTversion": "3.10",
 			"downloadUrls": [
 				"https://github.com/dwesterwick/SPTQuestingBots/releases/download/0.8.1/DanW-SPTQuestingBots.zip",
 				"https://github.com/DrakiaXYZ/SPT-BigBrain/releases/download/1.2.0/DrakiaXYZ-BigBrain-1.2.0.7z",
@@ -170,8 +170,8 @@
 		},
 		{
 			"name": "Questing Bots - KR",
-			"version": "0.8.1",
-			"SPTversion": "3.9",
+			"version": "0.9.0",
+			"SPTversion": "3.10",
 			"downloadUrls": [
 				"https://drive.google.com/uc?export=download&id=1VjkzFQuVKe2zfhFSAPjpVqfNvyzBcnw1"
 			],
