@@ -240,18 +240,18 @@
 		},
 		{
 			"name": "Fontaine's FOV Fix",
-			"version": "3.0.0",
+			"version": "3.0.1",
 			"SPTversion": "3.10",
 			"downloadUrls": [
-				"https://github.com/space-commits/SPT-FOV-Fix/releases/download/v3.0.0-test1/Fontaine-FOV-Fix-v3.0.0-SPT-v3.10.0.zip"
+				"https://github.com/space-commits/SPT-FOV-Fix/releases/download/v3.0.0/Fontaine-FOV-Fix-v3.0.0-SPT-v3.10.0.zip"
 			],
 			"krVersion": false,
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/942-fontaine-s-fov-fix-variable-optics/"
 		},
 		{
 			"name": "Fontaine's FOV Fix - KR",
-			"version": "2.1.8",
-			"SPTversion": "3.9",
+			"version": "3.0.1",
+			"SPTversion": "3.10",
 			"downloadUrls": [
 				"https://drive.google.com/uc?export=download&id=1lUPX3Rere4DxGDVUNvfmEjBoP1dkMroM"
 			],
