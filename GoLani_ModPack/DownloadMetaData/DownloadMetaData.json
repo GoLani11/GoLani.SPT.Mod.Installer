@@ -88,18 +88,18 @@
 		},
 		{
 			"name": "Realism",
-			"version": "1.4.8",
-			"SPTversion": "3.9",
+			"version": "1.5.0",
+			"SPTversion": "3.10",
 			"downloadUrls": [
-				"https://github.com/space-commits/SPT-Realism-Mod-Client/releases/download/v1.4.8/Realism-Mod-v1.4.8-SPT-v3.9.8.zip"
+				"https://github.com/space-commits/SPT-Realism-Mod-Client/releases/download/v1.5.0/Realism-Mod-v1.5.0-SPT-v3.10.5.zip"
 			],
 			"krVersion": false,
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/606-spt-realism-mod/"
 		},
 		{
 			"name": "Realism - KR",
-			"version": "1.4.8",
-			"SPTversion": "3.9",
+			"version": "1.5.0",
+			"SPTversion": "3.10",
 			"downloadUrls": [
 				"https://github.com/GoLani11/GoLani_ModPack/raw/main/zip/Realism%20Mod%201.4.8.zip"
 			],
