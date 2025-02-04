@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>간편 설치기 - 모드 다운로드</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/mod-download.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="top-menu">
+            <div class="left-menu">
+                <button class="menu-btn" data-page="home">
+                    <span class="material-icons">home</span>
+                    <span class="menu-text">홈</span>
+                </button>
+                <button class="menu-btn active" data-page="mod-download">
+                    <span class="material-icons">cloud_download</span>
+                    <span class="menu-text">모드 다운로드</span>
+                </button>
+            </div>
+            <div class="right-menu">
+                <button class="icon-btn" id="settings-btn">
+                    <span class="material-icons">settings</span>
+                </button>
+            </div>
+        </header>
+
+        <div class="notification-banner">
+            <span>모드 다운로드 페이지입니다.</span>
+            <button id="close-banner">×</button>
+        </div>
+
+        <!-- "원본 모드 선택 시 한글화 모드 자동 선택" 토글을 카테고리 탭 위로 이동 -->
+        <div class="auto-select-toggle-area">
+            <div class="auto-select-toggle">
+                <input type="checkbox" id="auto-select-toggle" checked>
+                <label for="auto-select-toggle">원본 모드 선택 시 한글화 모드 자동 선택</label>
+            </div>
+        </div>
+
+
+        <!-- 메인 콘텐츠 영역 (동적 모드 탭 및 그리드) -->
+        <main class="main-content">
+            <div class="download-container content-scroll">
+                <!-- 탭 메뉴 (카테고리) -->
+                <div class="md-tabs">
+                    <button class="tab-btn active" data-tab="korean">한글 모드</button>
+                    <button class="tab-btn" data-tab="original">원본 모드</button>
+                    <button class="tab-btn" data-tab="translation">한글화 모드</button>
+                </div>
+
+                <!-- 탭 컨텐츠: 각 카테고리별 모드 그리드 (동적 생성) -->
+                <div class="tab-content active" id="korean">
+                    <div id="koreanGrid" class="mode-grid"></div>
+                </div>
+
+                <div class="tab-content" id="original">
+                    <div id="originalGrid" class="mode-grid"></div>
+                </div>
+
+                <div class="tab-content" id="translation">
+                    <div id="translationGrid" class="mode-grid"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 다운로드 설정 섹션 (푸터 바로 위, 여백 없이 배치) -->
+        <div class="download-settings-area">
+            <div class="download-settings-path">
+                <div class="path-select-group">
+                    <button id="select-path-btn" class="select-btn">경로 선택</button>
+                    <span id="chosen-path">설정되지 않음</span>
+                </div>
+            </div>
+            <div class="download-settings-button">
+                <button id="download-btn" class="download-btn">다운로드 시작</button>
+            </div>
+        </div>
+
+
+        <!-- 푸터 (홈 페이지와 동일한 텍스트 디자인 적용) -->
+        <footer class="footer">
+            <span id="program-version">프로그램 버전: 1.0.0</span>
+            <span id="spt-version">SPT 게임 버전: --</span>
+        </footer>
+    </div>
+
+    <!-- 다운로드 진행용 모달 창 -->
+    <div id="download-modal" class="modal hidden">
+        <div class="modal-content download-modal-content">
+            <h3>다운로드 진행</h3>
+            <!-- 선택된 모드들을 그리드 형식(텍스트 왼쪽 정렬 및 상태 아이콘 포함) -->
+            <div id="selected-mod-grid" class="selected-mod-grid"></div>
+            <!-- 진행바 영역 -->
+            <div id="download-progress">
+                <div id="progress-bar"></div>
+            </div>
+            <span id="progress-percent">0%</span>
+            <button id="download-modal-close-btn" class="modal-btn hidden">닫기</button>
+        </div>
+    </div>
+
+    <!-- 기존 알림용 모달 -->
+    <div id="notification-modal" class="modal hidden">
+        <div class="modal-content">
+            <p id="modal-message"></p>
+            <button id="modal-close-btn" class="modal-btn">확인</button>
+        </div>
+    </div>
+
+    <script src="../src/mod-download.js"></script>
+</body>
+
+</html>

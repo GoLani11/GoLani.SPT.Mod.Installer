@@ -1,0 +1,318 @@
+/* 모드 다운로드 페이지 전용 스타일 */
+
+/* 다운로드 컨테이너 padding 값 조정 */
+.download-container {
+    padding: 10px 20px;
+    /* 상하 padding 감소 */
+    overflow-y: auto;
+}
+
+/* 탭 메뉴 */
+.md-tabs {
+    display: flex;
+    border-bottom: 1px solid #7289DA;
+    margin-bottom: 10px;
+    /* margin-bottom 값 감소 */
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: #ddd;
+    padding: 8px 16px;
+    /* padding 값 감소 */
+    cursor: pointer;
+    font-size: 15px;
+    /* font-size 값 감소 */
+    transition: background 0.3s;
+}
+
+.tab-btn.active {
+    color: #fff;
+    border-bottom: 2px solid #7289DA;
+}
+
+.tab-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* 탭 컨텐츠 */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* 2열 그리드 레이아웃 for 모드 아이템 */
+.mode-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    /* gap 값 감소 */
+    margin-bottom: 15px;
+    /* margin-bottom 값 감소 */
+}
+
+.mode-item {
+    background: #2F3136;
+    padding: 8px;
+    /* padding 값 감소 */
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+}
+
+.mode-item input[type="checkbox"] {
+    flex-shrink: 0;
+}
+
+.mode-item label {
+    margin-left: 6px;
+    /* margin-left 값 감소 */
+    flex: 1;
+    font-size: 16px;
+    /* font-size 값 복원 */
+}
+
+.mode-item label a {
+    color: #7289DA;
+    text-decoration: none;
+}
+
+.mode-item label a:hover {
+    text-decoration: underline;
+}
+
+/* 모드 이름 옆에 버전 정보를 작은 글씨로 표시 */
+.mod-text small {
+    font-size: 0.75em;
+    /* font-size 값 감소 */
+    color: #bbb;
+    margin-left: 3px;
+    /* margin-left 값 감소 */
+}
+
+/* 자동 선택 토글 영역 (카테고리 탭 상단) */
+.auto-select-toggle-area {
+    padding: 10px 20px 0;
+    /* 상단 padding 추가, 좌우 padding 유지 */
+    margin-bottom: 10px;
+    /* margin-bottom 추가 */
+    display: flex;
+    justify-content: flex-start;
+    /* 좌측 정렬 */
+}
+
+.auto-select-toggle {
+    color: #fff;
+    font-size: 14px;
+    /* font-size 값 조정 */
+    display: flex;
+    align-items: center;
+    /* 세로 중앙 정렬 */
+    gap: 5px;
+    /* 토글-라벨 간 간격 */
+}
+
+.auto-select-toggle input[type="checkbox"] {
+    margin-right: 0;
+    /* 체크박스 우측 margin 제거 */
+}
+
+
+/* 다운로드 설정 영역 전체 컨테이너 */
+.download-settings-area {
+    background: #2C2F33;
+    padding: 15px 20px;
+    margin-top: 15px;
+    /* main-content 와 간격 */
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    /* 내부 요소 세로 배치 */
+    gap: 15px;
+    /* 요소 간 간격 늘림 */
+    border-radius: 5px;
+    /* border-radius 추가 */
+}
+
+/* 다운로드 경로 설정 영역 */
+.download-settings-path {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* 경로 선택 버튼과 경로 표시 양쪽 끝 정렬 */
+}
+
+/* 다운로드 버튼 영역 */
+.download-settings-button {
+    display: flex;
+    justify-content: center;
+    /* 다운로드 시작 버튼 가운데 정렬 */
+}
+
+
+/* 경로 선택 그룹 */
+.path-select-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.download-settings-area .select-btn,
+.download-settings-area .download-btn {
+    padding: 10px 20px;
+    /* padding 값 조정 */
+    background-color: #7289DA;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    /* border-radius 값 조정 */
+    cursor: pointer;
+    font-size: 16px;
+    /* font-size 값 조정 */
+    transition: background-color 0.2s;
+}
+
+.download-settings-area .select-btn:hover,
+.download-settings-area .download-btn:hover {
+    background-color: #5b6eae;
+}
+
+#chosen-path {
+    color: #fff;
+    font-size: 15px;
+    /* font-size 값 조정 */
+    margin-left: 10px;
+    /* margin-left 값 조정 */
+}
+
+
+/* 푸터 */
+.footer {
+    background-color: #23272A;
+    padding: 10px 20px;
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    color: #bbb;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+    justify-content: left;
+    /* 푸터 내용 가운데 정렬 */
+}
+
+.footer a {
+    font-size: 14px;
+    color: #7289DA;
+}
+
+/* 다운로드 진행 모달 (공통 모달 스타일 활용) */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 47, 53, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: #2C2F33;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* 다운로드 모달 콘텐츠 구역 */
+.download-modal-content {
+    width: 400px;
+}
+
+.download-modal-content h3 {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+/* 선택된 모드 그리드: 텍스트 왼쪽 정렬, 아이콘 포함 */
+.selected-mod-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.selected-mod-grid .mod-item {
+    background: #23272A;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.selected-mod-grid .mod-item .mod-text {
+    flex: 1;
+}
+
+.selected-mod-grid .mod-item .mod-status {
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.selected-mod-grid .mod-item .mod-status i {
+    font-size: 20px;
+}
+
+/* 진행바 스타일 */
+#download-progress {
+    width: 100%;
+    height: 10px;
+    background-color: #555;
+    margin: 15px 0 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #7289DA;
+}
+
+#progress-percent {
+    color: #fff;
+    font-size: 14px;
+}
+
+/* 모달 버튼 */
+.modal-btn {
+    background-color: #7289DA;
+    border: none;
+    padding: 6px 12px;
+    color: #fff;
+    border-radius: 4px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.modal-btn:hover {
+    background-color: #5b6eae;
+}

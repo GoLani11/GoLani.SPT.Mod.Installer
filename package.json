@@ -1,0 +1,50 @@
+{
+  "name": "spt-mod-installer",
+  "version": "1.0.0",
+  "description": "SPT (Escape from Tarkov) 모드 간편 설치 프로그램",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^34.0.2",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.example.sptmodinstaller",
+    "productName": "SPT 모드 간편 설치기",
+    "copyright": "Copyright © 2024 Your Name",
+    "asar": true,
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "html/**/*",
+      "styles/**/*",
+      "assets/**/*",
+      "docs/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icons/app-icon.png"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icons/app-icon.png"
+    },
+    "linux": {
+      "target": "deb",
+      "icon": "assets/icons/app-icon.png"
+    }
+  },
+  "keywords": [],
+  "dependencies": {
+    "7zip-bin": "^5.2.0",
+    "adm-zip": "^0.5.16"
+  }
+}

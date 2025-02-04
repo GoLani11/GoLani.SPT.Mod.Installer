@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2C2F33;
+    color: #eee;
+}
+
+/* 컨테이너: 상단 메뉴, 알림 배너, 메인 콘텐츠, 푸터를 세로 배치 */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* 상단 메뉴 */
+.top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #23272A;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.left-menu,
+.right-menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu-btn {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ddd;
+    font-size: 16px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.menu-btn:hover,
+.menu-btn.active {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-btn .material-icons {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+/* 아이콘 버튼 (설정) */
+.icon-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ddd;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.icon-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 알림 배너 */
+.notification-banner {
+    background-color: #7289DA;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+#close-banner {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* 메인 콘텐츠 영역 */
+.main-content {
+    flex: 1;
+    background-color: #36393F;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 스크롤 영역 */
+.content-scroll {
+    overflow-y: auto;
+    height: 100%;
+    padding-right: 10px;
+}
+
+/* 사용자 정의 스크롤바 */
+.content-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.content-scroll::-webkit-scrollbar-track {
+    background: #1F2329;
+    border-radius: 4px;
+}
+
+.content-scroll::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 4px;
+}
+
+/* 홈 화면 섹션 컨테이너 (좌우 배치) */
+#home-sections-container {
+    display: flex;
+    /* Use flexbox for horizontal layout */
+    gap: 20px;
+    /* Spacing between sections */
+    margin-bottom: 30px;
+    /* Add margin below the container */
+}
+
+/* 콘텐츠 섹션 - 홈 화면 좌우 배치용 */
+#home-sections-container .content-section {
+    width: 50%;
+    /* Each section takes up half the width */
+    margin-bottom: 0;
+    /* Remove bottom margin for side-by-side sections */
+}
+
+/* 콘텐츠 섹션 */
+.content-section {
+    /* margin-bottom: 30px;  <- REMOVED margin-bottom here, now on container */
+    background: #2F3136;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.content-section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #99AAB5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 업데이트 날짜 스타일 */
+.update-date {
+    font-size: 14px;
+    color: #bbb;
+}
+
+.content-list {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.content-list li {
+    padding: 5px 0;
+    border-bottom: 1px dotted #99AAB5;
+}
+
+/* 숨긴 추가 내용 */
+.hidden {
+    display: none;
+}
+
+/* 더보기/접기 버튼 */
+.toggle-btn {
+    background-color: transparent;
+    border: 1px solid #7289DA;
+    color: #7289DA;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.toggle-btn:hover {
+    background-color: #7289DA;
+    color: #fff;
+}
+
+/* 푸터 */
+.footer {
+    background-color: #23272A;
+    padding: 10px 20px;
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    color: #bbb;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+    justify-content: left;
+    /* 푸터 내용 가운데 정렬 */
+}
+
+.footer span {
+    color: #99AAB5;
+    /* 푸터 텍스트 색상 #99AAB5 */
+    font-size: 14px;
+    /* 푸터 폰트 크기 14px */
+}
+
+/* 라이센스 정보 스타일 */
+.license-info {
+    background-color: #2F3136;
+    border-left: 3px solid #7289DA;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+.license-info p {
+    font-size: 14px;
+    color: #ddd;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.license-info strong {
+    color: #fff;
+}
+
+#copyright-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #ddd;
+}
+
+#copyright-section ul li {
+    margin-bottom: 5px;
+}
