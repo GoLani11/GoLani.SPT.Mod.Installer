@@ -1,12 +1,13 @@
+<!-- index.html (수정된 파일) -->
 <!DOCTYPE html>
 <html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>간편 설치기 - 홈</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>고라니 SPT 모드 간편 설치기</title>
     <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -23,6 +24,9 @@
                 </button>
             </div>
             <div class="right-menu">
+                <button class="icon-btn" id="refresh-btn" title="새로고침"> <!-- 새로고침 버튼 추가 -->
+                    <span class="material-icons">refresh</span>
+                </button>
                 <button class="icon-btn" id="settings-btn">
                     <span class="material-icons">settings</span>
                 </button>
@@ -30,36 +34,49 @@
         </header>
 
         <div class="notification-banner">
-            <span>최근 주요 업데이트가 있습니다. 자세한 내용은 공지사항을 확인하세요!</span>
+            <span>홈 페이지입니다.</span>
             <button id="close-banner">×</button>
         </div>
 
         <main class="main-content">
             <div class="content-scroll">
                 <div id="home-sections-container">
-                    <section class="content-section" id="hangeul-log-section">
-                        <h2>한글화 업데이트 로그 <span class="update-date" id="hangeul-log-date"></span></h2>
-                        <ul class="content-list" id="hangeul-log-list" data-expanded="false"></ul>
-                        <button class="toggle-btn">더보기</button>
+                    <section class="content-section" id="hangeul-update-log-section">
+                        <h2>한글화 업데이트 로그 <span id="hangeul-log-date" class="update-date"></span>
+                            <button class="toggle-btn" data-target="hangeul-log-list">더보기</button>
+                        </h2>
+                        <ul id="hangeul-log-list" class="content-list" data-expanded="false">
+                            <!-- script.js에서 동적 생성 -->
+                        </ul>
+                        <div class="more-content hidden">
+                            <!-- script.js에서 동적 생성 -->
+                        </div>
                     </section>
 
                     <section class="content-section" id="patcher-notice-section">
-                        <h2>패치기 공지사항 <span class="update-date" id="patcher-notice-date"></span></h2>
-                        <ul class="content-list" id="patcher-notice-list" data-expanded="false"></ul>
-                        <button class="toggle-btn">더보기</button>
+                        <h2>패치기 공지사항 <span id="patcher-notice-date" class="update-date"></span>
+                            <button class="toggle-btn" data-target="patcher-notice-list">더보기</button>
+                        </h2>
+                        <ul id="patcher-notice-list" class="content-list" data-expanded="false">
+                            <!-- script.js에서 동적 생성 -->
+                        </ul>
+                        <div class="more-content hidden">
+                            <!-- script.js에서 동적 생성 -->
+                        </div>
                     </section>
                 </div>
 
                 <section class="content-section" id="copyright-section">
-                    <h2>저작권 정보 <span class="update-date" id="copyright-date"></span></h2>
-                    <ul class="content-list" id="copyright-list" data-expanded="false"></ul>
-
+                    <h2>저작권 정보 <span id="copyright-date" class="update-date"></span></h2>
+                    <ul id="copyright-list" class="content-list">
+                        <!-- script.js에서 동적 생성 -->
+                    </ul>
                 </section>
             </div>
         </main>
 
         <footer class="footer">
-            <span id="program-version">프로그램 버전: --</span>
+            <span id="program-version">프로그램 버전: 1.0.0</span>
             <span id="spt-version">SPT 게임 버전: --</span>
         </footer>
     </div>

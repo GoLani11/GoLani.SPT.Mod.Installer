@@ -1,3 +1,5 @@
+/* style.css (전체 코드 - Fallback 모드 알림 배너 스타일 및 기존 스타일 포함) */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -62,7 +64,7 @@ html {
     margin-right: 8px;
 }
 
-/* 아이콘 버튼 (설정) */
+/* 아이콘 버튼 (설정, 새로고침) */
 .icon-btn {
     background: transparent;
     border: none;
@@ -72,6 +74,8 @@ html {
     padding: 6px;
     border-radius: 4px;
     transition: background-color 0.3s;
+    margin-left: 5px;
+    /* 아이콘 버튼 간 간격 조정 */
 }
 
 .icon-btn:hover {
@@ -87,6 +91,12 @@ html {
     align-items: center;
     justify-content: space-between;
     font-size: 15px;
+}
+
+/* Fallback 모드 알림 배너 스타일 */
+.notification-banner.fallback-mode {
+    background-color: #f0ad4e;
+    /* Fallback 시 배경색 변경 (예: 주황색) */
 }
 
 #close-banner {
