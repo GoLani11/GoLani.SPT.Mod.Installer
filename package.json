@@ -52,6 +52,7 @@
   "keywords": [],
   "dependencies": {
     "7zip-bin": "^5.2.0",
-    "adm-zip": "^0.5.16"
+    "adm-zip": "^0.5.16",
+    "semver": "^7.7.1"
   }
 }

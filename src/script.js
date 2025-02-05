@@ -1,8 +1,13 @@
-// script.js (수정된 전체 코드)
+// script.js (최종 수정 코드 - 라이트 모드 테마, 새로고침 알림, 아이콘 변경 반영)
 const { ipcRenderer } = require('electron'); // ipcRenderer 추가
 
 document.addEventListener('DOMContentLoaded', () => {
     let isFallbackActive = false; // Fallback 모드 활성 여부 추적
+    let currentTheme = localStorage.getItem('theme') || 'dark'; // 초기 테마 설정 (localStorage에서 로드, 없으면 'dark' 기본)
+
+    // 초기 테마 적용
+    setTheme(currentTheme);
+    updateSettingsIcon(currentTheme); // 아이콘 업데이트 함수 호출
 
     // 푸터 프로그램 버전 및 SPT 버전 업데이트
     function updateFooterVersions(programVersion, sptVersion) {
@@ -10,10 +15,47 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('spt-version').textContent = `SPT 게임 버전: ${sptVersion}`;
     }
 
+    // 알림 배너 메시지 표시 함수 (기존 알림 배너 용도)
+    function showNotificationBannerMessage(message, type = 'default') { // type 인자 추가 (default, fallback)
+        const banner = document.querySelector('.notification-banner');
+        const bannerSpan = document.querySelector('.notification-banner span');
+        bannerSpan.textContent = message;
+        banner.style.display = 'flex';
+
+        banner.classList.remove('fallback-mode', 'success-mode'); // 모든 스타일 클래스 제거
+        if (type === 'fallback') {
+            banner.classList.add('fallback-mode'); // Fallback 스타일 적용
+        }
+
+        // 기존 닫기 버튼은 그대로 유지하거나 필요에 따라 별도 처리
+    }
+
+
+    // 새로고침 상태 메시지 표시 함수
+    function showRefreshStatusMessage(message, isSuccess) {
+        const banner = document.querySelector('.refresh-status-banner'); // 새로고침 배너 요소 선택
+        const bannerSpan = banner.querySelector('span'); // 새로고침 배너 span 요소 선택
+        bannerSpan.textContent = message;
+        banner.style.display = 'flex'; // 새로고침 배너 보이기
+
+        banner.classList.remove('fallback-mode', 'success-mode');
+        if (isSuccess === true) {
+            banner.classList.add('success-mode');
+        } else if (isSuccess === false) {
+            banner.classList.add('fallback-mode');
+        }
+
+        setTimeout(() => {
+            banner.style.display = 'none'; // 새로고침 배너 숨기기
+            banner.classList.remove('fallback-mode', 'success-mode');
+        }, 3000);
+    }
+
     // config 파일 로드 및 내용 설정 함수
     function loadContentFromFiles() {
         isFallbackActive = false; // 리로드 시 Fallback 모드 초기화
         updateNotificationBanner(); // 배너 텍스트 업데이트 (초기화)
+        showRefreshStatusMessage('새로고침 중...', null); // "새로고침 중..." 메시지 표시
 
         const metaFilePath = '../config/DownloadMetaData.json'; // 기존 파일 경로 유지 (fallback)
         const hangeulLogPath = '../config/KR-Update-Log.txt'; // 기존 파일 경로 유지 (fallback)
@@ -36,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('hangeul-log-date').textContent = `(${metaData.home_page_notices.hangeul_log_date})`;
                 document.getElementById('patcher-notice-date').textContent = `(${metaData.home_page_notices.patcher_notice_date})`;
                 setCopyrightSection();
+                showRefreshStatusMessage('새로고침 완료', true); // "새로고침 완료" 메시지 표시 (성공)
             })
             .catch(error => {
                 githubLoadSuccess = false;
@@ -51,8 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         document.getElementById('hangeul-log-date').textContent = `(${metaData.home_page_notices.hangeul_log_date})`;
                         document.getElementById('patcher-notice-date').textContent = `(${metaData.home_page_notices.patcher_notice_date})`;
                         setCopyrightSection();
+                        showRefreshStatusMessage('새로고침 완료 (로컬 설정 사용)', true); // "새로고침 완료 (로컬 설정 사용)" 메시지 표시 (Fallback 성공)
                     })
-                    .catch(localError => console.error('로컬 메타데이터 로드 실패:', localError));
+                    .catch(localError => {
+                        console.error('로컬 메타데이터 로드 실패:', localError);
+                        showRefreshStatusMessage('새로고침 실패 (로컬 설정 로드 실패)', false); // "새로고침 실패" 메시지 표시 (Fallback 실패)
+                    });
             });
 
         // GitHub에서 KR-Update-Log.txt 로드 시도
@@ -67,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ipcRenderer.invoke('show-notification', '서버와 연결이 되지 않아 프로그램에 저장된 설정을 가져옵니다. 인터넷 연결을 확인해주세요.'); // 알림 창 표시 (추가)
                 // GitHub 로딩 실패 시, 로컬 파일 로드 (기존 방식 유지)
                 loadTextContent(hangeulLogPath, 'hangeul-log-list');
+                showRefreshStatusMessage('새로고침 실패 (업데이트 로그)', false); // "새로고침 실패 (업데이트 로그)" 메시지 표시
             });
 
         // GitHub에서 Notice.txt 로드 시도
@@ -81,21 +129,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 ipcRenderer.invoke('show-notification', '서버와 연결이 되지 않아 프로그램에 저장된 설정을 가져옵니다. 인터넷 연결을 확인해주세요.'); // 알림 창 표시 (추가)
                 // GitHub 로딩 실패 시, 로컬 파일 로드 (기존 방식 유지)
                 loadTextContent(patcherNoticePath, 'patcher-notice-list');
+                showRefreshStatusMessage('새로고침 실패 (공지사항)', false); // "새로고침 실패 (공지사항)" 메시지 표시
             });
 
-        // 모든 GitHub 파일 로딩 시도 후 알림 표시 (최초 로딩 시에만)
-        if (!isFallbackActive) { // Fallback 모드가 활성화되지 않았을 때만 (최초 로딩 성공 시에만)
+
+        if (!isFallbackActive) {
             Promise.all([
-                fetch(githubMetaUrl).catch(() => null), // Promise.reject를 null로 처리
+                fetch(githubMetaUrl).catch(() => null),
                 fetch(githubLogUrl).catch(() => null),
                 fetch(githubNoticeUrl).catch(() => null)
             ]).finally(() => {
-                if (!githubLoadSuccess && !isFallbackActive) { // Double check and prevent showing error if fallback already active
+                if (!githubLoadSuccess && !isFallbackActive) {
                     ipcRenderer.invoke('show-notification', '서버와 연결이 되지 않아 프로그램에 저장된 설정을 가져옵니다. 인터넷 연결을 확인해주세요.');
+                    showRefreshStatusMessage('새로고침 실패 (전체 설정)', false); // "새로고침 실패 (전체 설정)" 메시지 표시 (최종적으로 모든 GitHub 로딩 실패 시)
+                } else if (githubLoadSuccess) {
+                    // GitHub 로딩 성공 시에만 "새로고침 완료" 메시지 표시 (한 번만)
+                    // showRefreshStatusMessage('새로고침 완료', true); // <-  fetch(githubMetaUrl) .then() 블록에서 이미 성공 메시지 표시하므로 여기서는 제거하거나 주석 처리
                 }
             });
         } else {
-            updateNotificationBanner(); // Fallback 활성화 시 배너 업데이트 (초기 로딩 실패 시)
+            updateNotificationBanner();
+            showRefreshStatusMessage('새로고침 실패 (Fallback 모드)', false); // "새로고침 실패 (Fallback 모드)" 메시지 표시 (Fallback 활성화)
         }
     }
 
@@ -104,11 +158,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const banner = document.querySelector('.notification-banner span');
         if (isFallbackActive) {
             banner.textContent = 'GitHub 설정 로드 실패. 로컬 설정 사용 중 (인터넷 연결 확인 요망).';
-            document.querySelector('.notification-banner').classList.add('fallback-mode'); // Fallback 모드 스타일 클래스 추가
+            showNotificationBannerMessage('GitHub 설정 로드 실패. 로컬 설정 사용 중 (인터넷 연결 확인 요망)', 'fallback'); // Fallback 모드 알림 배너 메시지 표시 (기존 함수 재활용)
+            document.querySelector('.notification-banner').classList.add('fallback-mode'); // Fallback 모드 스타일 클래스 추가 (CSS 스타일 적용을 위해 유지)
+            document.querySelector('.notification-banner').classList.remove('success-mode'); // success-mode 클래스 제거 (혹시 남아있을 경우)
         } else {
-            banner.textContent = '홈 페이지입니다.'; // 기본 배너 텍스트
-            document.querySelector('.notification-banner').classList.remove('fallback-mode'); // Fallback 모드 스타일 클래스 제거
+            banner.textContent = '홈 페이지입니다.'; // 기본 배너 텍스트 (필요하다면 설정, 현재는 큰 의미 없을 수 있음)
+            showNotificationBannerMessage('홈 페이지입니다.'); // 홈 페이지 기본 배너 메시지 표시 (기존 함수 재활용)
+            document.querySelector('.notification-banner').classList.remove('fallback-mode', 'success-mode'); // Fallback, Success 모드 스타일 클래스 제거
         }
+        banner.style.display = 'flex'; // 알림 배너 보이도록 설정 (updateNotificationBanner에서도 보이게 해야 초기 로딩 시 배너가 나타남)
     }
 
 
@@ -116,25 +174,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function loadTextContentFromText(text, listId) {
         const list = document.getElementById(listId);
         list.innerHTML = '';
-        let moreContent = document.createElement('div');
-        moreContent.className = 'more-content hidden';
-        let isMoreContent = false;
 
         text.split('\n').forEach(line => {
             const trimmedLine = line.trim();
-            if (trimmedLine === '----more----') {
-                isMoreContent = true;
-                return;
-            }
             let listItem = document.createElement('li');
             listItem.textContent = trimmedLine;
-            if (isMoreContent) {
-                moreContent.appendChild(listItem);
-            } else {
-                list.appendChild(listItem);
-            }
+            list.appendChild(listItem);
         });
-        list.parentElement.appendChild(moreContent);
     }
 
 
@@ -189,26 +235,50 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // 테마 설정 함수 (다크/라이트 모드 전환)
+    function setTheme(themeName) {
+        const body = document.body;
+        if (themeName === 'light') {
+            body.classList.add('light-mode');
+            body.classList.remove('dark-mode');
+        } else {
+            body.classList.remove('light-mode');
+            body.classList.add('dark-mode');
+        }
+        localStorage.setItem('theme', themeName); // localStorage에 테마 설정 저장
+        currentTheme = themeName; // 현재 테마 업데이트
+        updateSettingsIcon(themeName); // 테마 변경 시 아이콘 업데이트
+    }
+
+    // 설정 아이콘 업데이트 함수
+    function updateSettingsIcon(themeName) {
+        const settingsIcon = document.querySelector('#settings-btn .material-icons');
+        if (themeName === 'light') {
+            settingsIcon.textContent = 'light_mode'; // Light Mode 아이콘
+        } else {
+            settingsIcon.textContent = 'dark_mode'; // Dark Mode 아이콘 (동일 아이콘 유지 or 다르게 변경)
+        }
+    }
+
+
+    // 설정 버튼 클릭 이벤트 리스너 (테마 전환)
+    const settingsBtn = document.getElementById('settings-btn');
+    settingsBtn.addEventListener('click', () => {
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme); // 테마 변경 함수 호출
+    });
+
+
+    // 새로고침 버튼 클릭 이벤트 리스너
+    const refreshBtn = document.getElementById('refresh-btn');
+    refreshBtn.addEventListener('click', () => {
+        showRefreshStatusMessage('새로고침 중...', null); // "새로고침 중..." 메시지 표시 (성공 여부 미정)
+        loadContentFromFiles(); // 새로고침 시 파일 다시 로드
+    });
+
+
     loadContentFromFiles(); // 최초 실행 시 파일 로드
 
-    const toggleBtns = document.querySelectorAll('.toggle-btn');
-    toggleBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const section = btn.parentElement;
-            const list = section.querySelector('.content-list');
-            const moreContent = section.querySelector('.more-content');
-            const expanded = list.getAttribute('data-expanded') === 'true';
-            if (!expanded) {
-                moreContent.classList.remove('hidden');
-                btn.textContent = '접기';
-                list.setAttribute('data-expanded', 'true');
-            } else {
-                moreContent.classList.add('hidden');
-                btn.textContent = '더보기';
-                list.setAttribute('data-expanded', 'false');
-            }
-        });
-    });
 
     const menuButtons = document.querySelectorAll('.menu-btn');
     menuButtons.forEach(btn => {
@@ -229,17 +299,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.notification-banner').style.display = 'none';
     });
 
-    const settingsBtn = document.getElementById('settings-btn');
-    settingsBtn.addEventListener('click', () => {
-        console.log('설정 버튼 클릭됨');
-        // 설정 메뉴 열기 또는 설정 페이지로 이동 (추후 구현)
-    });
-
-    // 새로고침 버튼 클릭 이벤트 리스너
-    const refreshBtn = document.getElementById('refresh-btn');
-    refreshBtn.addEventListener('click', () => {
-        loadContentFromFiles(); // 새로고침 시 파일 다시 로드
-    });
 
 
     // ipcRenderer를 통해 main process로부터 programVersion 받기

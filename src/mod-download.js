@@ -1,3 +1,4 @@
+// mod-download.js (최종 수정 코드 - 라이트 모드 테마, 새로고침 알림, 아이콘 변경 반영)
 const { ipcRenderer } = require('electron');
 const fs = require('fs');
 const path = require('path');
@@ -15,14 +16,57 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     let isFallbackActive = false; // Fallback 모드 활성 여부 추적 (mod-download.js에도 추가)
+    let currentTheme = localStorage.getItem('theme') || 'dark'; // 초기 테마 설정 (localStorage에서 로드, 없으면 'dark' 기본)
+
+    // 초기 테마 적용
+    setTheme(currentTheme);
+    updateSettingsIcon(currentTheme); // 아이콘 업데이트 함수 호출
+
 
     // GitHub DownloadMetaData.json URL
     const githubMetaUrl = 'https://raw.githubusercontent.com/GoLani11/GoLani.SPT.Mod.Installer/main/config/DownloadMetaData.json';
+
+    // 알림 배너 메시지 표시 함수 (mod-download.js) - 기존 알림 배너 용도
+    function showNotificationBannerMessage(message, type = 'default') { // type 인자 추가 (default, fallback)
+        const banner = document.querySelector('.notification-banner');
+        const bannerSpan = document.querySelector('.notification-banner span');
+        bannerSpan.textContent = message;
+        banner.style.display = 'flex';
+
+        banner.classList.remove('fallback-mode', 'success-mode'); // 모든 스타일 클래스 제거
+        if (type === 'fallback') {
+            banner.classList.add('fallback-mode'); // Fallback 스타일 적용
+        }
+
+        // 기존 닫기 버튼은 그대로 유지하거나 필요에 따라 별도 처리
+    }
+
+    // 새로고침 상태 메시지 표시 함수 (mod-download.js)
+    function showRefreshStatusMessage(message, isSuccess) {
+        const banner = document.querySelector('.refresh-status-banner');
+        const bannerSpan = banner.querySelector('span');
+        bannerSpan.textContent = message;
+        banner.style.display = 'flex';
+
+        banner.classList.remove('fallback-mode', 'success-mode');
+        if (isSuccess === true) {
+            banner.classList.add('success-mode');
+        } else if (isSuccess === false) {
+            banner.classList.add('fallback-mode');
+        }
+
+        setTimeout(() => {
+            banner.style.display = 'none';
+            banner.classList.remove('fallback-mode', 'success-mode');
+        }, 3000);
+    }
+
 
     // 메타데이터 로드 함수 (GitHub에서 다운로드)
     function loadMetaData() {
         isFallbackActive = false; // 리로드 시 Fallback 모드 초기화
         updateNotificationBanner(); // 배너 텍스트 업데이트 (초기화)
+        showRefreshStatusMessage('새로고침 중...', null); // "새로고침 중..." 메시지 표시
 
         fetch(githubMetaUrl)
             .then(response => response.json())
@@ -84,6 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
                 bindDependencyListeners();
                 bindOriginalToTranslationAutoSelect();
+                showRefreshStatusMessage('새로고침 완료', true); // "새로고침 완료" 메시지 표시 (성공)
             })
             .catch(error => {
                 isFallbackActive = true; // Fallback 모드 활성화
@@ -92,6 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ipcRenderer.invoke('show-notification', '서버와 연결이 되지 않아 프로그램에 저장된 설정을 가져옵니다. 인터넷 연결을 확인해주세요.'); // 알림 표시
                 // GitHub 로드 실패 시, 로컬 파일 로드 (기존 방식 유지)
                 loadMetaDataLocal();
+                showRefreshStatusMessage('새로고침 실패 (GitHub)', false); // "새로고침 실패 (GitHub)" 메시지 표시 (GitHub 실패)
             });
     }
 
@@ -100,11 +146,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const banner = document.querySelector('.notification-banner span');
         if (isFallbackActive) {
             banner.textContent = 'GitHub 설정 로드 실패. 로컬 설정 사용 중 (인터넷 연결 확인 요망).';
-            document.querySelector('.notification-banner').classList.add('fallback-mode'); // Fallback 모드 스타일 클래스 추가
+            showNotificationBannerMessage('GitHub 설정 로드 실패. 로컬 설정 사용 중 (인터넷 연결 확인 요망)', 'fallback'); // Fallback 모드 알림 배너 메시지 표시 (기존 함수 재활용)
+            document.querySelector('.notification-banner').classList.add('fallback-mode'); // Fallback 모드 스타일 클래스 추가 (CSS 스타일 적용을 위해 유지)
+            document.querySelector('.notification-banner').classList.remove('success-mode'); // success-mode 클래스 제거
         } else {
             banner.textContent = '모드 다운로드 페이지입니다.'; // 모드 다운로드 페이지 기본 배너 텍스트
-            document.querySelector('.notification-banner').classList.remove('fallback-mode'); // Fallback 모드 스타일 클래스 제거
+            showNotificationBannerMessage('모드 다운로드 페이지입니다.'); // 기본 배너 메시지 표시 (기존 함수 재활용)
+            document.querySelector('.notification-banner').classList.remove('fallback-mode', 'success-mode'); // Fallback, Success 모드 스타일 클래스 제거
         }
+        banner.style.display = 'flex'; // 알림 배너 보이도록 설정 (updateNotificationBanner에서도 보이게 해야 초기 로딩 시 배너가 나타남)
     }
 
 
@@ -114,6 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
         fs.readFile(metaFilePath, 'utf8', (err, data) => {
             if (err) {
                 console.error("로컬 메타데이터 로드 실패:", err);
+                showRefreshStatusMessage('새로고침 실패 (로컬 설정)', false); // "새로고침 실패 (로컬 설정)" 메시지 표시 (로컬 파일 로드 실패)
                 return;
             }
             try {
@@ -173,8 +224,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
                 bindDependencyListeners();
                 bindOriginalToTranslationAutoSelect();
+                showRefreshStatusMessage('새로고침 완료 (로컬 설정)', true); // "새로고침 완료 (로컬 설정)" 메시지 표시 (로컬 파일 로드 성공)
             } catch (e) {
                 console.error("로컬 메타데이터 파싱 오류:", e);
+                showRefreshStatusMessage('새로고침 실패 (로컬 설정 파싱)', false); // "새로고침 실패 (로컬 설정 파싱)" 메시지 표시 (로컬 JSON 파싱 오류)
             }
         });
     }
@@ -581,15 +634,45 @@ document.addEventListener("DOMContentLoaded", () => {
     closeBanner.addEventListener('click', () => {
         document.querySelector('.notification-banner').style.display = 'none';
     });
+
+    // 테마 설정 함수 (다크/라이트 모드 전환) - script.js 와 동일
+    function setTheme(themeName) {
+        const body = document.body;
+        if (themeName === 'light') {
+            body.classList.add('light-mode');
+            body.classList.remove('dark-mode');
+        } else {
+            body.classList.remove('light-mode');
+            body.classList.add('dark-mode');
+        }
+        localStorage.setItem('theme', themeName); // localStorage에 테마 설정 저장
+        currentTheme = themeName; // 현재 테마 업데이트
+        updateSettingsIcon(themeName); // 테마 변경 시 아이콘 업데이트
+    }
+
+    // 설정 아이콘 업데이트 함수
+    function updateSettingsIcon(themeName) {
+        const settingsIcon = document.querySelector('#settings-btn .material-icons');
+        if (themeName === 'light') {
+            settingsIcon.textContent = 'settings'; // Light Mode 아이콘
+        } else {
+            settingsIcon.textContent = 'settings'; // Dark Mode 아이콘 (동일 아이콘 유지 or 다르게 변경)
+        }
+    }
+
+
+    // 설정 버튼 클릭 이벤트 리스너 (테마 전환) - script.js 와 동일
     const settingsBtn = document.getElementById('settings-btn');
     settingsBtn.addEventListener('click', () => {
-        console.log('설정 버튼 클릭됨');
-        // 설정 메뉴 열기 또는 설정 페이지로 이동 (추후 구현)
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme); // 테마 변경 함수 호출
     });
+
 
     // 새로고침 버튼 클릭 이벤트 리스너 (mod-download.js 용)
     const refreshBtn = document.getElementById('refresh-btn');
     refreshBtn.addEventListener('click', () => {
+        showRefreshStatusMessage('새로고침 중...', null); // "새로고침 중..." 메시지 표시
         loadMetaData(); // 새로고침 시 파일 다시 로드
     });
 

@@ -1,4 +1,3 @@
-<!-- index.html (수정된 파일) -->
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -38,31 +37,28 @@
             <button id="close-banner">×</button>
         </div>
 
+        <!-- 새로고침 상태 알림 배너 (추가) -->
+        <div class="refresh-status-banner hidden">
+            <span></span>
+        </div>
+
         <main class="main-content">
             <div class="content-scroll">
                 <div id="home-sections-container">
                     <section class="content-section" id="hangeul-update-log-section">
                         <h2>한글화 업데이트 로그 <span id="hangeul-log-date" class="update-date"></span>
-                            <button class="toggle-btn" data-target="hangeul-log-list">더보기</button>
                         </h2>
-                        <ul id="hangeul-log-list" class="content-list" data-expanded="false">
+                        <ul id="hangeul-log-list" class="content-list">
                             <!-- script.js에서 동적 생성 -->
                         </ul>
-                        <div class="more-content hidden">
-                            <!-- script.js에서 동적 생성 -->
-                        </div>
                     </section>
 
                     <section class="content-section" id="patcher-notice-section">
                         <h2>패치기 공지사항 <span id="patcher-notice-date" class="update-date"></span>
-                            <button class="toggle-btn" data-target="patcher-notice-list">더보기</button>
                         </h2>
-                        <ul id="patcher-notice-list" class="content-list" data-expanded="false">
+                        <ul id="patcher-notice-list" class="content-list">
                             <!-- script.js에서 동적 생성 -->
                         </ul>
-                        <div class="more-content hidden">
-                            <!-- script.js에서 동적 생성 -->
-                        </div>
                     </section>
                 </div>
 
@@ -80,6 +76,17 @@
             <span id="spt-version">SPT 게임 버전: --</span>
         </footer>
     </div>
+
+    <!-- Custom Modal Dialog -->
+    <div id="custom-modal" class="modal hidden">
+        <div class="modal-content custom-modal-content">
+            <p id="custom-modal-message"></p>
+            <div id="custom-modal-buttons" class="custom-modal-buttons">
+                <!-- 버튼 동적 생성 영역 -->
+            </div>
+        </div>
+    </div>
+
     <script src="../src/script.js"></script>
 </body>
 

@@ -1,3 +1,5 @@
+/* mod-download.css (최종 수정 코드 - 라이트 모드 자동 선택 토글 텍스트 색상 변경 반영) */
+
 /* 모드 다운로드 페이지 전용 스타일 */
 
 /* 다운로드 컨테이너 padding 값 조정 */
@@ -108,6 +110,7 @@
 
 .auto-select-toggle {
     color: #fff;
+    /* 다크 모드 기본 색상 유지 */
     font-size: 14px;
     /* font-size 값 조정 */
     display: flex;
@@ -120,6 +123,12 @@
 .auto-select-toggle input[type="checkbox"] {
     margin-right: 0;
     /* 체크박스 우측 margin 제거 */
+}
+
+/* 라이트 모드 자동 선택 토글 텍스트 색상 변경 */
+body.light-mode .auto-select-toggle-area .auto-select-toggle label {
+    color: #555;
+    /* 텍스트 색상 짙은 회색으로 변경 */
 }
 
 
@@ -310,7 +319,7 @@
     border-radius: 4px;
     margin-top: 15px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background-color 0.2s;
 }
 
 .modal-btn:hover {
