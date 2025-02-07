@@ -14,8 +14,6 @@ html {
     /* 다크 모드 기본 배경색 */
     color: #eee;
     /* 다크 모드 기본 텍스트 색상 */
-    transition: background-color 0.3s, color 0.3s;
-    /* 부드러운 전환 효과 */
 }
 
 /* 라이트 모드 스타일 (body에 light-mode 클래스 추가 시 적용) */
@@ -253,6 +251,11 @@ body.light-mode #copyright-section ul li {
     /* 변경: 짙은 회색 (기존 #555) */
 }
 
+body.light-mode .license-info strong {
+    color: #495057;
+    /* 짙은 회색으로 변경 */
+}
+
 /* 라이트 모드 아이콘 색상 변경 */
 body.light-mode .top-menu .menu-btn .material-icons,
 body.light-mode .top-menu .icon-btn .material-icons {
@@ -354,8 +357,7 @@ body.light-mode .content-scroll::-webkit-scrollbar-thumb {
     padding: 20px;
     overflow: hidden;
     position: relative;
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-    /* 부드러운 전환 효과 */
+    transition: background-color 0.3s;
 }
 
 /* 스크롤 영역 */
@@ -405,8 +407,7 @@ body.light-mode .content-scroll::-webkit-scrollbar-thumb {
     padding: 15px;
     border-radius: 6px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-    /* 부드러운 전환 효과 */
+    transition: background-color 0.3s;
 }
 
 .content-section h2 {
@@ -417,8 +418,7 @@ body.light-mode .content-scroll::-webkit-scrollbar-thumb {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: border-bottom-color 0.3s, color 0.3s;
-    /* 부드러운 전환 효과 */
+    transition: border-bottom-color 0.3s;
 }
 
 /* 업데이트 날짜 스타일 */
@@ -467,8 +467,7 @@ body.light-mode .content-scroll::-webkit-scrollbar-thumb {
     padding: 10px;
     margin: 10px 0;
     border-radius: 4px;
-    transition: background-color 0.3s, border-left-color 0.3s, box-shadow 0.3s;
-    /* 부드러운 전환 효과 */
+    transition: background-color 0.3s;
 }
 
 .license-info p {

@@ -247,33 +247,71 @@ body.light-mode .auto-select-toggle-area .auto-select-toggle label {
 
 /* 다운로드 모달 콘텐츠 구역 */
 .download-modal-content {
-    width: 400px;
+    width: 500px; /* 너비 증가 */
+    max-height: 80vh; /* 뷰포트 높이의 80%로 제한 */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;
 }
 
-.download-modal-content h3 {
-    margin-bottom: 15px;
-    color: #fff;
-}
-
-/* 선택된 모드 그리드: 텍스트 왼쪽 정렬, 아이콘 포함 */
+/* 선택된 모드 그리드 */
 .selected-mod-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* 2열에서 4열로 변경 */
+    grid-template-columns: repeat(2, 1fr); /* 2열로 변경 */
     gap: 8px;
-    margin-bottom: 15px;
+    max-height: 50vh; /* 뷰포트 높이의 50%로 제한 */
+    overflow-y: auto; /* 스크롤 적용 */
+    padding-right: 8px;
+    margin: 10px 0;
 }
 
+/* 스크롤바 스타일링 */
+.selected-mod-grid::-webkit-scrollbar {
+    width: 8px;
+}
+
+.selected-mod-grid::-webkit-scrollbar-track {
+    background: #23272A;
+    border-radius: 4px;
+}
+
+.selected-mod-grid::-webkit-scrollbar-thumb {
+    background: #7289DA;
+    border-radius: 4px;
+}
+
+.selected-mod-grid::-webkit-scrollbar-thumb:hover {
+    background: #5b6eae;
+}
+
+/* 라이트 모드 스크롤바 스타일 수정 */
+body.light-mode .selected-mod-grid::-webkit-scrollbar-track {
+    background: #e9ecef;
+    /* 밝은 회색 배경으로 변경 */
+}
+
+body.light-mode .selected-mod-grid::-webkit-scrollbar-thumb {
+    background: #adb5bd;
+    /* 중간 톤의 회색으로 변경 */
+}
+
+body.light-mode .selected-mod-grid::-webkit-scrollbar-thumb:hover {
+    background: #868e96;
+    /* 호버 시 더 진한 회색으로 변경 */
+}
+
+/* 모드 아이템 스타일 개선 */
 .selected-mod-grid .mod-item {
     background: #23272A;
     color: #fff;
-    padding: 5px;
+    padding: 8px 12px; /* 패딩 증가 */
     border-radius: 4px;
     font-size: 14px;
-    text-align: left;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 10px; /* 내부 요소 간격 추가 */
 }
 
 .selected-mod-grid .mod-item .mod-text {
@@ -311,6 +349,17 @@ body.light-mode .auto-select-toggle-area .auto-select-toggle label {
     font-size: 14px;
 }
 
+/* 라이트 모드 로딩바 스타일 수정 */
+body.light-mode #download-progress {
+    background-color: #e9ecef;
+    /* 배경색을 밝은 회색으로 변경 */
+}
+
+body.light-mode #progress-bar {
+    background-color: #5b6eae;
+    /* 프로그레스 바 색상을 좀 더 어두운 톤으로 변경 */
+}
+
 /* 모달 버튼 */
 .modal-btn {
     background-color: #7289DA;
@@ -344,6 +393,7 @@ body.light-mode .selected-mod-grid .mod-item {
     /* 변경: 아주 연한 회색 (기존 #f0f0f0) */
     color: #495057;
     /* 변경: 짙은 회색 (기존 #444) */
+    border: 1px solid #dee2e6; /* 테두리 추가 */
 }
 
 body.light-mode #progress-percent {
