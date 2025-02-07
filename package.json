@@ -1,6 +1,6 @@
 {
   "name": "golani-spt-mod-installer",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "SPT 모드 간편 설치 프로그램",
   "main": "src/main.js",
   "scripts": {
