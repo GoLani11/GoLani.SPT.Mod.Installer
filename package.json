@@ -1,17 +1,18 @@
 {
   "name": "golani-spt-mod-installer",
-  "version": "1.0.0",
-  "description": "SPT (Escape from Tarkov) 모드 간편 설치 프로그램",
+  "version": "0.3.0",
+  "description": "SPT 모드 간편 설치 프로그램",
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
     "package": "electron-builder --dir",
     "dist": "electron-builder",
-    "build": "electron-builder build"
+    "build": "cross-env NODE_ENV=production electron-builder"
   },
   "author": "GoLani",
   "license": "MIT",
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "electron": "^34.0.2",
     "electron-builder": "^24.9.1"
   },
@@ -19,7 +20,7 @@
     "appId": "com.example.sptmodinstaller",
     "productName": "고라니 SPT 모드 간편 설치기",
     "copyright": "Copyright © 2025 Your Name",
-    "asar": true,
+    "asar": false,
     "directories": {
       "buildResources": "assets",
       "output": "build"
@@ -34,16 +35,16 @@
     ],
     "win": {
       "target": "portable",
-      "icon": "assets/icons/app-icon.png",
+      "icon": "assets/icon.ico",
       "publisherName": "GoLani"
     },
     "mac": {
       "target": "dmg",
-      "icon": "assets/icons/app-icon.png"
+      "icon": "assets/icon.ico"
     },
     "linux": {
       "target": "deb",
-      "icon": "assets/icons/app-icon.png"
+      "icon": "assets/icon.ico"
     },
     "extraResources": [
       "7zip/**/*"

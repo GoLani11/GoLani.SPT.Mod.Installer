@@ -608,3 +608,6 @@ Thumbs.db
 
 # 기타 캐시 파일
 .cache/
+
+# 이미지 파일
+assets/

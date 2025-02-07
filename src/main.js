@@ -1,9 +1,10 @@
-// main.js (수정된 전체 코드)
-const { app, BrowserWindow, ipcMain, dialog } = require('electron');
+const { app, BrowserWindow, ipcMain, dialog, Menu } = require('electron');
 const path = require('path');
 const fs = require('fs'); // fs 모듈 추가
 const https = require('https');
 const semver = require('semver'); // semver 라이브러리 추가
+const { spawn } = require('child_process');
+const sevenZipPath = require('7zip-bin').path7za;
 
 async function checkForUpdates() {
     const currentVersion = app.getVersion(); // package.json 버전 사용
@@ -85,6 +86,14 @@ async function downloadFile(downloadUrl, downloadPath, latestVersion) {
             throw new Error('Response body is null');
         }
 
+        // 다운로드 완료 후 압축 해제 (예: build 디렉토리 내에 압축 해제)
+        const outputDirectory = path.join(__dirname, '..', 'build', 'extracted');
+        try {
+            await extract7z(downloadPath, outputDirectory);
+            console.log('압축 해제 완료:', outputDirectory);
+        } catch (err) {
+            console.error('압축 해제 실패:', err);
+        }
 
         dialog.showMessageBox({
             type: 'info',
@@ -106,11 +115,29 @@ async function downloadFile(downloadUrl, downloadPath, latestVersion) {
 const { promisify } = require('util');
 const pipeline = promisify(require('stream').pipeline);
 
+function extract7z(archivePath, outputPath) {
+    return new Promise((resolve, reject) => {
+        const extraction = spawn(sevenZipPath, ['x', archivePath, `-o${outputPath}`, '-y']);
+        extraction.stdout.on('data', data => console.log(data.toString()));
+        extraction.stderr.on('data', data => console.error(data.toString()));
+        extraction.on('error', reject);
+        extraction.on('close', code => {
+            if (code === 0) {
+                resolve();
+            } else {
+                reject(new Error(`7z extraction failed with code ${code}`));
+            }
+        });
+    });
+}
 
 function createWindow() {
+    // app.isPackaged가 true이면 프로덕션 모드입니다.
+    const isProduction = app.isPackaged;
     const win = new BrowserWindow({
         width: 1200,
         height: 800,
+        autoHideMenuBar: isProduction, // 프로덕션 빌드에서는 메뉴 자동 숨김
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
             nodeIntegration: true,
@@ -118,10 +145,20 @@ function createWindow() {
         }
     });
 
-    win.loadFile(path.join(__dirname, '..', 'html', 'index.html'));
-    win.webContents.openDevTools();
+    if (isProduction) {
+        // 프로덕션 빌드 시 전체 애플리케이션 메뉴 제거
+        Menu.setApplicationMenu(null);
+    }
 
-    // package.json 파일 읽기
+    win.loadFile(path.join(__dirname, '..', 'html', 'index.html'));
+
+    if (isProduction) {
+        win.webContents.on('devtools-opened', () => {
+            win.webContents.closeDevTools();
+        });
+    }
+
+    // package.json 파일로부터 프로그램 버전 전달
     fs.readFile(path.join(__dirname, '..', 'package.json'), 'utf8', (err, data) => {
         if (err) {
             console.error("package.json 파일 로드 실패:", err);
@@ -130,19 +167,15 @@ function createWindow() {
         try {
             const packageData = JSON.parse(data);
             const programVersion = packageData.version;
-
-            // 렌더러 프로세스에 프로그램 버전 정보 전달 (webContents.on('did-finish-load') 사용)
             win.webContents.on('did-finish-load', () => {
                 win.webContents.send('program-version', programVersion);
             });
-
         } catch (e) {
             console.error("package.json 파싱 오류:", e);
         }
     });
 
-    // 앱 시작 시 자동 업데이트 체크 (선택 사항: 사용자 경험 고려)
-    checkForUpdates(); // 프로그램 시작 시 업데이트 확인
+    checkForUpdates(); // 앱 시작 시 업데이트 체크
 }
 
 app.whenReady().then(() => {

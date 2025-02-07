@@ -14,79 +14,57 @@
         <header class="top-menu">
             <div class="left-menu">
                 <button class="menu-btn active" data-page="home">
-                    <span class="material-icons">home</span>
-                    <span class="menu-text">홈</span>
+                    <span class="material-icons">home</span><span class="menu-text">홈</span>
                 </button>
                 <button class="menu-btn" data-page="mod-download">
-                    <span class="material-icons">cloud_download</span>
-                    <span class="menu-text">모드 다운로드</span>
+                    <span class="material-icons">cloud_download</span><span class="menu-text">모드 다운로드</span>
                 </button>
             </div>
             <div class="right-menu">
-                <button class="icon-btn" id="refresh-btn" title="새로고침"> <!-- 새로고침 버튼 추가 -->
+                <button class="icon-btn" id="refresh-btn" title="새로고침">
                     <span class="material-icons">refresh</span>
                 </button>
                 <button class="icon-btn" id="settings-btn">
-                    <span class="material-icons">settings</span>
+                    <span class="material-icons"></span>
                 </button>
             </div>
         </header>
-
         <div class="notification-banner">
-            <span>홈 페이지입니다.</span>
+            <span>홈 페이지 베너 텍스트</span>
             <button id="close-banner">×</button>
         </div>
-
-        <!-- 새로고침 상태 알림 배너 (추가) -->
         <div class="refresh-status-banner hidden">
             <span></span>
         </div>
-
         <main class="main-content">
             <div class="content-scroll">
                 <div id="home-sections-container">
                     <section class="content-section" id="hangeul-update-log-section">
-                        <h2>한글화 업데이트 로그 <span id="hangeul-log-date" class="update-date"></span>
-                        </h2>
-                        <ul id="hangeul-log-list" class="content-list">
-                            <!-- script.js에서 동적 생성 -->
-                        </ul>
+                        <h2>한글화 업데이트 로그 <span id="hangeul-log-date" class="update-date"></span></h2>
+                        <ul id="hangeul-log-list" class="content-list"></ul>
                     </section>
-
                     <section class="content-section" id="patcher-notice-section">
-                        <h2>패치기 공지사항 <span id="patcher-notice-date" class="update-date"></span>
-                        </h2>
-                        <ul id="patcher-notice-list" class="content-list">
-                            <!-- script.js에서 동적 생성 -->
-                        </ul>
+                        <h2>고라니 SPT 모드 간편 설치기 공지사항 <span id="patcher-notice-date" class="update-date"></span></h2>
+                        <ul id="patcher-notice-list" class="content-list"></ul>
                     </section>
                 </div>
-
                 <section class="content-section" id="copyright-section">
                     <h2>저작권 정보 <span id="copyright-date" class="update-date"></span></h2>
-                    <ul id="copyright-list" class="content-list">
-                        <!-- script.js에서 동적 생성 -->
-                    </ul>
+                    <ul id="copyright-list" class="content-list"></ul>
                 </section>
             </div>
         </main>
-
         <footer class="footer">
             <span id="program-version">프로그램 버전: 1.0.0</span>
             <span id="spt-version">SPT 게임 버전: --</span>
         </footer>
     </div>
-
-    <!-- Custom Modal Dialog -->
     <div id="custom-modal" class="modal hidden">
         <div class="modal-content custom-modal-content">
             <p id="custom-modal-message"></p>
-            <div id="custom-modal-buttons" class="custom-modal-buttons">
-                <!-- 버튼 동적 생성 영역 -->
-            </div>
+            <div id="custom-modal-buttons" class="custom-modal-buttons"></div>
         </div>
     </div>
-
     <script src="../src/script.js"></script>
 </body>
 

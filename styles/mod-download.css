@@ -1,4 +1,4 @@
-/* mod-download.css (최종 수정 코드 - 라이트 모드 자동 선택 토글 텍스트 색상 변경 반영) */
+/* mod-download.css */
 
 /* 모드 다운로드 페이지 전용 스타일 */
 
@@ -127,8 +127,8 @@
 
 /* 라이트 모드 자동 선택 토글 텍스트 색상 변경 */
 body.light-mode .auto-select-toggle-area .auto-select-toggle label {
-    color: #555;
-    /* 텍스트 색상 짙은 회색으로 변경 */
+    color: #495057;
+    /* 변경: 짙은 회색 (기존 #555) */
 }
 
 
@@ -258,7 +258,8 @@ body.light-mode .auto-select-toggle-area .auto-select-toggle label {
 /* 선택된 모드 그리드: 텍스트 왼쪽 정렬, 아이콘 포함 */
 .selected-mod-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    /* 2열에서 4열로 변경 */
     gap: 8px;
     margin-bottom: 15px;
 }
@@ -319,9 +320,33 @@ body.light-mode .auto-select-toggle-area .auto-select-toggle label {
     border-radius: 4px;
     margin-top: 15px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background 0.3s;
 }
 
 .modal-btn:hover {
     background-color: #5b6eae;
+}
+
+
+/* 라이트 모드 다운로드 진행 모달 텍스트 색상 조정 */
+body.light-mode .download-modal-content {
+    color: #495057;
+    /* 변경: 짙은 회색 (기존 #333) */
+}
+
+body.light-mode .download-modal-content h3 {
+    color: #495057;
+    /* 변경: 짙은 회색 (기존 #333) */
+}
+
+body.light-mode .selected-mod-grid .mod-item {
+    background: #e9ecef;
+    /* 변경: 아주 연한 회색 (기존 #f0f0f0) */
+    color: #495057;
+    /* 변경: 짙은 회색 (기존 #444) */
+}
+
+body.light-mode #progress-percent {
+    color: #495057;
+    /* 변경: 짙은 회색 (기존 #333) */
 }

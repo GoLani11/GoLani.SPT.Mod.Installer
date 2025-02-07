@@ -1,4 +1,4 @@
-// mod-download.js (최종 수정 코드 - 라이트 모드 테마, 새로고침 알림, 아이콘 변경 반영)
+// mod-download.js (수정된 전체 코드 - 라이트 모드 테마 전환 기능 추가)
 const { ipcRenderer } = require('electron');
 const fs = require('fs');
 const path = require('path');
@@ -18,10 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let isFallbackActive = false; // Fallback 모드 활성 여부 추적 (mod-download.js에도 추가)
     let currentTheme = localStorage.getItem('theme') || 'dark'; // 초기 테마 설정 (localStorage에서 로드, 없으면 'dark' 기본)
 
-    // 초기 테마 적용
+    // 초기 테마 적용 및 아이콘 설정
     setTheme(currentTheme);
-    updateSettingsIcon(currentTheme); // 아이콘 업데이트 함수 호출
-
+    updateSettingsIcon(currentTheme);
 
     // GitHub DownloadMetaData.json URL
     const githubMetaUrl = 'https://raw.githubusercontent.com/GoLani11/GoLani.SPT.Mod.Installer/main/config/DownloadMetaData.json';
@@ -134,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 isFallbackActive = true; // Fallback 모드 활성화
                 updateNotificationBanner(); // 배너 텍스트 업데이트 (Fallback 모드)
                 console.error("GitHub 메타데이터 로드 실패, 로컬 파일 사용:", error);
-                ipcRenderer.invoke('show-notification', '서버와 연결이 되지 않아 프로그램에 저장된 설정을 가져옵니다. 인터넷 연결을 확인해주세요.'); // 알림 표시
+                ipcRenderer.invoke('show-notification', '서버와 연결이 되지 않아 프로그램에 저장된 설정을 가져옵니다.\n인터넷 연결을 확인해주세요.'); // 알림 표시
                 // GitHub 로드 실패 시, 로컬 파일 로드 (기존 방식 유지)
                 loadMetaDataLocal();
                 showRefreshStatusMessage('새로고침 실패 (GitHub)', false); // "새로고침 실패 (GitHub)" 메시지 표시 (GitHub 실패)
@@ -151,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector('.notification-banner').classList.remove('success-mode'); // success-mode 클래스 제거
         } else {
             banner.textContent = '모드 다운로드 페이지입니다.'; // 모드 다운로드 페이지 기본 배너 텍스트
-            showNotificationBannerMessage('모드 다운로드 페이지입니다.'); // 기본 배너 메시지 표시 (기존 함수 재활용)
+            showNotificationBannerMessage('경로 지정 시 SPT 게임 폴더에 경로를 지정해주세요.'); // 기본 배너 메시지 표시 (기존 함수 재활용)
             document.querySelector('.notification-banner').classList.remove('fallback-mode', 'success-mode'); // Fallback, Success 모드 스타일 클래스 제거
         }
         banner.style.display = 'flex'; // 알림 배너 보이도록 설정 (updateNotificationBanner에서도 보이게 해야 초기 로딩 시 배너가 나타남)
@@ -647,25 +646,24 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         localStorage.setItem('theme', themeName); // localStorage에 테마 설정 저장
         currentTheme = themeName; // 현재 테마 업데이트
-        updateSettingsIcon(themeName); // 테마 변경 시 아이콘 업데이트
     }
 
     // 설정 아이콘 업데이트 함수
     function updateSettingsIcon(themeName) {
         const settingsIcon = document.querySelector('#settings-btn .material-icons');
         if (themeName === 'light') {
-            settingsIcon.textContent = 'settings'; // Light Mode 아이콘
+            settingsIcon.textContent = 'light_mode'; // Light Mode 아이콘
         } else {
-            settingsIcon.textContent = 'settings'; // Dark Mode 아이콘 (동일 아이콘 유지 or 다르게 변경)
+            settingsIcon.textContent = 'dark_mode'; // Dark Mode 아이콘 (동일 아이콘 유지 or 다르게 변경)
         }
     }
-
 
     // 설정 버튼 클릭 이벤트 리스너 (테마 전환) - script.js 와 동일
     const settingsBtn = document.getElementById('settings-btn');
     settingsBtn.addEventListener('click', () => {
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         setTheme(newTheme); // 테마 변경 함수 호출
+        updateSettingsIcon(newTheme); // 아이콘 업데이트
     });
 
 
