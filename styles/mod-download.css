@@ -247,21 +247,26 @@ body.light-mode .auto-select-toggle-area .auto-select-toggle label {
 
 /* 다운로드 모달 콘텐츠 구역 */
 .download-modal-content {
-    width: 500px; /* 너비 증가 */
-    max-height: 80vh; /* 뷰포트 높이의 80%로 제한 */
+    width: 500px;
+    /* 너비 증가 */
+    max-height: 80vh;
+    /* 뷰포트 높이의 80%로 제한 */
     padding: 20px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     gap: 15px;
 }
 
 /* 선택된 모드 그리드 */
 .selected-mod-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2열로 변경 */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2열로 변경 */
     gap: 8px;
-    max-height: 50vh; /* 뷰포트 높이의 50%로 제한 */
-    overflow-y: auto; /* 스크롤 적용 */
+    max-height: 50vh;
+    /* 뷰포트 높이의 50%로 제한 */
+    overflow-y: auto;
+    /* 스크롤 적용 */
     padding-right: 8px;
     margin: 10px 0;
 }
@@ -305,13 +310,15 @@ body.light-mode .selected-mod-grid::-webkit-scrollbar-thumb:hover {
 .selected-mod-grid .mod-item {
     background: #23272A;
     color: #fff;
-    padding: 8px 12px; /* 패딩 증가 */
+    padding: 8px 12px;
+    /* 패딩 증가 */
     border-radius: 4px;
     font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px; /* 내부 요소 간격 추가 */
+    gap: 10px;
+    /* 내부 요소 간격 추가 */
 }
 
 .selected-mod-grid .mod-item .mod-text {
@@ -393,7 +400,8 @@ body.light-mode .selected-mod-grid .mod-item {
     /* 변경: 아주 연한 회색 (기존 #f0f0f0) */
     color: #495057;
     /* 변경: 짙은 회색 (기존 #444) */
-    border: 1px solid #dee2e6; /* 테두리 추가 */
+    border: 1px solid #dee2e6;
+    /* 테두리 추가 */
 }
 
 body.light-mode #progress-percent {
