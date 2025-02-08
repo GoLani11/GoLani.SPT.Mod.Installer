@@ -1,1 +1,2 @@
-2025.02.07 이후 한글화 업데이트 로그부터 작성 예정
+MOAR 3.0.1 업데이트
+Audio Accessibility Indicators 1.4.1 업데이트
