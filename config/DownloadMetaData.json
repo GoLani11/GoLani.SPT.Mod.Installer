@@ -425,10 +425,10 @@
 		},
 		{
 			"name": "Audio Accessibility Indicators",
-			"version": "1.4.0",
+			"version": "1.4.1",
 			"SPTversion": "3.10",
 			"downloadUrls": [
-				"https://github.com/acidphantasm/acidphantasm-accessibilityindicators/releases/download/1.4.0/acidphantasm-accessibilityindicators.zip"
+				"https://github.com/acidphantasm/acidphantasm-accessibilityindicators/releases/download/1.4.1/acidphantasm-accessibilityindicators.zip"
 			],
 			"Category": "원본 모드",
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/2395-audio-accessibility-indicators/"
@@ -436,7 +436,7 @@
 		{
 			"name": "Audio Accessibility Indicators - KR",
 			"Parent mod name": "Audio Accessibility Indicators",
-			"version": "1.4.0",
+			"version": "1.4.1",
 			"SPTversion": "3.10",
 			"downloadUrls": [
 				"https://drive.google.com/uc?export=download&id=1B1Cz3TYXU5IxkodYiaHNYqKNRpP9tu9G"
