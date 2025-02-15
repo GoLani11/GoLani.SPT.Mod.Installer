@@ -1,2 +1,1 @@
 MOAR 3.0.1 업데이트
-Audio Accessibility Indicators 1.4.1 업데이트
