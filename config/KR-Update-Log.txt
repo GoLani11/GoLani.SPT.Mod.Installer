@@ -1,2 +1,1 @@
-Fontaine's FOV Fix 3.0.2 업데이트
-Realism 1.5.1 업데이트
+Realism 1.5.2 업데이트
