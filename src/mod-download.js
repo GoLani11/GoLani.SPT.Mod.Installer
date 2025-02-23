@@ -264,39 +264,15 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // 체크된 모드들의 충돌 검사
-        const checkedMods = [];
-        const categories = ['korean', 'original', 'translation'];
-        categories.forEach(cat => {
-            document.querySelectorAll(`#${cat}Grid .mode-item input[type="checkbox"]`)
-                .forEach(checkbox => {
-                    if (checkbox.checked && !checkbox.disabled) {
-                        const modName = checkbox.getAttribute('data-name');
-                        checkedMods.push(modName);
-                    }
-                });
-        });
-
-        // 충돌하는 모드 쌍 검사
-        let conflictFound = false;
-        checkedMods.forEach((mod1, index) => {
-            for (let i = index + 1; i < checkedMods.length; i++) {
-                const mod2 = checkedMods[i];
-                // CompareModName 비교
-                const compareResult = checkModConflict(mod1, mod2);
-                if (compareResult) {
-                    showNotificationModal(`'${mod1}'와(과) '${mod2}'는 함께 설치할 수 없습니다.`);
-                    conflictFound = true;
-                    return;
-                }
-            }
-        });
-
-        if (conflictFound) {
+        // 선택된 모드들의 호환성 체크
+        const incompatibleMods = checkModCompatibility();
+        if (incompatibleMods.length > 0) {
+            showNotificationModal(`다음 모드들은 함께 설치할 수 없습니다. 한 가지 버전만 선택해주세요.\n\n${incompatibleMods.join('\n')}`, true);
             return;
         }
 
-        // 기존 다운로드 로직
+        // 각 카테고리(한글, 원본, 한글화)에서 체크된 모드를 순서대로 배열
+        const categories = ['korean', 'original', 'translation'];
         let selectedMods = [];
         categories.forEach(cat => {
             document.querySelectorAll(`#${cat} .mode-item input[type="checkbox"]`)
@@ -321,24 +297,39 @@ document.addEventListener("DOMContentLoaded", () => {
         startSequentialDownload();
     });
 
-    // CompareModName을 확인하는 함수 추가
-    function checkModConflict(mod1Name, mod2Name) {
-        // DownloadMetaData.json에서 모드 정보 찾기
-        const findModInfo = (modName) => {
-            return metaData.mods.find(mod => mod.name === modName);
-        };
+    // 모드 호환성 체크 함수
+    function checkModCompatibility() {
+        const incompatiblePairs = [];
+        const selectedMods = document.querySelectorAll('input[type="checkbox"]:checked');
+        const selectedModsArray = Array.from(selectedMods);
 
-        const mod1Info = findModInfo(mod1Name);
-        const mod2Info = findModInfo(mod2Name);
+        for (let i = 0; i < selectedModsArray.length; i++) {
+            const mod1 = selectedModsArray[i];
+            const mod1Name = mod1.getAttribute('data-name');
 
-        if (!mod1Info || !mod2Info) return false;
+            for (let j = i + 1; j < selectedModsArray.length; j++) {
+                const mod2 = selectedModsArray[j];
+                const mod2Name = mod2.getAttribute('data-name');
 
-        // CompareModName이 서로의 이름과 일치하는지 확인
-        if (mod1Info.CompareModName === mod2Name || mod2Info.CompareModName === mod1Name) {
-            return true;
+                // CompareModName 체크
+                const mod1Element = document.querySelector(`[data-name="${mod1Name}"]`);
+                const mod2Element = document.querySelector(`[data-name="${mod2Name}"]`);
+
+                if (mod1Element && mod2Element) {
+                    const mods = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'config', 'DownloadMetaData.json'), 'utf8')).mods;
+                    const mod1Data = mods.find(m => m.name === mod1Name);
+                    const mod2Data = mods.find(m => m.name === mod2Name);
+
+                    if (mod1Data && mod2Data &&
+                        ((mod1Data.CompareModName === mod2Name) ||
+                            (mod2Data.CompareModName === mod1Name))) {
+                        incompatiblePairs.push(`${mod1Name}\n${mod2Name}`);
+                    }
+                }
+            }
         }
 
-        return false;
+        return incompatiblePairs;
     }
 
     // 다운로드 진행 모달 관련 DOM 요소
@@ -359,6 +350,8 @@ document.addEventListener("DOMContentLoaded", () => {
             // 모드 이름과 버전 정보를 작은 글씨로 표시
             spanText.innerHTML = `${mod.name} <small>(v${mod.version})</small>`;
             const spanStatus = document.createElement("span");
+            spanStatus.className = "mod-status";
+            spanStatus.className = "mod-status";
             spanStatus.innerHTML = '<i class="material-icons">hourglass_empty</i>';
             // downloadUrl는 쉼표로 구분된 문자열; data-filename에 원본 파일명이 저장되어 있다면 그대로 사용
             div.dataset.downloadurl = mod.downloadUrl;
@@ -653,11 +646,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // 알림 모달 (기존과 동일)
+    // 알림 모달 (수정됨)
     const notificationModal = document.getElementById("notification-modal");
     const modalMessage = document.getElementById("modal-message");
     const modalCloseBtn = document.getElementById("modal-close-btn");
-    function showNotificationModal(message) {
+    function showNotificationModal(message, preserveLineBreaks = false) {
+        if (preserveLineBreaks) {
+            modalMessage.style.whiteSpace = 'pre-line';
+        } else {
+            modalMessage.style.whiteSpace = 'normal';
+        }
         modalMessage.textContent = message;
         notificationModal.classList.remove("hidden");
     }
