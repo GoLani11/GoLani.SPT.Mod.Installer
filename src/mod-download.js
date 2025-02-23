@@ -263,8 +263,40 @@ document.addEventListener("DOMContentLoaded", () => {
             showNotificationModal("다운로드 경로가 선택되지 않았습니다. 경로를 선택해주세요.");
             return;
         }
-        // 각 카테고리(한글, 원본, 한글화)에서 체크된 모드를 순서대로 배열
+
+        // 체크된 모드들의 충돌 검사
+        const checkedMods = [];
         const categories = ['korean', 'original', 'translation'];
+        categories.forEach(cat => {
+            document.querySelectorAll(`#${cat}Grid .mode-item input[type="checkbox"]`)
+                .forEach(checkbox => {
+                    if (checkbox.checked && !checkbox.disabled) {
+                        const modName = checkbox.getAttribute('data-name');
+                        checkedMods.push(modName);
+                    }
+                });
+        });
+
+        // 충돌하는 모드 쌍 검사
+        let conflictFound = false;
+        checkedMods.forEach((mod1, index) => {
+            for (let i = index + 1; i < checkedMods.length; i++) {
+                const mod2 = checkedMods[i];
+                // CompareModName 비교
+                const compareResult = checkModConflict(mod1, mod2);
+                if (compareResult) {
+                    showNotificationModal(`'${mod1}'와(과) '${mod2}'는 함께 설치할 수 없습니다.`);
+                    conflictFound = true;
+                    return;
+                }
+            }
+        });
+
+        if (conflictFound) {
+            return;
+        }
+
+        // 기존 다운로드 로직
         let selectedMods = [];
         categories.forEach(cat => {
             document.querySelectorAll(`#${cat} .mode-item input[type="checkbox"]`)
@@ -289,6 +321,26 @@ document.addEventListener("DOMContentLoaded", () => {
         startSequentialDownload();
     });
 
+    // CompareModName을 확인하는 함수 추가
+    function checkModConflict(mod1Name, mod2Name) {
+        // DownloadMetaData.json에서 모드 정보 찾기
+        const findModInfo = (modName) => {
+            return metaData.mods.find(mod => mod.name === modName);
+        };
+
+        const mod1Info = findModInfo(mod1Name);
+        const mod2Info = findModInfo(mod2Name);
+
+        if (!mod1Info || !mod2Info) return false;
+
+        // CompareModName이 서로의 이름과 일치하는지 확인
+        if (mod1Info.CompareModName === mod2Name || mod2Info.CompareModName === mod1Name) {
+            return true;
+        }
+
+        return false;
+    }
+
     // 다운로드 진행 모달 관련 DOM 요소
     const downloadModal = document.getElementById("download-modal");
     const downloadModalCloseBtn = document.getElementById("download-modal-close-btn");
@@ -307,7 +359,6 @@ document.addEventListener("DOMContentLoaded", () => {
             // 모드 이름과 버전 정보를 작은 글씨로 표시
             spanText.innerHTML = `${mod.name} <small>(v${mod.version})</small>`;
             const spanStatus = document.createElement("span");
-            spanStatus.className = "mod-status";
             spanStatus.innerHTML = '<i class="material-icons">hourglass_empty</i>';
             // downloadUrl는 쉼표로 구분된 문자열; data-filename에 원본 파일명이 저장되어 있다면 그대로 사용
             div.dataset.downloadurl = mod.downloadUrl;
