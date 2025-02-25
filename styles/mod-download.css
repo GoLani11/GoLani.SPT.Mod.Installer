@@ -159,6 +159,32 @@ body.light-mode .auto-select-toggle-area .auto-select-toggle label {
 /* 다운로드 버튼 영역 */
 .download-settings-button {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* 모드 초기화 토글 영역 */
+.initialize-mods-toggle {
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.initialize-mods-toggle input[type="checkbox"] {
+    margin-right: 0;
+}
+
+/* 라이트 모드 모드 초기화 토글 텍스트 색상 변경 */
+body.light-mode .initialize-mods-toggle label {
+    color: #495057;
+}
+
+/* 다운로드 버튼 영역 */
+.download-settings-button {
+    display: flex;
     justify-content: center;
     /* 다운로드 시작 버튼 가운데 정렬 */
 }
@@ -243,6 +269,79 @@ body.light-mode .auto-select-toggle-area .auto-select-toggle label {
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
     text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+/* 확인 모달 스타일 */
+#confirm-modal .modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#confirm-modal h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+#confirm-modal p {
+    margin: 10px 0;
+    color: #ddd;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.modal-btn {
+    background-color: #7289DA;
+    border: none;
+    padding: 8px 20px;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 14px;
+    min-width: 80px;
+}
+
+.modal-btn:hover {
+    background-color: #5b6eae;
+}
+
+.modal-btn.secondary-btn {
+    background-color: #4f545c;
+}
+
+.modal-btn.secondary-btn:hover {
+    background-color: #36393f;
+}
+
+/* 라이트 모드 모달 스타일 */
+body.light-mode .modal-content {
+    background-color: #f8f9fa;
+}
+
+body.light-mode #confirm-modal h3 {
+    color: #495057;
+}
+
+body.light-mode #confirm-modal p {
+    color: #495057;
+}
+
+body.light-mode .modal-btn.secondary-btn {
+    background-color: #dee2e6;
+    color: #495057;
+}
+
+body.light-mode .modal-btn.secondary-btn:hover {
+    background-color: #ced4da;
 }
 
 /* 다운로드 모달 콘텐츠 구역 */

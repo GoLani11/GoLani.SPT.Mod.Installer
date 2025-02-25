@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let autoSelectEnabled = true;
     let isFallbackActive = false;
     let currentTheme = localStorage.getItem('theme') || 'dark';
+    let initializeModsEnabled = false;
 
     // DOM 요소 참조
     const autoToggle = document.getElementById("auto-select-toggle");
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalCloseBtn = document.getElementById("modal-close-btn");
     const downloadModalCloseBtn = document.getElementById("download-modal-close-btn");
     const chosenPathSpan = document.getElementById("chosen-path");
+    const initializeModsToggle = document.getElementById("initialize-mods-toggle");
 
     // 초기 설정
     setTheme(currentTheme);
@@ -34,6 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // UI 이벤트 리스너 설정
     autoToggle.addEventListener("change", () => {
         autoSelectEnabled = autoToggle.checked;
+    });
+
+    initializeModsToggle.addEventListener("change", () => {
+        initializeModsEnabled = initializeModsToggle.checked;
     });
 
     refreshBtn.addEventListener('click', () => {
@@ -399,6 +405,128 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
+        const chosenPath = chosenPathSpan.textContent;
+
+        // 경로 유효성 검증 - SPT 게임 폴더인지 확인
+        if (!isValidSPTPath(chosenPath)) {
+            showNotificationModal("올바른 SPT 게임 폴더가 아닙니다. 'BepInEx'와 'user' 폴더를 포함하는 SPT 게임 폴더를 선택해주세요.");
+            return;
+        }
+
+        // 모드 초기화 옵션이 켜져있을 경우
+        if (initializeModsEnabled) {
+            try {
+                // 사용자에게 모드 초기화 작업 확인 요청
+                showConfirmModal("모드 초기화", "모드를 초기화하시겠습니까? 기존에 설치된 모드, 로그들이 모두 삭제됩니다.", 
+                    () => {
+                        try {
+                            initializeMods(chosenPath);
+                            showNotificationModal("모드가 성공적으로 초기화되었습니다.");
+                            // 다운로드 프로세스 계속 진행
+                            continueWithDownload();
+                        } catch (error) {
+                            console.error("모드 초기화 중 오류 발생:", error);
+                            showNotificationModal(`모드 초기화 중 오류가 발생했습니다: ${error.message}`);
+                        }
+                    },
+                    () => {
+                        // 초기화 없이 다운로드만 진행
+                        continueWithDownload();
+                    }
+                );
+                return;
+            } catch (error) {
+                console.error("모드 초기화 중 오류 발생:", error);
+                showNotificationModal(`모드 초기화 중 오류가 발생했습니다: ${error.message}`);
+                return;
+            }
+        }
+
+        // 초기화 없이 다운로드 계속 진행
+        continueWithDownload();
+    }
+
+    /**
+     * 확인 모달 표시
+     * @param {string} title - 모달 제목
+     * @param {string} message - 표시할 메시지
+     * @param {Function} onConfirm - 확인 시 실행할 콜백 함수
+     * @param {Function} onCancel - 취소 시 실행할 콜백 함수
+     */
+    function showConfirmModal(title, message, onConfirm, onCancel) {
+        // 기존 모달이 있으면 재사용, 없으면 새로 생성
+        let confirmModal = document.getElementById('confirm-modal');
+        
+        if (!confirmModal) {
+            confirmModal = document.createElement('div');
+            confirmModal.id = 'confirm-modal';
+            confirmModal.className = 'modal';
+            
+            const modalContent = document.createElement('div');
+            modalContent.className = 'modal-content';
+            
+            const modalTitle = document.createElement('h3');
+            modalTitle.id = 'confirm-modal-title';
+            
+            const modalMessage = document.createElement('p');
+            modalMessage.id = 'confirm-modal-message';
+            
+            const buttonContainer = document.createElement('div');
+            buttonContainer.className = 'modal-buttons';
+            
+            const confirmBtn = document.createElement('button');
+            confirmBtn.id = 'confirm-yes-btn';
+            confirmBtn.className = 'modal-btn';
+            confirmBtn.textContent = '확인';
+            
+            const cancelBtn = document.createElement('button');
+            cancelBtn.id = 'confirm-no-btn';
+            cancelBtn.className = 'modal-btn secondary-btn';
+            cancelBtn.textContent = '취소';
+            
+            buttonContainer.appendChild(confirmBtn);
+            buttonContainer.appendChild(cancelBtn);
+            
+            modalContent.appendChild(modalTitle);
+            modalContent.appendChild(modalMessage);
+            modalContent.appendChild(buttonContainer);
+            confirmModal.appendChild(modalContent);
+            
+            document.body.appendChild(confirmModal);
+        }
+        
+        // 모달 내용 설정
+        document.getElementById('confirm-modal-title').textContent = title;
+        document.getElementById('confirm-modal-message').textContent = message;
+        
+        // 이벤트 리스너 설정 (기존 리스너 제거 후 새로 설정)
+        const confirmBtn = document.getElementById('confirm-yes-btn');
+        const cancelBtn = document.getElementById('confirm-no-btn');
+        
+        const newConfirmBtn = confirmBtn.cloneNode(true);
+        const newCancelBtn = cancelBtn.cloneNode(true);
+        
+        confirmBtn.parentNode.replaceChild(newConfirmBtn, confirmBtn);
+        cancelBtn.parentNode.replaceChild(newCancelBtn, cancelBtn);
+        
+        newConfirmBtn.addEventListener('click', () => {
+            confirmModal.classList.add('hidden');
+            if (onConfirm) onConfirm();
+        });
+        
+        newCancelBtn.addEventListener('click', () => {
+            confirmModal.classList.add('hidden');
+            if (onCancel) onCancel();
+        });
+        
+        // 모달 표시
+        confirmModal.classList.remove('hidden');
+    }
+
+    /**
+     * 다운로드 계속 진행 (모드 초기화 이후 또는 초기화 없이)
+     */
+    function continueWithDownload() {
         // 선택된 모드들의 호환성 체크
         const incompatibleMods = checkModCompatibility();
         if (incompatibleMods.length > 0) {
@@ -416,6 +544,102 @@ document.addEventListener("DOMContentLoaded", () => {
         populateDownloadModal(selectedMods);
         showDownloadModal();
         startSequentialDownload();
+    }
+
+    /**
+     * SPT 게임 폴더 유효성 검사
+     * @param {string} folderPath - 검사할 폴더 경로
+     * @returns {boolean} 유효한 SPT 게임 폴더인지 여부
+     */
+    function isValidSPTPath(folderPath) {
+        try {
+            return (
+                fs.existsSync(path.join(folderPath, 'BepInEx')) &&
+                fs.existsSync(path.join(folderPath, 'user'))
+            );
+        } catch (error) {
+            console.error("경로 검증 중 오류 발생:", error);
+            return false;
+        }
+    }
+
+    /**
+     * 모드 초기화 함수 - 지정된 폴더의 모드 파일을 정리
+     * @param {string} sptPath - SPT 게임 폴더 경로
+     */
+    function initializeMods(sptPath) {
+        try {
+            // 1. BepInEx/plugins 내 파일 정리 (spt 폴더는 제외)
+            const pluginsPath = path.join(sptPath, 'BepInEx', 'plugins');
+            if (fs.existsSync(pluginsPath)) {
+                const pluginsFiles = fs.readdirSync(pluginsPath);
+                pluginsFiles.forEach(file => {
+                    const filePath = path.join(pluginsPath, file);
+                    // SPT 폴더 제외
+                    if (file !== 'spt' && file !== 'spt.dll') {
+                        if (fs.lstatSync(filePath).isDirectory()) {
+                            // 디렉토리인 경우 재귀적으로 삭제
+                            fs.rmdirSync(filePath, { recursive: true });
+                        } else {
+                            // 파일인 경우 삭제
+                            fs.unlinkSync(filePath);
+                        }
+                    }
+                });
+            }
+
+            // 2. user/mods 내 파일 정리
+            const modsPath = path.join(sptPath, 'user', 'mods');
+            if (fs.existsSync(modsPath)) {
+                clearDirectory(modsPath);
+            }
+
+            // 3. user/cache 내 파일 정리
+            const userCachePath = path.join(sptPath, 'user', 'cache');
+            if (fs.existsSync(userCachePath)) {
+                clearDirectory(userCachePath);
+            }
+
+            // 4. BepInEx/cache 내 파일 정리
+            const bepinexCachePath = path.join(sptPath, 'BepInEx', 'cache');
+            if (fs.existsSync(bepinexCachePath)) {
+                clearDirectory(bepinexCachePath);
+            }
+            
+            // 5. BepInEx/config 내 파일 정리 (신규 추가)
+            const bepinexConfigPath = path.join(sptPath, 'BepInEx', 'config');
+            if (fs.existsSync(bepinexConfigPath)) {
+                clearDirectory(bepinexConfigPath);
+            }
+
+            console.log("모드 초기화가 완료되었습니다.");
+            return true;
+        } catch (error) {
+            console.error("모드 초기화 중 오류 발생:", error);
+            throw error;
+        }
+    }
+
+    /**
+     * 디렉토리 내 모든 파일 및 폴더 삭제
+     * @param {string} dirPath - 삭제할 디렉토리 경로
+     */
+    function clearDirectory(dirPath) {
+        if (!fs.existsSync(dirPath)) {
+            return;
+        }
+
+        const files = fs.readdirSync(dirPath);
+        files.forEach(file => {
+            const filePath = path.join(dirPath, file);
+            if (fs.lstatSync(filePath).isDirectory()) {
+                // 디렉토리인 경우 재귀적으로 삭제
+                fs.rmdirSync(filePath, { recursive: true });
+            } else {
+                // 파일인 경우 삭제
+                fs.unlinkSync(filePath);
+            }
+        });
     }
 
     /**
