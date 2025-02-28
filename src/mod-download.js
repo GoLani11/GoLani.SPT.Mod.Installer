@@ -417,7 +417,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (initializeModsEnabled) {
             try {
                 // 사용자에게 모드 초기화 작업 확인 요청
-                showConfirmModal("모드 초기화", "모드를 초기화하시겠습니까? 기존에 설치된 모드, 로그들이 모두 삭제됩니다.", 
+                showConfirmModal("모드 초기화", "모드를 초기화하시겠습니까? 기존에 설치된 모드와 모드 설정, 로그들이 모두 삭제됩니다.",
                     () => {
                         try {
                             initializeMods(chosenPath);
@@ -456,69 +456,69 @@ document.addEventListener("DOMContentLoaded", () => {
     function showConfirmModal(title, message, onConfirm, onCancel) {
         // 기존 모달이 있으면 재사용, 없으면 새로 생성
         let confirmModal = document.getElementById('confirm-modal');
-        
+
         if (!confirmModal) {
             confirmModal = document.createElement('div');
             confirmModal.id = 'confirm-modal';
             confirmModal.className = 'modal';
-            
+
             const modalContent = document.createElement('div');
             modalContent.className = 'modal-content';
-            
+
             const modalTitle = document.createElement('h3');
             modalTitle.id = 'confirm-modal-title';
-            
+
             const modalMessage = document.createElement('p');
             modalMessage.id = 'confirm-modal-message';
-            
+
             const buttonContainer = document.createElement('div');
             buttonContainer.className = 'modal-buttons';
-            
+
             const confirmBtn = document.createElement('button');
             confirmBtn.id = 'confirm-yes-btn';
             confirmBtn.className = 'modal-btn';
             confirmBtn.textContent = '확인';
-            
+
             const cancelBtn = document.createElement('button');
             cancelBtn.id = 'confirm-no-btn';
             cancelBtn.className = 'modal-btn secondary-btn';
             cancelBtn.textContent = '취소';
-            
+
             buttonContainer.appendChild(confirmBtn);
             buttonContainer.appendChild(cancelBtn);
-            
+
             modalContent.appendChild(modalTitle);
             modalContent.appendChild(modalMessage);
             modalContent.appendChild(buttonContainer);
             confirmModal.appendChild(modalContent);
-            
+
             document.body.appendChild(confirmModal);
         }
-        
+
         // 모달 내용 설정
         document.getElementById('confirm-modal-title').textContent = title;
         document.getElementById('confirm-modal-message').textContent = message;
-        
+
         // 이벤트 리스너 설정 (기존 리스너 제거 후 새로 설정)
         const confirmBtn = document.getElementById('confirm-yes-btn');
         const cancelBtn = document.getElementById('confirm-no-btn');
-        
+
         const newConfirmBtn = confirmBtn.cloneNode(true);
         const newCancelBtn = cancelBtn.cloneNode(true);
-        
+
         confirmBtn.parentNode.replaceChild(newConfirmBtn, confirmBtn);
         cancelBtn.parentNode.replaceChild(newCancelBtn, cancelBtn);
-        
+
         newConfirmBtn.addEventListener('click', () => {
             confirmModal.classList.add('hidden');
             if (onConfirm) onConfirm();
         });
-        
+
         newCancelBtn.addEventListener('click', () => {
             confirmModal.classList.add('hidden');
             if (onCancel) onCancel();
         });
-        
+
         // 모달 표시
         confirmModal.classList.remove('hidden');
     }
@@ -605,7 +605,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (fs.existsSync(bepinexCachePath)) {
                 clearDirectory(bepinexCachePath);
             }
-            
+
             // 5. BepInEx/config 내 파일 정리 (신규 추가)
             const bepinexConfigPath = path.join(sptPath, 'BepInEx', 'config');
             if (fs.existsSync(bepinexConfigPath)) {
