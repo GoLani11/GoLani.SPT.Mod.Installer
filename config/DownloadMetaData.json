@@ -90,7 +90,7 @@
 			"SPTversion": "3.10",
 			"CompareModName": "MOAR",
 			"downloadUrls": [
-				"https://github.com/p-kossa/nookys-swag-presets-spt/releases/download/v3.5.1/SWAG-Donuts-v3.5.1-SPT39x.zip",
+				"https://github.com/Nympfonic/Donuts/releases/download/v4.0.0/SWAG-Donuts-v4.0.0-SPT310x.7z",
 				"https://github.com/Nympfonic/UnityToolkit/releases/download/v1.2.0/UnityToolkit-1.2.0.7z",
 				"https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.6.2/DrakiaXYZ-Waypoints-1.6.2.7z"
 			],
