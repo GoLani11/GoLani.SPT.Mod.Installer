@@ -1,8 +1,8 @@
 {
 	"SPTDefaultVersion": "3.10",
 	"home_page_notices": {
-		"hangeul_log_date": "2025-02-28",
-		"patcher_notice_date": "2025-02-24",
+		"hangeul_log_date": "2025-03-01",
+		"patcher_notice_date": "2025-03-01",
 		"copyright_date": "2025-02-07"
 	},
 	"mods": [
@@ -86,8 +86,9 @@
 		},
 		{
 			"name": "Donut",
-			"version": "3.5.1",
-			"SPTversion": "3.9",
+			"version": "4.0.0",
+			"SPTversion": "3.10",
+			"CompareModName": "MOAR",
 			"downloadUrls": [
 				"https://github.com/p-kossa/nookys-swag-presets-spt/releases/download/v3.5.1/SWAG-Donuts-v3.5.1-SPT39x.zip",
 				"https://github.com/Nympfonic/UnityToolkit/releases/download/v1.2.0/UnityToolkit-1.2.0.7z",
@@ -99,8 +100,9 @@
 		{
 			"name": "Donut - KR",
 			"Parent mod name": "Donut",
-			"version": "3.5.1",
-			"SPTversion": "3.9",
+			"version": "4.0.0",
+			"SPTversion": "3.10",
+			"CompareModName": "MOAR - KR",
 			"downloadUrls": [
 				"https://drive.google.com/uc?export=download&id=1_J1vetb4_lkBRP-qlHTw_I1_8BPDAZkl"
 			],
@@ -163,6 +165,7 @@
 			"name": "MOAR",
 			"version": "3.0.1",
 			"SPTversion": "3.10",
+			"CompareModName": "Donut",
 			"downloadUrls": [
 				"https://github.com/Andrewgdewar/MOAR/releases/download/3.0.1-alpha-10/DewardianDev-MOAR-3.0.1-alpha-10.zip",
 				"https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.6.2/DrakiaXYZ-Waypoints-1.6.2.7z"
@@ -175,6 +178,7 @@
 			"Parent mod name": "MOAR",
 			"version": "3.0.1",
 			"SPTversion": "3.10",
+			"CompareModName": "Donut - KR",
 			"downloadUrls": [
 				"https://drive.google.com/uc?export=download&id=1IgwdRl863HZmAxsB6Gb-j_OEuHP_lFRx"
 			],

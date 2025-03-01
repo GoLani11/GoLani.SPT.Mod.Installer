@@ -79,13 +79,26 @@
     /* font-size 값 복원 */
 }
 
+/* 개선된 모드 항목 링크 스타일 - 애니메이션 효과 제거 */
 .mode-item label a {
     color: #7289DA;
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
 
 .mode-item label a:hover {
-    text-decoration: underline;
+    color: #a0b3f5;
+    text-decoration: none;
+}
+
+/* 라이트 모드에서 링크 스타일 변경 */
+body.light-mode .mode-item label a {
+    color: #5865F2;
+}
+
+body.light-mode .mode-item label a:hover {
+    color: #4752c4;
 }
 
 /* 모드 이름 옆에 버전 정보를 작은 글씨로 표시 */

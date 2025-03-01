@@ -1,4 +1,4 @@
-const { ipcRenderer } = require('electron');
+const { ipcRenderer, shell } = require('electron');
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
@@ -279,11 +279,25 @@ document.addEventListener("DOMContentLoaded", () => {
             checkbox.setAttribute("data-filename", mod.filename);
         }
 
-        // 라벨 생성
+        // 라벨 생성 - 기본 브라우저에서 링크 열기 수정
         const label = document.createElement("label");
         label.htmlFor = checkbox.id;
-        label.innerHTML = `<a href="${mod.sourceUrl}" target="_blank">${mod.name} <small>(v${mod.version})</small></a>`;
 
+        // a 태그 생성 및 스타일 적용 (인라인 스타일 제거)
+        const a = document.createElement("a");
+        a.href = "#"; // 내부 이동 방지
+        a.textContent = mod.name;
+        a.innerHTML = `${mod.name} <small>(v${mod.version})</small>`;
+
+        // 클릭 이벤트에서 shell.openExternal 사용하여 기본 브라우저에서 열기
+        a.addEventListener("click", (event) => {
+            event.preventDefault();
+            shell.openExternal(mod.sourceUrl);
+        });
+
+        a.style.cursor = "pointer"; // 커서 스타일만 유지
+
+        label.appendChild(a);
         div.appendChild(checkbox);
         div.appendChild(label);
 
@@ -606,10 +620,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 clearDirectory(bepinexCachePath);
             }
 
-            // 5. BepInEx/config 내 파일 정리 (신규 추가)
+            // 5. BepInEx/config 내 파일 정리 (특정 파일 제외)
             const bepinexConfigPath = path.join(sptPath, 'BepInEx', 'config');
             if (fs.existsSync(bepinexConfigPath)) {
-                clearDirectory(bepinexConfigPath);
+                // 삭제하지 않을 중요 파일 목록
+                const preserveFiles = ['BepInEx.cfg', 'com.bepis.bepinex.configurationmanager.cfg'];
+                clearDirectory(bepinexConfigPath, preserveFiles);
             }
 
             console.log("모드 초기화가 완료되었습니다.");
@@ -621,16 +637,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /**
-     * 디렉토리 내 모든 파일 및 폴더 삭제
+     * 디렉토리 내 모든 파일 및 폴더 삭제 (제외 목록 지원)
      * @param {string} dirPath - 삭제할 디렉토리 경로
+     * @param {string[]} excludeFiles - 삭제에서 제외할 파일 목록
      */
-    function clearDirectory(dirPath) {
+    function clearDirectory(dirPath, excludeFiles = []) {
         if (!fs.existsSync(dirPath)) {
             return;
         }
 
         const files = fs.readdirSync(dirPath);
         files.forEach(file => {
+            // 제외 목록에 있는 파일은 건너뛰기
+            if (excludeFiles.includes(file)) {
+                console.log(`보존된 파일: ${file}`);
+                return;
+            }
+
             const filePath = path.join(dirPath, file);
             if (fs.lstatSync(filePath).isDirectory()) {
                 // 디렉토리인 경우 재귀적으로 삭제
