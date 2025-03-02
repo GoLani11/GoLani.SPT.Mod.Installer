@@ -1,7 +1,7 @@
 {
 	"SPTDefaultVersion": "3.10",
 	"home_page_notices": {
-		"hangeul_log_date": "2025-03-01",
+		"hangeul_log_date": "2025-03-02",
 		"patcher_notice_date": "2025-03-01",
 		"copyright_date": "2025-02-07"
 	},
@@ -111,7 +111,7 @@
 		},
 		{
 			"name": "Realism",
-			"version": "1.5.2",
+			"version": "1.5.3",
 			"SPTversion": "3.10",
 			"downloadUrls": [
 				"https://github.com/space-commits/SPT-Realism-Mod-Client/releases/download/v1.5.2/Realism-Mod-1.5.2-SPT-3.10.5.zip"
@@ -122,10 +122,10 @@
 		{
 			"name": "Realism - KR",
 			"Parent mod name": "Realism",
-			"version": "1.5.2",
+			"version": "1.5.3",
 			"SPTversion": "3.10",
 			"downloadUrls": [
-				"https://github.com/GoLani11/GoLani_ModPack/raw/main/zip/Realism%20Mod%201.5.2.zip"
+				"https://github.com/GoLani11/GoLani_ModPack/raw/main/zip/Realism%20Mod%201.5.3.zip"
 			],
 			"Category": "한글화 모드",
 			"sourceUrl": "https://arca.live/b/tarkovspt/115303575"
