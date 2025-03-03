@@ -1,7 +1,7 @@
 {
 	"SPTDefaultVersion": "3.10",
 	"home_page_notices": {
-		"hangeul_log_date": "2025-03-02",
+		"hangeul_log_date": "2025-03-03",
 		"patcher_notice_date": "2025-03-01",
 		"copyright_date": "2025-02-07"
 	},
@@ -187,10 +187,10 @@
 		},
 		{
 			"name": "Questing Bots",
-			"version": "0.9.0",
+			"version": "0.9.1",
 			"SPTversion": "3.10",
 			"downloadUrls": [
-				"https://github.com/dwesterwick/SPTQuestingBots/releases/download/0.9.0/DanW-SPTQuestingBots.zip",
+				"https://github.com/dwesterwick/SPTQuestingBots/releases/download/0.9.1/DanW-SPTQuestingBots.zip",
 				"https://github.com/DrakiaXYZ/SPT-BigBrain/releases/download/1.2.0/DrakiaXYZ-BigBrain-1.2.0.7z",
 				"https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.6.2/DrakiaXYZ-Waypoints-1.6.2.7z"
 			],
@@ -200,7 +200,7 @@
 		{
 			"name": "Questing Bots - KR",
 			"Parent mod name": "Questing Bots",
-			"version": "0.9.0",
+			"version": "0.9.1",
 			"SPTversion": "3.10",
 			"downloadUrls": [
 				"https://drive.google.com/uc?export=download&id=1VjkzFQuVKe2zfhFSAPjpVqfNvyzBcnw1"
