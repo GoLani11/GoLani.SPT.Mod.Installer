@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.notification-banner').classList.remove('success-mode');
         } else {
             banner.textContent = '홈 페이지입니다.';
-            showNotificationBannerMessage('모드 간편 설치기가 새롭게 업데이트 되었습니다. 업데이트 내용은 아래에서 확인하세요. SPT 3.10 버전만 지원합니다.');
+            showNotificationBannerMessage('모드 간편 설치기가 새롭게 업데이트 되었습니다. 업데이트 내용은 아래에서 확인하세요. SPT 3.11 버전만 지원합니다.');
             document.querySelector('.notification-banner').classList.remove('fallback-mode', 'success-mode');
         }
         banner.style.display = 'flex';

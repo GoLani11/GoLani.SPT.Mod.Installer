@@ -1,18 +1,18 @@
 {
-	"SPTDefaultVersion": "3.10",
+	"SPTDefaultVersion": "3.11",
 	"home_page_notices": {
 		"hangeul_log_date": "2025-03-03",
-		"patcher_notice_date": "2025-03-01",
+		"patcher_notice_date": "2025-03-16",
 		"copyright_date": "2025-02-07"
 	},
 	"mods": [
 		{
 			"name": "SPT 타르코프 한글화 프로젝트(한영 병기)",
-			"version": "1.2.0",
-			"SPTversion": "3.10",
+			"version": "1.3.0",
+			"SPTversion": "3.11",
 			"CompareModName": "SPT 타르코프 한글화 프로젝트(한글)",
 			"downloadUrls": [
-				"https://github.com/GoLani11/SPT-Korean-Project/releases/download/v1.2.0/SPT_Korean_Localization.KR.EN._G.M.zip",
+				"https://github.com/GoLani11/SPT-Korean-Project/releases/download/v1.3.0/SPT_Korean_Localization.KR.EN._G.M.zip",
 				"https://drive.google.com/uc?export=download&id=1RbtlPzjqcQEsl_S-INKWaOxvpTZYeKWe"
 			],
 			"Category": "한글 모드",
@@ -20,11 +20,11 @@
 		},
 		{
 			"name": "SPT 타르코프 한글화 프로젝트(한글)",
-			"version": "1.2.0",
-			"SPTversion": "3.10",
+			"version": "1.3.0",
+			"SPTversion": "3.11",
 			"CompareModName": "SPT 타르코프 한글화 프로젝트(한영 병기)",
 			"downloadUrls": [
-				"https://github.com/GoLani11/SPT-Korean-Project/releases/download/v1.2.0/SPT_Korean_Localization.KR._G.M.zip",
+				"https://github.com/GoLani11/SPT-Korean-Project/releases/download/v1.3.0/SPT_Korean_Localization.KR._G.M.zip",
 				"https://drive.google.com/uc?export=download&id=1RbtlPzjqcQEsl_S-INKWaOxvpTZYeKWe"
 			],
 			"Category": "한글 모드",
