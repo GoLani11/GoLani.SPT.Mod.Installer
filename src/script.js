@@ -4,6 +4,7 @@ const { ipcRenderer } = require('electron');
 document.addEventListener('DOMContentLoaded', () => {
     let isFallbackActive = false;
     let currentTheme = localStorage.getItem('theme') || 'dark';
+    let homeBannerMessage = '모드 간편 설치기가 새롭게 업데이트 되었습니다. 업데이트 내용은 아래에서 확인하세요. SPT 3.11 버전만 지원합니다.'; // 기본 메시지
 
     setTheme(currentTheme);
     updateSettingsIcon(currentTheme);
@@ -44,12 +45,35 @@ document.addEventListener('DOMContentLoaded', () => {
         const metaFilePath = '../config/DownloadMetaData.json';
         const hangeulLogPath = '../config/KR-Update-Log.txt';
         const patcherNoticePath = '../config/Notice.txt';
+        const homeBannerPath = '../config/HomeBanner.txt'; // 새로운 배너 메시지 파일 경로
 
         const githubMetaUrl = 'https://raw.githubusercontent.com/GoLani11/GoLani.SPT.Mod.Installer/main/config/DownloadMetaData.json';
         const githubLogUrl = 'https://raw.githubusercontent.com/GoLani11/GoLani.SPT.Mod.Installer/main/config/KR-Update-Log.txt';
         const githubNoticeUrl = 'https://raw.githubusercontent.com/GoLani11/GoLani.SPT.Mod.Installer/main/config/Notice.txt';
+        const githubBannerUrl = 'https://raw.githubusercontent.com/GoLani11/GoLani.SPT.Mod.Installer/main/config/HomeBanner.txt'; // 깃허브 배너 메시지 URL
 
         let githubLoadSuccess = true;
+
+        // 배너 메시지 로드
+        fetch(githubBannerUrl)
+            .then(response => response.text())
+            .then(text => {
+                homeBannerMessage = text.trim();
+                updateNotificationBanner();
+            })
+            .catch(error => {
+                console.error('GitHub 배너 메시지 로드 실패, 로컬 파일 사용:', error);
+                fetch(homeBannerPath)
+                    .then(response => response.text())
+                    .then(text => {
+                        homeBannerMessage = text.trim();
+                        updateNotificationBanner();
+                    })
+                    .catch(localError => {
+                        console.error('로컬 배너 메시지 로드 실패, 기본 메시지 사용:', localError);
+                        // 기본 메시지는 이미 설정되어 있음
+                    });
+            });
 
         fetch(githubMetaUrl)
             .then(response => response.json())
@@ -134,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.notification-banner').classList.remove('success-mode');
         } else {
             banner.textContent = '홈 페이지입니다.';
-            showNotificationBannerMessage('모드 간편 설치기가 새롭게 업데이트 되었습니다. 업데이트 내용은 아래에서 확인하세요. SPT 3.11 버전만 지원합니다.');
+            showNotificationBannerMessage(homeBannerMessage); // 파일에서 로드한 메시지 사용
             document.querySelector('.notification-banner').classList.remove('fallback-mode', 'success-mode');
         }
         banner.style.display = 'flex';
