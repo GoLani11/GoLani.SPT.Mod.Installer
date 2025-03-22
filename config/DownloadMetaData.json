@@ -1,7 +1,7 @@
 {
 	"SPTDefaultVersion": "3.11",
 	"home_page_notices": {
-		"hangeul_log_date": "2025-03-16",
+		"hangeul_log_date": "2025-03-22",
 		"patcher_notice_date": "2025-03-16",
 		"copyright_date": "2025-02-07"
 	},
@@ -142,10 +142,10 @@
 		},
 		{
 			"name": "UI Fixes",
-			"version": "4.0.0",
+			"version": "4.1.0",
 			"SPTversion": "3.11",
 			"downloadUrls": [
-				"https://github.com/tyfon7/UIFixes/releases/download/v4.0.0/Tyfon-UIFixes-4.0.0.zip"
+				"https://github.com/tyfon7/UIFixes/releases/download/v4.1.0/Tyfon-UIFixes-4.1.0.zip"
 			],
 			"Category": "원본 모드",
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1860-ui-fixes/"
@@ -153,7 +153,7 @@
 		{
 			"name": "UI Fixes - KR",
 			"Parent mod name": "UI Fixes",
-			"version": "4.0.0",
+			"version": "4.1.0",
 			"SPTversion": "3.11",
 			"downloadUrls": [
 				"https://drive.google.com/uc?export=download&id=1Ji0C9kvFCFBl1gm1ONrk4wv_zeG2vihM"
@@ -379,10 +379,10 @@
 		},
 		{
 			"name": "Quest Tracker",
-			"version": "1.4.1",
-			"SPTversion": "3.10",
+			"version": "1.5.1",
+			"SPTversion": "3.11",
 			"downloadUrls": [
-				"https://github.com/DrakiaXYZ/SPT-QuestTracker/releases/download/1.4.1/DrakiaXYZ-QuestTracker-1.4.1.7z"
+				"https://github.com/DrakiaXYZ/SPT-QuestTracker/releases/download/1.5.1/DrakiaXYZ-QuestTracker-1.5.1.7z"
 			],
 			"Category": "원본 모드",
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1574-quest-tracker/"
@@ -390,8 +390,8 @@
 		{
 			"name": "Quest Tracker - KR",
 			"Parent mod name": "Quest Tracker",
-			"version": "1.4.1",
-			"SPTversion": "3.10",
+			"version": "1.5.1",
+			"SPTversion": "3.11",
 			"downloadUrls": [
 				"https://drive.google.com/uc?export=download&id=1a7jqr-q9vzqbLbj6n00d5X6uY_EHmTsb"
 			],
