@@ -1,7 +1,7 @@
 {
 	"SPTDefaultVersion": "3.11",
 	"home_page_notices": {
-		"hangeul_log_date": "2025-03-22",
+		"hangeul_log_date": "2025-03-23",
 		"patcher_notice_date": "2025-03-16",
 		"copyright_date": "2025-02-07"
 	},
@@ -210,10 +210,10 @@
 		},
 		{
 			"name": "Dynamic Maps",
-			"version": "0.5.4",
+			"version": "0.5.5",
 			"SPTversion": "3.11",
 			"downloadUrls": [
-				"https://github.com/CJ-SPT/SPT-DynamicMaps/releases/download/V0.5.4/DynamicMaps-0.5.4-3016d51f.zip"
+				"https://github.com/CJ-SPT/SPT-DynamicMaps/releases/download/V0.5.5/DynamicMaps-0.5.5-83fa458a.zip"
 			],
 			"Category": "원본 모드",
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1981-dynamic-maps/"
@@ -221,7 +221,7 @@
 		{
 			"name": "Dynamic Maps - KR",
 			"Parent mod name": "Dynamic Maps",
-			"version": "0.5.4",
+			"version": "0.5.5",
 			"SPTversion": "3.11",
 			"downloadUrls": [
 				"https://drive.google.com/uc?export=download&id=1H7K8swBDfmrYAtBF_gTsDteReN7Nazax"
