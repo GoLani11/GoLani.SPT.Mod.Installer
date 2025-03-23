@@ -232,7 +232,7 @@
 		{
 			"name": "Amands Graphics",
 			"version": "1.6.5",
-			"SPTversion": "3.10",
+			"SPTversion": "3.11",
 			"downloadUrls": [
 				"https://github.com/Amands2Mello/AmandsGraphics/releases/download/1.6.5/AmandsGraphics.1.6.5.zip"
 			],
@@ -243,7 +243,7 @@
 			"name": "Amands Graphics - KR",
 			"Parent mod name": "Amands Graphics",
 			"version": "1.6.5",
-			"SPTversion": "3.10",
+			"SPTversion": "3.11",
 			"downloadUrls": [
 				"https://drive.google.com/uc?export=download&id=1ZeTWNfvnFoycyUE9yRNdznBY-Mgj7LGC"
 			],
