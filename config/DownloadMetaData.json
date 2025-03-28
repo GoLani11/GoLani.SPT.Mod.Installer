@@ -1,7 +1,7 @@
 {
 	"SPTDefaultVersion": "3.11",
 	"home_page_notices": {
-		"hangeul_log_date": "2025-03-23",
+		"hangeul_log_date": "2025-03-28",
 		"patcher_notice_date": "2025-03-16",
 		"copyright_date": "2025-02-07"
 	},
@@ -142,10 +142,10 @@
 		},
 		{
 			"name": "UI Fixes",
-			"version": "4.1.0",
+			"version": "4.1.1",
 			"SPTversion": "3.11",
 			"downloadUrls": [
-				"https://github.com/tyfon7/UIFixes/releases/download/v4.1.0/Tyfon-UIFixes-4.1.0.zip"
+				"https://github.com/tyfon7/UIFixes/releases/download/v4.1.1/Tyfon-UIFixes-4.1.1.zip"
 			],
 			"Category": "원본 모드",
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1860-ui-fixes/"
@@ -153,7 +153,7 @@
 		{
 			"name": "UI Fixes - KR",
 			"Parent mod name": "UI Fixes",
-			"version": "4.1.0",
+			"version": "4.1.1",
 			"SPTversion": "3.11",
 			"downloadUrls": [
 				"https://drive.google.com/uc?export=download&id=1Ji0C9kvFCFBl1gm1ONrk4wv_zeG2vihM"
@@ -210,10 +210,10 @@
 		},
 		{
 			"name": "Dynamic Maps",
-			"version": "0.5.5",
+			"version": "0.5.6",
 			"SPTversion": "3.11",
 			"downloadUrls": [
-				"https://github.com/CJ-SPT/SPT-DynamicMaps/releases/download/V0.5.5/DynamicMaps-0.5.5-83fa458a.zip"
+				"https://github.com/CJ-SPT/SPT-DynamicMaps/releases/download/V0.5.6/DynamicMaps-0.5.6-d2772612.zip"
 			],
 			"Category": "원본 모드",
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1981-dynamic-maps/"
@@ -221,7 +221,7 @@
 		{
 			"name": "Dynamic Maps - KR",
 			"Parent mod name": "Dynamic Maps",
-			"version": "0.5.5",
+			"version": "0.5.6",
 			"SPTversion": "3.11",
 			"downloadUrls": [
 				"https://drive.google.com/uc?export=download&id=1H7K8swBDfmrYAtBF_gTsDteReN7Nazax"

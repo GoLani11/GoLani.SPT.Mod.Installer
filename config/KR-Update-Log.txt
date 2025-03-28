@@ -1,3 +1,2 @@
-Amands Graphics 1.6.5 SPT 3.11 호환
-Dynamic Maps 0.5.5 업데이트
-Game Panel HUD 3.3.0 업데이트
+Dynamic Maps 0.5.6 업데이트
+UI Fixes 4.1.1 업데이트
