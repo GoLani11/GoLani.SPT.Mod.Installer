@@ -68,7 +68,7 @@
 			"downloadUrls": [
 				"https://github.com/Solarint/SAIN/releases/download/v3.2.1-Release/SAIN-3.2.1-Release.7z",
 				"https://github.com/DrakiaXYZ/SPT-BigBrain/releases/download/1.2.0/DrakiaXYZ-BigBrain-1.2.0.7z",
-				"https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.6.2/DrakiaXYZ-Waypoints-1.6.2.7z"
+				"https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.7.0/DrakiaXYZ-Waypoints-1.7.0.7z"
 			],
 			"Category": "원본 모드",
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1062-sain-solarint-s-ai-modifications-full-ai-combat-system-replacement/"
@@ -92,7 +92,7 @@
 			"downloadUrls": [
 				"https://github.com/Nympfonic/Donuts/releases/download/v4.0.0/SWAG-Donuts-v4.0.0-SPT310x.7z",
 				"https://github.com/Nympfonic/UnityToolkit/releases/download/v1.2.0/UnityToolkit-1.2.0.7z",
-				"https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.6.2/DrakiaXYZ-Waypoints-1.6.2.7z"
+				"https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.7.0/DrakiaXYZ-Waypoints-1.7.0.7z"
 			],
 			"Category": "원본 모드",
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/878-swag-donuts-dynamic-spawn-waves-and-custom-spawn-points/"
@@ -168,7 +168,7 @@
 			"CompareModName": "Donut",
 			"downloadUrls": [
 				"https://github.com/Andrewgdewar/MOAR/releases/download/3.0.1-alpha-10/DewardianDev-MOAR-3.0.1-alpha-10.zip",
-				"https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.6.2/DrakiaXYZ-Waypoints-1.6.2.7z"
+				"https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.7.0/DrakiaXYZ-Waypoints-1.7.0.7z"
 			],
 			"Category": "원본 모드",
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1059-moar-ultra-lite-spawn-mod/"
@@ -192,7 +192,7 @@
 			"downloadUrls": [
 				"https://github.com/dwesterwick/SPTQuestingBots/releases/download/0.9.1/DanW-SPTQuestingBots.zip",
 				"https://github.com/DrakiaXYZ/SPT-BigBrain/releases/download/1.2.0/DrakiaXYZ-BigBrain-1.2.0.7z",
-				"https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.6.2/DrakiaXYZ-Waypoints-1.6.2.7z"
+				"https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.7.0/DrakiaXYZ-Waypoints-1.7.0.7z"
 			],
 			"Category": "원본 모드",
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/1534-questing-bots/"
