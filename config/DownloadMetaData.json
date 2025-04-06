@@ -1,7 +1,7 @@
 {
 	"SPTDefaultVersion": "3.11",
 	"home_page_notices": {
-		"hangeul_log_date": "2025-04-03",
+		"hangeul_log_date": "2025-04-06",
 		"patcher_notice_date": "2025-03-16",
 		"copyright_date": "2025-02-07"
 	},
@@ -443,10 +443,10 @@
 		},
 		{
 			"name": "Audio Accessibility Indicators",
-			"version": "1.5.0",
+			"version": "1.5.1",
 			"SPTversion": "3.11",
 			"downloadUrls": [
-				"https://github.com/acidphantasm/acidphantasm-accessibilityindicators/releases/download/1.5.0/acidphantasm-accessibilityindicators.zip"
+				"https://github.com/acidphantasm/acidphantasm-accessibilityindicators/releases/download/1.5.1/acidphantasm-accessibilityindicators.zip"
 			],
 			"Category": "원본 모드",
 			"sourceUrl": "https://hub.sp-tarkov.com/files/file/2395-audio-accessibility-indicators/"
@@ -454,7 +454,7 @@
 		{
 			"name": "Audio Accessibility Indicators - KR",
 			"Parent mod name": "Audio Accessibility Indicators",
-			"version": "1.5.0",
+			"version": "1.5.1",
 			"SPTversion": "3.11",
 			"downloadUrls": [
 				"https://drive.google.com/uc?export=download&id=1B1Cz3TYXU5IxkodYiaHNYqKNRpP9tu9G"
