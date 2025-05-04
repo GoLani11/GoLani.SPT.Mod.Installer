@@ -1,4 +1,4 @@
-/* style.css (전체 코드 - 기본 알림 배너 메시지 테마 독립, 라이트/다크 모드 스타일, etc.) */
+/* style.css - 불필요한 테마 관련 코드 제거 후 최적화 */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,47 +11,14 @@ html {
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #2C2F33;
-    /* 다크 모드 기본 배경색 */
     color: #eee;
-    /* 다크 모드 기본 텍스트 색상 */
-}
-
-/* 라이트 모드 스타일 (body에 light-mode 클래스 추가 시 적용) */
-body.light-mode {
-    background-color: #f0f2f5;
-    /* 배경색 변경: 아주 연한 회색 (기존 #f8f8f8) */
-    color: #333;
-    /* 라이트 모드 텍스트 색상 (짙은 회색) */
-}
-
-body.light-mode .top-menu {
-    background-color: #fff;
-    /* 라이트 모드 상단 메뉴 배경색 (흰색) */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* 그림자 약하게 */
-}
-
-body.light-mode .top-menu .menu-btn,
-body.light-mode .top-menu .icon-btn {
-    color: #555;
-    /* 라이트 모드 메뉴 버튼/아이콘 색상 */
-}
-
-body.light-mode .top-menu .menu-btn:hover,
-body.light-mode .top-menu .menu-btn.active,
-body.light-mode .top-menu .icon-btn:hover {
-    color: #222;
-    /* 호버/활성 시 색상 더 짙게 */
-    background-color: rgba(0, 0, 0, 0.05);
-    /* 배경색 약간 밝게 */
 }
 
 /* 알림 배너 */
 .notification-banner {
-    background-color: #7289DA;
-    /* 기본 배경색 (파란색) - 유지 */
+    background-color: #9575cd;
+    /* 기본 배경색 (진한 파스텔 보라) */
     color: #fff;
-    /* 기본 텍스트 색상 (흰색) - 유지 */
     padding: 10px 20px;
     display: none;
     align-items: center;
@@ -60,52 +27,20 @@ body.light-mode .top-menu .icon-btn:hover {
     border-radius: 5px;
     margin: 0 20px;
     margin-bottom: 10px;
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    /* 그림자 유지 */
 }
 
-/* Fallback 모드 알림 배너 스타일 - 다크 모드 */
+/* Fallback 모드 알림 배너 스타일 */
 .notification-banner.fallback-mode {
     background-color: #f0ad4e;
-    /* Fallback 배경색 (주황색) - 유지 */
     color: #fff;
-    /* Fallback 텍스트 색상 (흰색) - 유지 */
 }
 
-/* 성공 모드 알림 배너 스타일 - 다크 모드 */
+/* 성공 모드 알림 배너 스타일 */
 .notification-banner.success-mode {
     background-color: #4CAF50;
-    /* 성공 배경색 (녹색) - 유지 */
     color: #fff;
-    /* 성공 텍스트 색상 (흰색) - 유지 */
 }
-
-/* 라이트 모드에서 기본 알림 배너 스타일 유지 (fallback, success 배너는 테마 변경) */
-body.light-mode .notification-banner {
-    /* 기본 알림 배너는 라이트 모드에서도 기본 스타일 유지 */
-    background-color: #7289DA !important;
-    /* 기본 배경색 강제 적용 */
-    color: #fff !important;
-    /* 기본 텍스트 색상 강제 적용 */
-}
-
-/* 라이트 모드에서 Fallback 모드 알림 배너 스타일 변경 */
-body.light-mode .notification-banner.fallback-mode {
-    background-color: #ffe0b2;
-    /* 라이트 모드 Fallback 배경색 (연한 주황색) - 변경 */
-    color: #333;
-    /* 라이트 모드 Fallback 텍스트 색상 (짙은 회색) - 변경 */
-}
-
-/* 라이트 모드에서 성공 모드 알림 배너 스타일 변경 */
-body.light-mode .notification-banner.success-mode {
-    background-color: #b2dfdb;
-    /* 라이트 모드 성공 배너 배경색 (연한 청록색) - 변경 */
-    color: #333;
-    /* 라이트 모드 성공 배너 텍스트 색상 (짙은 회색) - 변경 */
-}
-
 
 #close-banner {
     background: transparent;
@@ -115,171 +50,159 @@ body.light-mode .notification-banner.success-mode {
     cursor: pointer;
 }
 
-
-body.light-mode .main-content {
-    background-color: #e9ecef;
-    /* 변경: 아주 연한 회색 (기존 #f8f8f8) */
-    color: #333;
-    /* 라이트 모드 메인 콘텐츠 텍스트 색상 */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    /* 그림자 추가 */
+.main-content {
+    flex: 1;
+    background-color: #36393F;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
 }
 
-body.light-mode .content-section {
-    background-color: #fff;
-    /* 변경: 흰색 유지 */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    /* 그림자 추가 */
+.content-section {
+    background: #2F3136;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-body.light-mode .content-section h2 {
-    border-bottom-color: #ced4da;
-    /* 변경: 좀 더 연한 회색 (기존 #ccc) */
-    color: #495057;
-    /* 변경: 짙은 회색 (기존 #444) */
+.content-section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #99AAB5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-body.light-mode .content-section .update-date,
-body.light-mode .content-list li {
-    color: #6c757d;
-    /* 변경: 회색 (기존 #777) */
-    border-bottom-color: #dee2e6;
-    /* 변경: 아주 연한 회색 (기존 #ddd) */
+.update-date {
+    font-size: 14px;
+    color: #bbb;
 }
 
-body.light-mode .footer {
-    background-color: #e9ecef;
-    /* 변경: 아주 연한 회색 (기존 #f0f0f0) */
-    color: #6c757d;
-    /* 변경: 회색 (기존 #777) */
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    /* 그림자 약하게 */
+.content-list {
+    list-style: none;
+    margin-bottom: 10px;
 }
 
-body.light-mode .footer span {
-    color: #495057;
-    /* 변경: 짙은 회색 (기존 #888) */
+.content-list li {
+    padding: 5px 0;
+    border-bottom: 1px dotted #99AAB5;
 }
 
-body.light-mode .modal-content {
-    background-color: #fff;
-    /* 라이트 모드 모달 배경색 (흰색) */
-    color: #333;
-    /* 라이트 모드 모달 텍스트 색상 */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    /* 그림자 유지 */
+.footer {
+    background-color: #23272A;
+    padding: 10px 20px;
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    color: #bbb;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+    justify-content: left;
 }
 
-body.light-mode .modal-btn,
-body.light-mode .download-settings-area .select-btn,
-body.light-mode .download-settings-area .download-btn {
-    background-color: #7289DA;
-    /* 버튼 색상 (기존 파란색 유지) */
+.footer a {
+    font-size: 14px;
+    color: #9575cd;
+}
+
+.modal-content {
+    background-color: #2C2F33;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
     color: #fff;
 }
 
-body.light-mode .modal-btn:hover,
-body.light-mode .download-settings-area .select-btn:hover,
-body.light-mode .download-settings-area .download-btn:hover {
-    background-color: #5b6eae;
-    /* 버튼 호버 시 색상 (기존 파란색 hover 유지) */
+.modal-btn,
+.download-settings-area .select-btn,
+.download-settings-area .download-btn {
+    background-color: #9575cd;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
 }
 
-body.light-mode .selected-mod-grid .mod-item {
-    background-color: #e9ecef;
-    /* 변경: 아주 연한 회색 (기존 #f0f0f0) */
-    color: #495057;
-    /* 변경: 짙은 회색 (기존 #444) */
+.modal-btn:hover,
+.download-settings-area .select-btn:hover,
+.download-settings-area .download-btn:hover {
+    background-color: #7e57c2;
 }
 
-body.light-mode .mode-item {
-    background: #fff;
-    /* 모드 아이템 배경색 흰색 유지 */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+.selected-mod-grid .mod-item {
+    background-color: #23272A;
+    color: #fff;
 }
 
-body.light-mode .mode-item label a {
-    color: #0d47a1;
-    /* 링크 색상 (짙은 파란색) */
+.mode-item {
+    background: #2F3136;
 }
 
-body.light-mode .mode-item label a:hover {
-    color: #1565c0;
-    /* 링크 호버 시 색상 (더 짙은 파란색) */
+.mode-item label a {
+    color: #9575cd;
 }
 
-body.light-mode .md-tabs {
-    border-bottom-color: #ccc;
-    /* 탭 구분선 색상 */
+.mode-item label a:hover {
+    color: #7e57c2;
 }
 
-body.light-mode .tab-btn.active {
-    color: #222;
-    /* 활성 탭 텍스트 색상 */
-    border-bottom-color: #7289DA;
-    /* 활성 탭 밑줄 색상 (기존 파란색) */
+.md-tabs {
+    border-bottom-color: #99AAB5;
 }
 
-body.light-mode .tab-btn {
-    color: #555;
-    /* 비활성 탭 텍스트 색상 */
+.tab-btn.active {
+    color: #fff;
+    border-bottom-color: #b39ddb;
 }
 
-body.light-mode .download-settings-area {
-    background-color: #e9ecef;
-    /* 변경: 아주 연한 회색 (기존 #f0f0f0) */
-    color: #333;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.tab-btn {
+    color: #ddd;
 }
 
-body.light-mode #chosen-path {
-    color: #495057;
-    /* 변경: 짙은 회색 (기존 #555) */
+.download-settings-area {
+    background-color: #2C2F33;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-body.light-mode .license-info {
-    background-color: #f8f9fa;
-    /* 변경: 아주 연한 회색 (기존 #f8f8f8) */
-    border-left-color: #7289DA;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+#chosen-path {
+    color: #fff;
 }
 
-body.light-mode .license-info p,
-body.light-mode #copyright-section ul,
-body.light-mode #copyright-section ul li {
-    color: #495057;
-    /* 변경: 짙은 회색 (기존 #555) */
+.license-info {
+    background-color: #2F3136;
+    border-left: 3px solid #b39ddb;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
 }
 
-body.light-mode .license-info strong {
-    color: #495057;
-    /* 짙은 회색으로 변경 */
+.license-info p {
+    font-size: 14px;
+    color: #ddd;
+    margin-bottom: 5px;
+    line-height: 1.4;
 }
 
-/* 라이트 모드 아이콘 색상 변경 */
-body.light-mode .top-menu .menu-btn .material-icons,
-body.light-mode .top-menu .icon-btn .material-icons {
-    color: #495057;
-    /* 변경: 짙은 회색 (기존 #555) */
+.license-info strong {
+    color: #fff;
 }
 
-/* 라이트 모드 설정 아이콘 변경 (예시: settings_filled 아이콘으로 변경) */
-body.light-mode .top-menu .right-menu .icon-btn#settings-btn .material-icons {
-    content: "light_mode";
-    /* 텍스트 기반 아이콘으로 변경 (원하는 아이콘 이름으로 변경) */
+#copyright-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #ddd;
 }
 
-/* 라이트 모드 스크롤바 색상 변경 */
-body.light-mode .content-scroll::-webkit-scrollbar-track {
-    background: #e9ecef;
-    /* 변경: 아주 연한 회색 (기존 #f0f0f0) */
+#copyright-section ul li {
+    margin-bottom: 5px;
+    color: #ddd;
 }
-
-body.light-mode .content-scroll::-webkit-scrollbar-thumb {
-    background-color: #ced4da;
-    /* 변경: 좀 더 연한 회색 (기존 #ccc) */
-}
-
 
 /* 컨테이너: 상단 메뉴, 알림 배너, 메인 콘텐츠, 푸터를 세로 배치 */
 .container {
@@ -296,7 +219,6 @@ body.light-mode .content-scroll::-webkit-scrollbar-thumb {
     background-color: #23272A;
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .left-menu,
@@ -315,7 +237,6 @@ body.light-mode .content-scroll::-webkit-scrollbar-thumb {
     font-size: 16px;
     margin-right: 20px;
     cursor: pointer;
-    transition: color 0.3s, background-color 0.3s;
     padding: 8px 12px;
     border-radius: 4px;
 }
@@ -329,6 +250,7 @@ body.light-mode .content-scroll::-webkit-scrollbar-thumb {
 .menu-btn .material-icons {
     font-size: 24px;
     margin-right: 8px;
+    color: #ddd;
 }
 
 /* 아이콘 버튼 (설정, 새로고침) */
@@ -340,24 +262,11 @@ body.light-mode .content-scroll::-webkit-scrollbar-thumb {
     cursor: pointer;
     padding: 6px;
     border-radius: 4px;
-    transition: background-color 0.3s;
     margin-left: 5px;
-    /* 아이콘 버튼 간 간격 조정 */
 }
 
 .icon-btn:hover {
     background-color: rgba(255, 255, 255, 0.1);
-}
-
-
-/* 메인 콘텐츠 영역 */
-.main-content {
-    flex: 1;
-    background-color: #36393F;
-    padding: 20px;
-    overflow: hidden;
-    position: relative;
-    transition: background-color 0.3s;
 }
 
 /* 스크롤 영역 */
@@ -385,121 +294,20 @@ body.light-mode .content-scroll::-webkit-scrollbar-thumb {
 /* 홈 화면 섹션 컨테이너 (좌우 배치) */
 #home-sections-container {
     display: flex;
-    /* Use flexbox for horizontal layout */
     gap: 20px;
-    /* Spacing between sections */
     margin-bottom: 30px;
-    /* Add margin below the container */
 }
 
 /* 콘텐츠 섹션 - 홈 화면 좌우 배치용 */
 #home-sections-container .content-section {
     width: 50%;
-    /* Each section takes up half the width */
     margin-bottom: 0;
-    /* Remove bottom margin for side-by-side sections */
 }
-
-/* 콘텐츠 섹션 */
-.content-section {
-    /* margin-bottom: 30px;  <- REMOVED margin-bottom here, now on container */
-    background: #2F3136;
-    padding: 15px;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s;
-}
-
-.content-section h2 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #99AAB5;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: border-bottom-color 0.3s;
-}
-
-/* 업데이트 날짜 스타일 */
-.update-date {
-    font-size: 14px;
-    color: #bbb;
-    transition: color 0.3s;
-    /* 부드러운 전환 효과 */
-}
-
-.content-list {
-    list-style: none;
-    margin-bottom: 10px;
-}
-
-.content-list li {
-    padding: 5px 0;
-    border-bottom: 1px dotted #99AAB5;
-    transition: border-bottom-color 0.3s, color 0.3s;
-    /* 부드러운 전환 효과 */
-}
-
-
-/* 푸터 */
-.footer {
-    background-color: #23272A;
-    padding: 10px 20px;
-    display: flex;
-    gap: 20px;
-    font-size: 14px;
-    color: #bbb;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
-    justify-content: left;
-    /* 푸터 내용 가운데 정렬 */
-}
-
-.footer a {
-    font-size: 14px;
-    color: #7289DA;
-}
-
-/* 라이센스 정보 스타일 */
-.license-info {
-    background-color: #2F3136;
-    border-left: 3px solid #7289DA;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.license-info p {
-    font-size: 14px;
-    color: #ddd;
-    margin-bottom: 5px;
-    line-height: 1.4;
-    transition: color 0.3s;
-    /* 부드러운 전환 효과 */
-}
-
-.license-info strong {
-    color: #fff;
-}
-
-#copyright-section ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    color: #ddd;
-}
-
-#copyright-section ul li {
-    margin-bottom: 5px;
-}
-
 
 /* Custom Modal Dialog 스타일 */
 .custom-modal-content {
     width: 400px;
-    /* 너비 조정 */
     text-align: center;
-    /* 텍스트 가운데 정렬 */
 }
 
 .custom-modal-message {
@@ -507,45 +315,36 @@ body.light-mode .content-scroll::-webkit-scrollbar-thumb {
     font-size: 16px;
     margin-bottom: 20px;
     word-break: keep-all;
-    /* 단어 줄바꿈 방지 */
     word-wrap: break-word;
-    /* 긴 단어 줄바꿈 */
 }
 
 .custom-modal-buttons {
     display: flex;
     justify-content: center;
-    /* 버튼 가운데 정렬 */
     gap: 10px;
-    /* 버튼 간 간격 */
 }
 
 .custom-modal-buttons button {
-    /* 기존 modal-btn 스타일 또는 custom button 스타일 적용 */
-    background-color: #7289DA;
+    background-color: #9575cd;
     border: none;
     padding: 10px 20px;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.2s;
     font-size: 16px;
     min-width: 80px;
-    /* 최소 너비 확보 */
 }
 
 .custom-modal-buttons button:hover {
-    background-color: #5b6eae;
+    background-color: #7e57c2;
 }
 
-/* 새로고침 상태 알림 배너 스타일 (추가) */
+/* 새로고침 상태 알림 배너 스타일 */
 .refresh-status-banner {
     background-color: #607D8B;
-    /* 예시 배경색 */
     color: #fff;
     padding: 8px 15px;
     display: none;
-    /* 초기 숨김 */
     align-items: center;
     justify-content: center;
     font-size: 14px;
@@ -553,9 +352,6 @@ body.light-mode .content-scroll::-webkit-scrollbar-thumb {
     margin: 0 20px;
     margin-bottom: 10px;
     margin-top: 5px;
-    /* 기존 배너와 간격 */
-    transition: background-color 0.3s, color 0.3s;
-    /* 부드러운 전환 효과 */
 }
 
 .refresh-status-banner.hidden {
@@ -564,10 +360,26 @@ body.light-mode .content-scroll::-webkit-scrollbar-thumb {
 
 .refresh-status-banner.fallback-mode {
     background-color: #f0ad4e;
-    /* Fallback 스타일 (재활용 또는 변경) */
 }
 
 .refresh-status-banner.success-mode {
     background-color: #4CAF50;
-    /* 성공 스타일 */
+}
+
+/* 모달 기본 스타일 */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 47, 53, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
 }

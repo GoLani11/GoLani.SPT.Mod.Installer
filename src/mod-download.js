@@ -11,13 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // 상태 변수 초기화
     let autoSelectEnabled = true;
     let isFallbackActive = false;
-    let currentTheme = localStorage.getItem('theme') || 'dark';
     let initializeModsEnabled = false;
+    let translatorEnabled = true;
 
     // DOM 요소 참조
     const autoToggle = document.getElementById("auto-select-toggle");
+    const translatorToggle = document.getElementById("translator-toggle");
     const refreshBtn = document.getElementById('refresh-btn');
-    const settingsBtn = document.getElementById('settings-btn');
     const closeBanner = document.getElementById('close-banner');
     const selectPathBtn = document.getElementById("select-path-btn");
     const downloadBtn = document.getElementById("download-btn");
@@ -25,10 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const downloadModalCloseBtn = document.getElementById("download-modal-close-btn");
     const chosenPathSpan = document.getElementById("chosen-path");
     const initializeModsToggle = document.getElementById("initialize-mods-toggle");
-
-    // 초기 설정
-    setTheme(currentTheme);
-    updateSettingsIcon(currentTheme);
 
     // GitHub 메타데이터 URL
     const githubMetaUrl = 'https://raw.githubusercontent.com/GoLani11/GoLani.SPT.Mod.Installer/main/config/DownloadMetaData.json';
@@ -38,19 +34,16 @@ document.addEventListener("DOMContentLoaded", () => {
         autoSelectEnabled = autoToggle.checked;
     });
 
+    translatorToggle.addEventListener("change", () => {
+        translatorEnabled = translatorToggle.checked;
+    });
+
     initializeModsToggle.addEventListener("change", () => {
         initializeModsEnabled = initializeModsToggle.checked;
     });
 
     refreshBtn.addEventListener('click', () => {
-        showRefreshStatusMessage('새로고침 중...', null);
         loadMetaData();
-    });
-
-    settingsBtn.addEventListener('click', () => {
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        setTheme(newTheme);
-        updateSettingsIcon(newTheme);
     });
 
     closeBanner.addEventListener('click', () => {
@@ -93,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
     /**
      * 알림 배너 메시지 표시
      * @param {string} message - 표시할 메시지
-     * @param {string} type - 배너 타입 (default, fallback)
+     * @param {string} type - 메시지 유형 ('default', 'fallback')
      */
     function showNotificationBannerMessage(message, type = 'default') {
         const banner = document.querySelector('.notification-banner');
@@ -141,9 +134,9 @@ document.addEventListener("DOMContentLoaded", () => {
      */
     function updateNotificationBanner() {
         if (isFallbackActive) {
-            showNotificationBannerMessage('GitHub 설정 로드 실패. 로컬 설정 사용 중 (인터넷 연결 확인 요망)', 'fallback');
+            showNotificationBannerMessage("GitHub 메타데이터 로드 실패. 로컬 메타데이터를 사용합니다. 인터넷 연결을 확인하세요.", "fallback");
         } else {
-            showNotificationBannerMessage('경로 지정 시 SPT 게임 폴더에 경로를 지정해주세요.');
+            showNotificationBannerMessage("모드 다운로드 페이지에 오신 것을 환영합니다. 원하는 모드를 선택하세요.");
         }
     }
 
@@ -302,32 +295,6 @@ document.addEventListener("DOMContentLoaded", () => {
         div.appendChild(label);
 
         return div;
-    }
-
-    /**
-     * 테마 설정
-     * @param {string} themeName - 테마 이름 ('dark' 또는 'light')
-     */
-    function setTheme(themeName) {
-        const body = document.body;
-        if (themeName === 'light') {
-            body.classList.add('light-mode');
-            body.classList.remove('dark-mode');
-        } else {
-            body.classList.remove('light-mode');
-            body.classList.add('dark-mode');
-        }
-        localStorage.setItem('theme', themeName);
-        currentTheme = themeName;
-    }
-
-    /**
-     * 설정 아이콘 업데이트
-     * @param {string} themeName - 테마 이름 ('dark' 또는 'light')
-     */
-    function updateSettingsIcon(themeName) {
-        const settingsIcon = document.querySelector('#settings-btn .material-icons');
-        settingsIcon.textContent = themeName === 'light' ? 'light_mode' : 'dark_mode';
     }
 
     /**
@@ -549,10 +516,34 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // 선택된 모드 수집
-        const selectedMods = collectSelectedMods();
+        let selectedMods = collectSelectedMods();
         if (selectedMods.length === 0) {
             showNotificationModal("다운로드할 모드를 선택해주세요.");
             return;
+        }
+
+        // 고라니 번역기가 체크되어 있으면 추가
+        if (translatorEnabled) {
+            // 로컬 메타데이터에서 고라니 번역기 정보 가져오기
+            try {
+                const metaData = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'config', 'DownloadMetaData.json'), 'utf8'));
+                const translatorMod = metaData.mods.find(m => m.name === "고라니 SPT 한글화 번역기");
+                
+                if (translatorMod) {
+                    // 이미 선택된 모드 목록에 없을 경우에만 추가
+                    const alreadySelected = selectedMods.some(m => m.name === "고라니 SPT 한글화 번역기");
+                    if (!alreadySelected) {
+                        selectedMods.push({
+                            name: translatorMod.name,
+                            version: translatorMod.version,
+                            downloadUrl: translatorMod.downloadUrls.join(','),
+                            sourceUrl: translatorMod.sourceUrl
+                        });
+                    }
+                }
+            } catch (error) {
+                console.error("고라니 번역기 정보 로드 실패:", error);
+            }
         }
 
         populateDownloadModal(selectedMods);

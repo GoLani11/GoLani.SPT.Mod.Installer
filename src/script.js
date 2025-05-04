@@ -3,11 +3,7 @@ const { ipcRenderer } = require('electron');
 
 document.addEventListener('DOMContentLoaded', () => {
     let isFallbackActive = false;
-    let currentTheme = localStorage.getItem('theme') || 'dark';
     let homeBannerMessage = '모드 간편 설치기가 새롭게 업데이트 되었습니다. 업데이트 내용은 아래에서 확인하세요. SPT 3.11 버전만 지원합니다.'; // 기본 메시지
-
-    setTheme(currentTheme);
-    updateSettingsIcon(currentTheme);
 
     function updateFooterVersions(programVersion, sptVersion) {
         document.getElementById('program-version').textContent = `프로그램 버전: ${programVersion}`;
@@ -62,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateNotificationBanner();
             })
             .catch(error => {
-                console.error('GitHub 배너 메시지 로드 실패, 로컬 파일 사용:', error);
+                console.error('GitHub 배너 메시지 로드 실패, 기본 메시지 사용:', error);
                 fetch(homeBannerPath)
                     .then(response => response.text())
                     .then(text => {
@@ -70,15 +66,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         updateNotificationBanner();
                     })
                     .catch(localError => {
-                        console.error('로컬 배너 메시지 로드 실패, 기본 메시지 사용:', localError);
-                        // 기본 메시지는 이미 설정되어 있음
+                        console.error('로컬 배너 메시지 로드 실패, 기본 메시지 유지:', localError);
                     });
             });
 
+        // 메타데이터 로드
         fetch(githubMetaUrl)
             .then(response => response.json())
             .then(metaData => {
-                githubLoadSuccess = true;
                 updateFooterVersions(document.getElementById('program-version').textContent.split(': ')[1], metaData.SPTDefaultVersion);
                 document.getElementById('hangeul-log-date').textContent = `(${metaData.home_page_notices.hangeul_log_date})`;
                 document.getElementById('patcher-notice-date').textContent = `(${metaData.home_page_notices.patcher_notice_date})`;
@@ -221,35 +216,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const updateDateElement = copyrightSection.querySelector('.update-date');
         if (updateDateElement) updateDateElement.remove();
     }
-
-    function setTheme(themeName) {
-        const body = document.body;
-        if (themeName === 'light') {
-            body.classList.add('light-mode');
-            body.classList.remove('dark-mode');
-        } else {
-            body.classList.remove('light-mode');
-            body.classList.add('dark-mode');
-        }
-        localStorage.setItem('theme', themeName);
-        currentTheme = themeName;
-    }
-
-    function updateSettingsIcon(themeName) {
-        const settingsIcon = document.querySelector('#settings-btn .material-icons');
-        if (themeName === 'light') {
-            settingsIcon.textContent = 'light_mode';
-        } else {
-            settingsIcon.textContent = 'dark_mode';
-        }
-    }
-
-    const settingsBtn = document.getElementById('settings-btn');
-    settingsBtn.addEventListener('click', () => {
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        setTheme(newTheme);
-        updateSettingsIcon(newTheme);
-    });
 
     const refreshBtn = document.getElementById('refresh-btn');
     refreshBtn.addEventListener('click', () => {
