@@ -213,6 +213,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // 모드 항목 생성
         mods.forEach(mod => {
+            // "필수 모드" 카테고리는 UI에 표시하지 않음
+            if (mod.Category === "필수 모드") {
+                return;
+            }
+            
             const modElement = createModElement(mod, originalMods, metaData.SPTDefaultVersion);
 
             if (mod.Category === "한글 모드") {
@@ -517,22 +522,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // 선택된 모드 수집
         let selectedMods = collectSelectedMods();
-        if (selectedMods.length === 0) {
+
+        // 번역기 체크박스만 체크된 경우도 허용
+        if (selectedMods.length === 0 && !translatorEnabled) {
             showNotificationModal("다운로드할 모드를 선택해주세요.");
             return;
         }
 
         // 고라니 번역기가 체크되어 있으면 추가
         if (translatorEnabled) {
-            // 로컬 메타데이터에서 고라니 번역기 정보 가져오기
             try {
                 const metaData = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'config', 'DownloadMetaData.json'), 'utf8'));
                 const translatorMod = metaData.mods.find(m => m.name === "고라니 SPT 한글화 번역기");
-                
                 if (translatorMod) {
-                    // 이미 선택된 모드 목록에 없을 경우에만 추가
                     const alreadySelected = selectedMods.some(m => m.name === "고라니 SPT 한글화 번역기");
                     if (!alreadySelected) {
+                        console.log("번역기 다운로드 추가: ", translatorMod.name, translatorMod.version);
+                        console.log("다운로드 URL: ", translatorMod.downloadUrls);
+                        
                         selectedMods.push({
                             name: translatorMod.name,
                             version: translatorMod.version,
@@ -540,12 +547,20 @@ document.addEventListener("DOMContentLoaded", () => {
                             sourceUrl: translatorMod.sourceUrl
                         });
                     }
+                } else {
+                    console.error("고라니 번역기 정보를 찾을 수 없습니다.");
                 }
             } catch (error) {
                 console.error("고라니 번역기 정보 로드 실패:", error);
             }
         }
 
+        if (selectedMods.length === 0) {
+            showNotificationModal("다운로드할 모드가 없습니다. 모드를 선택하거나 번역기 설치 옵션을 체크해주세요.");
+            return;
+        }
+        
+        console.log("다운로드할 모드 목록:", selectedMods);
         populateDownloadModal(selectedMods);
         showDownloadModal();
         startSequentialDownload();
@@ -851,6 +866,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (urlIndex >= urlList.length) {
                     if (fileNames.length === 0) {
                         statusIcon.textContent = 'error';
+                        console.error("모든 다운로드 URL 실패, 대상 모드:", modName);
                         reject(new Error('모든 다운로드 URL 실패'));
                     } else {
                         decompressAndClean(fileNames, extractPath, statusIcon, resolve, reject);
@@ -859,6 +875,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
                 let currentUrl = urlList[urlIndex].trim();
+                console.log(`[${modName}] 다운로드 시도 URL (${urlIndex+1}/${urlList.length}):`, currentUrl);
+                
                 let fileName = '';
 
                 // URL에서 파일명 추출
@@ -867,45 +885,62 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (testUrl.includes("drive.google.com")) {
                         const urlObj = new URL(testUrl);
                         fileName = urlObj.searchParams.get('id') || 'download';
+                        console.log("Google Drive 파일 ID:", fileName);
                     } else {
                         fileName = decodeURIComponent(testUrl.split('/').pop());
+                        console.log("추출된 파일명:", fileName);
                     }
                 } catch (e) {
                     console.error("파일명 추출 실패:", e);
                     fileName = "download_" + urlIndex;
+                    console.log("기본 파일명 사용:", fileName);
                 }
 
                 // 한글화 모드면서 zip 확장자가 아닌 경우 zip으로 변경
                 if (isTranslationMod && !fileName.toLowerCase().endsWith('.zip')) {
                     fileName = fileName.replace(/\.[^/.]+$/, '') + '.zip';
+                    console.log("확장자 변경된 파일명:", fileName);
                 }
 
                 const filePath = path.join(chosenPath, fileName);
+                console.log("저장 경로:", filePath);
+                
                 const file = fs.createWriteStream(filePath);
                 const finalUrl = currentUrl.includes("drive.google.com")
                     ? convertGoogleDriveUrl(currentUrl)
                     : currentUrl;
+                
+                console.log("최종 다운로드 URL:", finalUrl);
 
                 downloadRequest(finalUrl, filePath, file, (response, err) => {
                     if (err) {
-                        try { fs.unlinkSync(filePath); } catch (e) { }
+                        try { 
+                            fs.unlinkSync(filePath); 
+                            console.error(`URL ${currentUrl} 다운로드 실패:`, err);
+                        } catch (e) { 
+                            console.error("파일 삭제 실패:", e);
+                        }
                         console.log(`URL ${currentUrl} 다운로드 실패, 다음 URL 시도`);
                         attemptDownloads(urlIndex + 1); // 다음 URL 시도
                     } else {
+                        console.log(`URL ${currentUrl} 다운로드 성공`);
                         // Content-Disposition 헤더에서 파일명 확인
                         const contentDispositionFilename = getFilenameFromContentDisposition(response.headers);
                         if (contentDispositionFilename) {
                             const finalFilePath = path.join(chosenPath, contentDispositionFilename);
+                            console.log("Content-Disposition 파일명:", contentDispositionFilename);
                             fs.rename(filePath, finalFilePath, (renameErr) => {
                                 if (renameErr) {
                                     console.error("파일명 변경 실패:", renameErr);
                                     fileNames.push(filePath);
                                 } else {
+                                    console.log("파일명 변경 성공:", finalFilePath);
                                     fileNames.push(finalFilePath);
                                 }
                                 attemptDownloads(urlIndex + 1);
                             });
                         } else {
+                            console.log("Content-Disposition 파일명 없음, 원본 파일명 사용");
                             fileNames.push(filePath);
                             attemptDownloads(urlIndex + 1);
                         }
@@ -1075,22 +1110,31 @@ document.addEventListener("DOMContentLoaded", () => {
      */
     function convertGoogleDriveUrl(url) {
         try {
+            console.log("Google Drive URL 변환 시도:", url);
             let fileId = null;
             const urlObj = new URL(url);
 
             // URL 파라미터에서 id 추출 시도
             fileId = urlObj.searchParams.get('id');
+            if (fileId) {
+                console.log("URL 파라미터에서 fileId 추출 성공:", fileId);
+            }
 
             // URL 경로에서 id 추출 시도 (/d/[FILE_ID] 패턴)
             if (!fileId) {
                 const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
                 if (match && match[1]) {
                     fileId = match[1];
+                    console.log("URL 경로에서 fileId 추출 성공:", fileId);
                 }
             }
 
             if (fileId) {
-                return `https://drive.google.com/uc?export=download&id=${fileId}`;
+                const convertedUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+                console.log("변환된 Google Drive URL:", convertedUrl);
+                return convertedUrl;
+            } else {
+                console.warn("Google Drive fileId 추출 실패, 원본 URL 반환");
             }
         } catch (e) {
             console.error("Google Drive URL 변환 실패:", e);
