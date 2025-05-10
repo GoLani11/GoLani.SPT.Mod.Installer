@@ -1,7 +1,7 @@
 {
 	"SPTDefaultVersion": "3.11",
 	"home_page_notices": {
-		"hangeul_log_date": "2025-05-04",
+		"hangeul_log_date": "2025-05-10",
 		"patcher_notice_date": "2025-05-04",
 		"copyright_date": "2025-02-07"
 	},
@@ -173,8 +173,8 @@
 		},
 		{
 			"name": "MOAR",
-			"version": "3.0.1",
-			"SPTversion": "3.10",
+			"version": "3.1.4",
+			"SPTversion": "3.11",
 			"CompareModName": "Donut",
 			"downloadUrls": [
 				"https://github.com/Andrewgdewar/MOAR/releases/download/3.0.1-alpha-10/DewardianDev-MOAR-3.0.1-alpha-10.zip",
@@ -186,8 +186,8 @@
 		{
 			"name": "MOAR - KR",
 			"Parent mod name": "MOAR",
-			"version": "3.0.1",
-			"SPTversion": "3.10",
+			"version": "3.1.4",
+			"SPTversion": "3.11",
 			"CompareModName": "Donut - KR",
 			"downloadUrls": [
 				"https://drive.google.com/uc?export=download&id=16e4gipGVb_AqmRTXw8ZwE5rhphzk_hAS"
