@@ -1,7 +1,7 @@
 {
 	"SPTDefaultVersion": "3.11",
 	"home_page_notices": {
-		"hangeul_log_date": "2025-05-10",
+		"hangeul_log_date": "2025-05-17",
 		"patcher_notice_date": "2025-05-04",
 		"copyright_date": "2025-02-07"
 	},
@@ -173,11 +173,11 @@
 		},
 		{
 			"name": "MOAR",
-			"version": "3.1.4",
+			"version": "3.1.5",
 			"SPTversion": "3.11",
 			"CompareModName": "Donut",
 			"downloadUrls": [
-				"https://github.com/Andrewgdewar/MOAR/releases/download/3.1.4/DewardianDev-MOAR-3.1.4.zip",
+				"https://github.com/Andrewgdewar/MOAR/releases/download/3.1.5/DewardianDev-MOAR-3.1.5.zip",
 				"https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.7.0/DrakiaXYZ-Waypoints-1.7.0.7z"
 			],
 			"Category": "원본 모드",
@@ -186,7 +186,7 @@
 		{
 			"name": "MOAR - KR",
 			"Parent mod name": "MOAR",
-			"version": "3.1.4",
+			"version": "3.1.5",
 			"SPTversion": "3.11",
 			"CompareModName": "Donut - KR",
 			"downloadUrls": [
